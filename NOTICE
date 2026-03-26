@@ -1,0 +1,40 @@
+Adaptive Chunking
+Copyright 2026 Ekimetrics
+
+This product includes the following third-party open source components.
+Each component is listed with its license. The full license texts can be
+found in the installed package metadata or at the URLs below.
+
+Core dependencies
+-----------------
+tiktoken            0.9.0     MIT
+pandas              2.2.3     BSD-3-Clause
+numpy               1.26.4    BSD-3-Clause
+tqdm                4.67.1    MPL-2.0 AND MIT
+python-dotenv       1.1.0     BSD-3-Clause
+sentence-transformers 3.1.0   Apache-2.0
+spacy               3.8.4     MIT
+scikit-learn        1.6.1     BSD-3-Clause
+scipy               1.15.2    BSD-3-Clause
+langdetect          1.0.9     MIT
+
+Optional: coref extra (CC BY-NC-SA 4.0 -- non-commercial)
+----------------------------------------------------------
+maverick-coref      1.0.7     CC BY-NC-SA 4.0
+
+  NOTE: maverick-coref is licensed under the Creative Commons
+  Attribution-NonCommercial-ShareAlike 4.0 International License.
+  It prohibits commercial use. Install with: pip install adaptive-chunking[coref]
+
+Optional: parsing extra
+-----------------------
+docling             2.77.0    MIT
+pymupdf4llm         0.3.4     AGPL-3.0 or Artifex Commercial
+
+  NOTE: pymupdf4llm (PyMuPDF) is dual-licensed under AGPL-3.0 or
+  a commercial license from Artifex Software. Users who cannot
+  comply with AGPL-3.0 should obtain a commercial license or use
+  an alternative parser (DoclingParser or AzureDIParser).
+
+azure-ai-documentintelligence 1.0.2 MIT
+markdownify         1.2.2     MIT

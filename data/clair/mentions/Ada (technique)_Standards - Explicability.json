@@ -1,0 +1,104 @@
+{
+  "document_name": "Ada (technique)_Standards - Explicability",
+  "pages": {
+    "1": "# 4- Explicability\n\nAs described in introduction, AI is a system, with users to take into account and an interface to build. Once you have access to what factor influenced your prediction/decision, it comes the time to explain it to your users. That is what explicability is. Knowing your users, understanding not only their needs but their reluctances, choosing the right level of information, giving them control and ability to give feedbacks, all of these techniques will ensure more trust and adoption of your solution.\n\n# A. UX studies\n\nYou need to know the appetite of users relative to AI to deliver the right level of explicability.\n\nWith explicability, we enter into UX Design and question the preference of users in terms of presentation of results. The level of explicability that accompanies the decision must correspond to the profile of the users. Depending on how AI will impact their work and life, but also on their maturity vis-\u00e0-vis this technology, not everyone will need the same granularity in the explanation.\n\nTo know the appetite of your users for AI, the best thing is to ask them the question through a short questionnaire. This will make it possible to detect the populations towards which it will be necessary to make a special effort to achieve genuine support.\n\nMoreover, you won't give the same information to an expert or a novice. For example, for a medical diagnostic algorithm, you won't give the same information to doctors or patients. Doctors will need more technical information, patients more plain English ones. Workshops with your users and regular feedbacks are indispensable to fit your interface with their information requirements to trust your solution.\n\n# B. Probabilities\n\nBy highlighting the relevant information, giving the user as much context as possible, it becomes possible to erase the feeling of no longer having any control over the decisions made by the machine.\n\nThe first information that will interest the user is to know how reliable the AI recommendation is. We too often set a default decision (i.e. threshold of 50% for a binary decision), and only give users the final decision: yes or no. Knowing the probability of a prediction can be a key acceptability factor. Indeed, depending on\n\n<!-- PageBreak -->\n\n",
+    "2": "whether this percentage is 60% or 90% for a binary classification, the confidence in your model's predictions will not be the same.\n\nSo instead of using the 'predict()' result, always get the 'predict_proba()'!\n\nHowever here, it must be taken into account that the majority of your users are not scientists and therefore have a biased representation of probabilities, with a tendency to overestimate low probability events and underestimate high probability events.\n\nFigure from : Khaw et al. 2021 https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008871\n\nThus, to simplify this notion of probability, they can be expressed not as a percentage, but in explicit terms. The reliability of the AI prediction or decision will can be \"absolutely certain\", \"certain\", \"probable\" or \"very uncertain\".\n\n## B.1. Calibration\n\nSome models (live SVM) can give you poor estimates of the probabilities and therefore make the interpretation of the probabilities unreliable.\n\nWe recommend calibrating your model or at least, check their reliability with calibration curves.\n\nLean more about calibration here:\n\nhttps://www.cs.cornell.edu/~alexn/papers/calibration.icml05.crc.rev3.pdf\n\nAnd on how to implement it with sklearn here:\n\n## 1.16. Probability calibration\n\n# C. Confidence intervals\n\nAnother interesting information to provide to the users: the confidence interval. This allows you to know on which subcategories of data the model is reliable, and for which, not so much. It is directly related to the variability in the prediction for a certain range of predictions and very much depends on how much data of each subcategories the model has been trained. For example, if a model has been trained with a lot of Caucasian faces and a few Asian ones, it will tend to be more reliable for the first class.\n\n<!-- PageBreak -->\n\n",
+    "3": "## C.1. Cross validation\n\nYou can get a first measure of the variability of your overall model performance by doing cross-validation (3.1. Cross-validation: evaluating estimator performance ), but it is not enough as it doesn't go into the details of performance for the subcategories.\n\n## C.2. Mapie\n\nYou can use a toolbox called Mapie (MAPIE - Model Agnostic Prediction Interval Estimator - MAPIE 0.6.5 documentation ) which is a model agnostic solution that works for both regression and classification problems.\n\nSource : Taquet et al. 2022 https://arxiv.org/pdf/2207.12274.pdf\n\nYou can find a video explaining the solution here : https://crossminds.ai/video/mapie- model-agnostic-prediction-interval-estimator-614bc17e3c7a224a9090211b/\n\nAnd articles here:\n\n\u00b7 With MAPIE, uncertainties are back in machine learning !\n\n\u00b7 https://arxiv.org/pdf/2207.12274.pdf\n\n# D. Human agency/control\n\nIn a Pew Research report from 2018 on AI and the Future of Humans (Artificial Intelligence and the Future of Humans ) concern about Human agency came out as the main concern. They talk about the fear that : 'the use of Al reduces individuals' control over their lives'.\n\nAnd the European Commission High-Level Expert Group on Artificial Intelligence (AI HLEG 2018 : Requirements of Trustworthy Al ) defines 'human agency and oversight' as the first of seven key elements in their \"Trustworthy Al\" framework. They state that 'Al systems should support human autonomy and decision-making, as prescribed by the principle of respect for human autonomy. This requires that AI systems should both act as enablers to a democratic, flourishing and equitable society by supporting the user's agency and foster fundamental rights, and allow for human oversight.\"\n\nFollowing these reports, it is fundamental that your systems always keep the 'humans in the loop' and should never be fully autonomous. A human should always make the final decision.\n\n<!-- PageBreak -->\n\n",
+    "4": "This recommendation goes hand-in-hand with explicability as you should give all the necessary information to the users to make the decision.\n\nAnd the design of the interface of the product or solution you are developing will be key here.\n\n# E. Feedback loops\n\nBecause keeping people in the loop is fundamental as we have just seen, care will be taken to encourage user feedback on the solution.\n\n## E.1. Report a mistake\n\nIf your user considers that the system has made a mistake in the prediction or decision, they must be able to express it. You should include, in the design of your solution, a way for them to do so.\n\nThis will increase the trust of your users for your solution greatly.\n\n## E.2. Performance in production\n\nIn addition, this feedback can be used to measure the performance in production, detect drifts and give a database to eventually retrain your model.\n\nMoreover, you can also detect bugs in the system and be able to strengthen its robustness and performance.\n\nAnd here is an interesting article on the feedback loop topic: Feedback Loops-Friend or Foe?\n\n<!-- PageBreak -->\n\n"
+  },
+  "full_text": "# 4- Explicability\n\nAs described in introduction, AI is a system, with users to take into account and an interface to build. Once you have access to what factor influenced your prediction/decision, it comes the time to explain it to your users. That is what explicability is. Knowing your users, understanding not only their needs but their reluctances, choosing the right level of information, giving them control and ability to give feedbacks, all of these techniques will ensure more trust and adoption of your solution.\n\n# A. UX studies\n\nYou need to know the appetite of users relative to AI to deliver the right level of explicability.\n\nWith explicability, we enter into UX Design and question the preference of users in terms of presentation of results. The level of explicability that accompanies the decision must correspond to the profile of the users. Depending on how AI will impact their work and life, but also on their maturity vis-\u00e0-vis this technology, not everyone will need the same granularity in the explanation.\n\nTo know the appetite of your users for AI, the best thing is to ask them the question through a short questionnaire. This will make it possible to detect the populations towards which it will be necessary to make a special effort to achieve genuine support.\n\nMoreover, you won't give the same information to an expert or a novice. For example, for a medical diagnostic algorithm, you won't give the same information to doctors or patients. Doctors will need more technical information, patients more plain English ones. Workshops with your users and regular feedbacks are indispensable to fit your interface with their information requirements to trust your solution.\n\n# B. Probabilities\n\nBy highlighting the relevant information, giving the user as much context as possible, it becomes possible to erase the feeling of no longer having any control over the decisions made by the machine.\n\nThe first information that will interest the user is to know how reliable the AI recommendation is. We too often set a default decision (i.e. threshold of 50% for a binary decision), and only give users the final decision: yes or no. Knowing the probability of a prediction can be a key acceptability factor. Indeed, depending on\n\n<!-- PageBreak -->\n\nwhether this percentage is 60% or 90% for a binary classification, the confidence in your model's predictions will not be the same.\n\nSo instead of using the 'predict()' result, always get the 'predict_proba()'!\n\nHowever here, it must be taken into account that the majority of your users are not scientists and therefore have a biased representation of probabilities, with a tendency to overestimate low probability events and underestimate high probability events.\n\nFigure from : Khaw et al. 2021 https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008871\n\nThus, to simplify this notion of probability, they can be expressed not as a percentage, but in explicit terms. The reliability of the AI prediction or decision will can be \"absolutely certain\", \"certain\", \"probable\" or \"very uncertain\".\n\n## B.1. Calibration\n\nSome models (live SVM) can give you poor estimates of the probabilities and therefore make the interpretation of the probabilities unreliable.\n\nWe recommend calibrating your model or at least, check their reliability with calibration curves.\n\nLean more about calibration here:\n\nhttps://www.cs.cornell.edu/~alexn/papers/calibration.icml05.crc.rev3.pdf\n\nAnd on how to implement it with sklearn here:\n\n## 1.16. Probability calibration\n\n# C. Confidence intervals\n\nAnother interesting information to provide to the users: the confidence interval. This allows you to know on which subcategories of data the model is reliable, and for which, not so much. It is directly related to the variability in the prediction for a certain range of predictions and very much depends on how much data of each subcategories the model has been trained. For example, if a model has been trained with a lot of Caucasian faces and a few Asian ones, it will tend to be more reliable for the first class.\n\n<!-- PageBreak -->\n\n## C.1. Cross validation\n\nYou can get a first measure of the variability of your overall model performance by doing cross-validation (3.1. Cross-validation: evaluating estimator performance ), but it is not enough as it doesn't go into the details of performance for the subcategories.\n\n## C.2. Mapie\n\nYou can use a toolbox called Mapie (MAPIE - Model Agnostic Prediction Interval Estimator - MAPIE 0.6.5 documentation ) which is a model agnostic solution that works for both regression and classification problems.\n\nSource : Taquet et al. 2022 https://arxiv.org/pdf/2207.12274.pdf\n\nYou can find a video explaining the solution here : https://crossminds.ai/video/mapie- model-agnostic-prediction-interval-estimator-614bc17e3c7a224a9090211b/\n\nAnd articles here:\n\n\u00b7 With MAPIE, uncertainties are back in machine learning !\n\n\u00b7 https://arxiv.org/pdf/2207.12274.pdf\n\n# D. Human agency/control\n\nIn a Pew Research report from 2018 on AI and the Future of Humans (Artificial Intelligence and the Future of Humans ) concern about Human agency came out as the main concern. They talk about the fear that : 'the use of Al reduces individuals' control over their lives'.\n\nAnd the European Commission High-Level Expert Group on Artificial Intelligence (AI HLEG 2018 : Requirements of Trustworthy Al ) defines 'human agency and oversight' as the first of seven key elements in their \"Trustworthy Al\" framework. They state that 'Al systems should support human autonomy and decision-making, as prescribed by the principle of respect for human autonomy. This requires that AI systems should both act as enablers to a democratic, flourishing and equitable society by supporting the user's agency and foster fundamental rights, and allow for human oversight.\"\n\nFollowing these reports, it is fundamental that your systems always keep the 'humans in the loop' and should never be fully autonomous. A human should always make the final decision.\n\n<!-- PageBreak -->\n\nThis recommendation goes hand-in-hand with explicability as you should give all the necessary information to the users to make the decision.\n\nAnd the design of the interface of the product or solution you are developing will be key here.\n\n# E. Feedback loops\n\nBecause keeping people in the loop is fundamental as we have just seen, care will be taken to encourage user feedback on the solution.\n\n## E.1. Report a mistake\n\nIf your user considers that the system has made a mistake in the prediction or decision, they must be able to express it. You should include, in the design of your solution, a way for them to do so.\n\nThis will increase the trust of your users for your solution greatly.\n\n## E.2. Performance in production\n\nIn addition, this feedback can be used to measure the performance in production, detect drifts and give a database to eventually retrain your model.\n\nMoreover, you can also detect bugs in the system and be able to strengthen its robustness and performance.\n\nAnd here is an interesting article on the feedback loop topic: Feedback Loops-Friend or Foe?\n\n<!-- PageBreak -->\n\n",
+  "split_points": [
+    525,
+    1703,
+    2255,
+    2275,
+    3092,
+    3512,
+    4093,
+    4113,
+    4400,
+    4975,
+    5273,
+    5856,
+    6040,
+    6060,
+    6299,
+    6456,
+    6753,
+    7140
+  ],
+  "titles": [
+    {
+      "title": "# 4- Explicability",
+      "start": 0,
+      "level": 1,
+      "end": 525
+    },
+    {
+      "title": "# A. UX studies",
+      "start": 525,
+      "level": 1,
+      "end": 1703
+    },
+    {
+      "title": "# B. Probabilities",
+      "start": 1703,
+      "level": 1,
+      "end": 3546
+    },
+    {
+      "title": "## B.1. Calibration",
+      "start": 3092,
+      "level": 2,
+      "end": 3512
+    },
+    {
+      "title": "## 1.16. Probability calibration",
+      "start": 3512,
+      "level": 2,
+      "end": 3546
+    },
+    {
+      "title": "# C. Confidence intervals",
+      "start": 3546,
+      "level": 1,
+      "end": 4975
+    },
+    {
+      "title": "## C.1. Cross validation",
+      "start": 4113,
+      "level": 2,
+      "end": 4400
+    },
+    {
+      "title": "## C.2. Mapie",
+      "start": 4400,
+      "level": 2,
+      "end": 4975
+    },
+    {
+      "title": "# D. Human agency/control",
+      "start": 4975,
+      "level": 1,
+      "end": 6299
+    },
+    {
+      "title": "# E. Feedback loops",
+      "start": 6299,
+      "level": 1,
+      "end": 7160
+    },
+    {
+      "title": "## E.1. Report a mistake",
+      "start": 6456,
+      "level": 2,
+      "end": 6753
+    },
+    {
+      "title": "## E.2. Performance in production",
+      "start": 6753,
+      "level": 2,
+      "end": 7160
+    }
+  ]
+}

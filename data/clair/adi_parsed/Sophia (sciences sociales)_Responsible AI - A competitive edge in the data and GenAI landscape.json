@@ -1,0 +1,619 @@
+{
+  "document_name": "Sophia (sciences sociales)_Responsible AI - A competitive edge in the data and GenAI landscape",
+  "pages": {
+    "1": "Ekimetrics.\n\n# Responsible AI: A competitive edge in the data and GenAI landscape\n\nHow Responsible Al enables the use of data, Al, and Gen Al technologies to create a strategic business advantage\n\n<!-- PageBreak -->\n\n",
+    "2": "<!-- PageHeader: Ekimetrics. -->\n\n## Introduction\n\n### Understand how and why AI makes a decision...\n\nYou have probably already applied for a loan from a bank. You have submitted your application for review by your account manager. Income, account management, personal situation, residual savings, downpayment: did you know that all these loan approval criteria are already analyzed by algorithms and artificial intelligence (AI)? Objective criteria? Are you sure?! How can you prove that you have not been discriminated against due to a black box effect? So what is a black box effect? It's a bit like trying to study a car engine without being able to open the hood. You input data into the box -the Al, a Machine Learning system for example- and results are output, which may be remarkable ... yet you're unable to explain the process that allowed the algorithm to make its choices. Understanding the reasons behind the decisions made by an algorithm is essential to ensure its accuracy and avoid bias (often the same discriminations as in the \"real world\", linked to gender, age, skin color or nationality1). In other words, the aim is to guarantee equal rights, whether for securing a loan, access to public services, hiring ...\n\n### ... and make it strategic\n\nAnd here's when we need to talk about responsible Al. Let's say that in our first example, you're no longer the one applying for the loan. You're the one who manages the bank or the IT system or the analytics. And for you, \"Responsible AI\" means \"yet more new regulations, more rules to change and implement!\". But if we tell you that responsible AI will help you optimize your costs, beef up your customer service or even your loyalty/satisfaction strategy, and easily maintain your platforms while complying with regulations, perhaps you'll see it as a major opportunity to build future-proof practices and business models. Let's rephrase: responsible AI does not have to be synonymous with constraints and compliance. On the contrary: because it is responsible, this approach to AI creates value and gives companies a true competitive edge.\n\nResponsible AI is all the more critical now that generative AIs (see below) have entered with a bang into all strata of society. The biases remain the same as those of the \"old\" AI. But their effects have multiplied: using colossal volumes of data2 , these \"GenAI\" generate new data, which is in turn used as input for decision-making. How can we trust them, and guarantee that an organization's products and services are reliable? Responsible AI is therefore becoming a cornerstone of business strategy. And we're not talking here about 5, 10 or 15-year business strategies. We're talking about what can be implemented now, with today's know-how and knowledge. This white paper is a practical guide to responsible AI for business.\n\n\\* 1 There are already many examples of algorithmic discriminatory behaviors that led to scandals that have tarnished the reputation and business of large companies. Read: \"Apple card investigated after gender discrimination complaints\", \"Amazon scraps secret Al recruiting tool that showed bias against women\", \"LAPD will end controversial program that aimed to predict where crimes would occur\"\n\n\\* 2 Gartner predicts that, within three years, generative AI will produce 10% of all data, i.e. tens of billions of gigabytes. Read: https://www.gartner.com/en/newsroom/press-releases/2021-10-18-gartner-identifies-the-top-strategic-technology-trends-for-2022\n\n<!-- PageFooter: page 02 -->\n<!-- PageBreak -->\n\n",
+    "3": "<!-- PageHeader: Ekimetrics. -->\n\n## \u00b7 Generative AI for dummies\n\n### Generative AIs create content...\n\n... as if they were you, based on one of your requests. Text, images, video, sound: they magnify human creative processes; it only takes them a few seconds to generate a text (with ChatGPT3) or an image (with Midjourney).\n\n### What is the difference with the \"old\" AI?\n\nUntil now, AIs were based mainly on \"structured\" data: descriptive, numerical information in spreadsheets (business accounts, temperature measurements for weather forecasts, sales figures, etc.). Generative AIs are based on \"unstructured\" data (text, images, video, sound); in a way, they create \"new\" content.\n\n### What challenges to achieve what success?\n\n### Relevance.\n\nHow do we control hallucinations and biases while respecting the regulatory framework, in a context with a low acceptable error on decision-making? How do we ensure that the content is contextualized and actionable in a specific sector, business, use and time?\n\n<!-- PageFooter: 3 3 GPT-3 and GPT-4 are LLMs (Large Language Models), which are generative AI algorithms, a Deep Learning method, a subset of Machine Learning, itself a subset of Data Science. page 03 -->\n<!-- PageBreak -->\n\n",
+    "4": "<!-- PageHeader: Ekimetrics. -->\n\nGenerative AI's true significance lies in its capacity to address specific problems within well-structured ecosystems. Beyond the hype, it becomes a valuable tool when applying meticulous data preprocessing and interface development to deliver human-readable results, through techniques like Reinforcement Learning from Human Feedback (RLHF) (a technique incorporating the corrections made by annotators to a ranking of answers proposed by the generative AI algorithm. Thanks to RLHF, the algorithm learns to generate responses that would be validated by humans).\n\n>> From a business viewpoint, the goal is to overcome the current pitfalls of AI and LLMs to deliver trustworthy models that exactly and specifically match an organization's strategy and operations.\n\n### Embedding.\n\nHow do we embed these complex models in specific IT legacy and activation tools? How can we be sure they match an organization and its processes? How do we combine them with lighter models and human-led decision-making steps?\n\nIntegrating Generative AI into an ecosystem mirrors traditional data projects, involving data structuring and user-centric refinement. Its unique strength lies in presenting meaningful outcomes to users, through constant adaptation and incorporation of feedback to enhance its accuracy.\n\n>> In practice, AI needs to be fully integrated and embedded in a company's workflows, processes and systems.\n\n### Control.\n\nHow do we control the cost of internalizing such technologies? Beyond the tech component and the training cost, what technical skills are required? How can we trust the security and privacy of these technologies?\n\nMonitoring Generative AI in production poses distinctive challenges compared to traditional algorithms. User feedback and comparisons become pivotal in defining a good model and ensuring long-term effectiveness while mitigating bias. Maintenance efforts are vital to uphold performance quality, and users will play an essential role in adapting to and refining their interactions with Generative AI.\n\n>> Securing access to data requires deploying Responsible AI models by design, compliant with the EU AI Act and developed with weighted models to control for cost and energy consumption.\n\n<!-- PageFooter: page 04 -->\n<!-- PageBreak -->\n\n",
+    "5": "<!-- PageHeader: Ekimetrics. -->\n\n## \u00b7 Responsible AI for dummies\n\n### The issue of impact.\n\nPreviously, Al was often a matter for specialists - data, sales, marketing, IT, etc. Today, although not everyone works with Machine Learning, anyone can use ChatGPT. In fact, it took this technology just 5 days to pass the million-user mark, and two months to reach 100,000 million.\n\nThis democratization of AI use therefore represents a major turning point: HR, the justice system, public services, etc .: all spheres of society now benefit from it -sometimes with proven and critical societal impacts (see diagram). This democratization requires increased attention to excellence in AI implementation, with stronger monitoring and equal rights protection. Safeguards must therefore be implemented from both a technical and a human standpoint, taking risks into account and correcting them as best we can.\n\n## WHAT ARE BIASES AND WHY ARE THEY DANGEROUS?\n\nSocial bias broadly encompasses disparate treatment or outcomes between social groups, arising from historical and structural power asymmetries. In the context of Natural Language Processing (NLP), this entails representational harms (misrepresentation, stereotyping, unequal system performance, derogatory language, and exclusionary norms) and allocative harms (direct discrimination and indirect discrimination).\n\nDiscrimination is the unjust or prejudicial treatment of different categories of people, especially on the grounds of ethnicity, age, sex, or disability.\n\nA protected attribute is the shared identity trait that determines the group identity of a social group (gender, age, ethnicity, etc.).\n\n<!-- PageFooter: page 05 -->\n<!-- PageBreak -->\n\n",
+    "6": "<!-- PageHeader: Ekimetrics. -->\n\n## \u00b7 How businesses already use GenAI\n\n### AI in businesses now\n\nThere are five main uses for AI in organizations:\n\n1. Measure and predict operational, financial or environmental performance through key indicators, to inform decision-making\n\n2. Automate tasks and boost productivity\n\n3. Improve customer experience/service, with chatbots available 24/7 or customized options\n\n4. Optimize production lines,\n\nshortening development times and accelerating return on investment\n\n5. Creativity, ideation and brainstorming,\n\none of the new applications brought about by the arrival of generative AI in the business world.\n\nOften opportunistic, the use of AI in organizations has rarely been thought through responsibly by design until now. It's the democratization mentioned earlier that's forcing them to rethink their approach, often to comply with regulations or to avoid losing a competitive edge by remaining in a situation that puts their business at risk.\n\n### GenAIs are expanding into the world of business...\n\n... to win the race against time, cumbersome tasks such as taking minutes at meetings, writing e-mails and summarizing documents can now be performed by generative AIs like ChatGPT. Corollary: employees can refocus their productivity on higher value-added tasks.\n\nBanking4, finance, media, NGOs, ESG players: some sectors are pioneers in the use of these new technologies. In fact, Ekimetrics has already been asked to implement:\n\n. Question answering and sourcing: with their ability to search for information in massive databases, new-generation AIs produce immediate answers to business questions, and can isolate specific criteria (a selection of CVs for HR; or in healthcare, in diagnosis tools or looking up information in research literature, for example). The demand for transparency, explainability and security is driving companies to implement a kind of internal ChatGPT, enabling them to track the source of the information they need. From a technological standpoint, generative AI is most often based on either: - Q&A based on proprietary documentary sources, to guarantee the veracity of the data -which does not preclude Azure's use of GPT - local open-source LLM models, to further increase data security.\n\n. Report completion: the aim here is to fill in reports semi- automatically, such as ESG or financial reports. This advantage also facilitates the work of analysts for their recap memos or to enrich the company's knowledge bases.\n\n. Ideation: a player in the French press asked us to analyze press article archives (spanning several decades) to identify contradictions or subjects insufficiently or not at all covered by the competition, and find new editorial angles.\n\n. Extremely advanced customer segmentation: this involves cross- referencing heterogeneous data to create typical customer paths, with the goal of facilitating strategic decision-making on customer retention or conversion.\n\n. Analysis of customer comments and opinions: Being able to detect the themes most associated with a product in a large dataset of comments, as well as the sentiment expressed by the writer, is a valuable source of information for analyzing how a product is received, its qualities, and the improvements to be made to win over more customers.\n\n<!-- PageFooter: 4 In banking, consider a couple of recent examples: JPMorgan Chase has filed a patent application for a GenAI-powered service to help investors choose equities. Read: https://www.kinandcarta.com/en/insights/2023/08/impactful-genai-applications/. And Morgan Stanley has built a tool to help Relationship Managers deliver relevant ideas to customers in real time. Read: https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai. page 06 -->\n<!-- PageBreak -->\n\n",
+    "7": "<!-- PageHeader: Ekimetrics. -->\n\n## \u00b7 And mitigating AI risks is a true challenge in business adoption\n\nHallucination, bias, confidentiality: these are the risks and limits that are holding companies back from using AI, through a healthy respect for both the regulatory framework, and a context where the acceptable margin of error in decision-making is low. So what do we mean by this?\n\n\u00b7 Hallucination: generative Als are based on a multitude of documents. When the next word to predict matches the truth, all is well. But otherwise? They must choose one option, and can hallucinate untruths with great aplomb. Users therefore need to be trained to use these AIs properly, and to verify every single claim they make.\n\n. Bias: they are rarely intentional, but algorithmic biases are based on data reflecting human practice. The system can therefore discriminate against a specific group of people. A major obstacle for businesses is to identify potential biases (lack of qualified data), raise awareness among employees and have the resources to do so (a dedicated inclusive team, for instance, or a taxonomy programmed with contextual information), and then deal with the biases.\n\n. Privacy: The confidentiality rules of GenAl, and ChatGPT in particular, are still poorly understood. Bear in mind that any data and/or code sent to one of these platforms is likely to be used for subsequent training, which raises issues of confidentiality of corporate data (or that of its customers) and intellectual property.\n\nOvercoming these risks is not an option, it's a sine qua non condition for some businesses. However, the adoption of AI itself is facilitated when it is designed responsibly from the outset: ethical standards reinforce confidence in its use; responsible practices in critical sectors such as human resources guarantee a positive and equitable societal impact; operational excellence prevents abuse and ensures that the AI is beneficial and reliable... Adopting a responsible AI is thus becoming a crucial approach to minimizing risk.\n\n<!-- PageFooter: page 07 -->\n<!-- PageBreak -->\n\n",
+    "8": "<!-- PageHeader: Ekimetrics. -->\n\n## . Key Issue\n\n### How do we turn this AI revolution into a competitive advantage?\n\nWe need new \"software\" to tackle this profound change in the way we work, and even in the way we do business. New responsible governance must overcome all the risks generated by the use of AI and generative AI. By evolving into an \"AI-ready\" business, organizations put in place the conditions that will enable them to meet the key business challenges of the future, and perpetuate their business practices and even their business model. It's a moment of truth for organizations: yes, there is a turning point ahead; yet it does not have to be a problem: by implementing a \"responsible-by-design\" approach, organizations are better equipped to deal with the risks -not just compliance risks, but also business risks- created by the exploding use of Al (see pillars).\n\nEkimetrics intends to accompany this revolution with a simple, easy-to-understand framework to support these organizations in their AI transformation and the use of these technologies. We have therefore developed 7 pillars of responsible AI, designed to create this competitive edge (see next chapter).\n\n<!-- PageFooter: page 08 -->\n<!-- PageBreak -->\n\n",
+    "9": "<!-- PageHeader: Ekimetrics. -->\n\n## \u00b7 Empower business with AI and GenAI solutions through responsible governance\n\nAnticipate future regulations, limit the risk of damage to image and reputation, improve the efficiency, accuracy and durability of models, all while generating value: to meet all these challenges, Ekimetrics has developed 7 pillars of responsible governance, which can be considered true operational and business tools.\n\nTHE 7 PILLARS OF RESPONSIBLE AI AND THEIR BUSINESS ADVANTAGES\n\n<Figure>\nTHE 7 PILLARS OF RESPONSIBLE AI AND THEIR BUSINESS ADVANTAGES\n</Figure>\n\n1. Security\n\nEnsure the security of personal and sensitive data. GDPR compliance. Data Clean Rooms: value of personal data.\n\n2. Transparency\n\nCommunicate intentions clearly regarding data and models. Improve trustworthiness and product adoption. Model cards are important for documentation, transmission, and reuse. Registries are probably needed for the AI Act.\n\n3. Interpretability Provide access to the factors that influenced the decision/prediction. More control, easier to debug. Allows explainability. Required for some products in the AI Act.\n\n4. Explainability Explain the predictions provided by the models, work on the user interfaces. Improve adoption/trust. Human agency.\n\n5. Vigilance\n\nAvoid possible prejudice to the users' interests, exclude discriminatory biases. Scandal prevention. AI Act compliance. Potential new customers.\n\n6. Robustness Measure and ensure performance and stability throughout the system lifecycle. Performance. Control.\n\n7. Sustainability\n\nLimit the system's energy consumption and carbon footprint. Financial gains, simplicity, control, acceleration.\n\n<!-- PageFooter: page 09 -->\n<!-- PageBreak -->\n\n",
+    "10": "<!-- PageHeader: Ekimetrics. -->\n\n### TYPES OF SECURITY AI FAILURE:\n\n- DATA BREACH OR LEAKAGE\n\n- NON-COMPLIANCE\n\n- RANSOMWARE / MALWARE\n\n- PHISHING\n\n- FAKE NEWS\n\n- MODEL AND DATA POISONING\n\n### WHO'S IN CHARGE?\n\nEXCOM DPO\n\nCOMPLIANCE/LEGAL IT MANAGEMENT DATA TEAMS FINAL USERS\n\n## 1. Security pillar\n\n### Core concept\n\nEnsure the protection and control of your customers' or users' personal data and your organization's sensitive data.\n\nWhat are the risks?\n\n\u00b7 For your end customers > disclosure and misuse\n\nof their data, possibly damaging to their image\n\n\u00b7 For your organization > brand image/reputation and business, industrial espionage, sabotage, ethics and compliance issues, GDPR fines\n\nWhere do you start? If you use a public tool like ChatGPT:\n\nV Don't share any personal or confidential data, whether about your customers or your organization\n\nV Do not provide information protected by intellectual property rights\n\nV Do not use the generated answers without first ensuring that they are reliable\n\nIf you have concerns about GAFAM technologies:\n\nv Customize your own open-source GenAl\n\nV Train: whether it's your teams ... or your Machine Learning algorithms\n\nV Set up Data Clean Rooms\n\n(=a secure environment allowing at least two entities to share and centralize data within an anonymized platform)\n\n### What's the competitive advantage?\n\n\u00b7 For your customers > reputation, loyalty\n\n. For your organization > robustness, maintenance, compliance (with GDPR and the Al Act,\n\nfor instance, which also apply to organizations, in particular the GAFAM, operating on European soil)\n\n## EXAMPLES OF CONFIDENTIAL DATA\n\nPersonal data\n\n- first & last name - postal or e-mail addresses - ID document number\n\n- location data - IP address or cookie identifier - your phone's advertising identifier - medical records\n\nSensitive data - Financial reports - Business plan\n\n- Product innovation\n\nDON'T X\n\nChatGPT: Samsung\n\nemployees leak sensitive data Using ChatGPT to correct errors in their source code, engineers at the Korean company leaked sensitive information1. The chatbot stores everything and uses the conversations to improve and re-train its models. Samsung has since banned the use of this generative AI internally and plans to develop its own AI.\n\n1 Read: https://economist.co.kr/article/ view/ecn202303300057?s=31\n\n## CUSTOMER STORIES: EMPOWERING A SPORTS COMPANY'S DATA STRATEGY THROUGH DATA CLEAN ROOMS\n\n. Challenge: The disappearance of third-party cookies and lower tracking consent rates are challenging companies' marketing models to extract insights from the massive amount of data available.\n\n. Approach: We are helping a sports company take the next step in the design and development of Data Clean Room analytics capabilities, considered a priority of the strategic plan going forward.\n\n. Outcome: initial gains to be achieved by proving value on a restricted scope before scaling to the rest of the activity.\n\n<!-- PageFooter: page 10 -->\n<!-- PageBreak -->\n\n",
+    "11": "<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF TRANSPARENCY AI FAILURE:\n\n- NON-ADOPTION\n\n- MISINFORMATION\n\n- REPUTATION\n\n## WHO'S IN CHARGE?\n\nEXCOM\n\nCDO\n\nIT MANAGEMENT DATA TEAMS\n\nFINAL USERS\n\n## 2\u00b7 Transparency pillar\n\n### Core concept Document and communicate clearly about data retrieval and processing (methods and values)\n\nWhat are the risks?\n\n\u00b7 For your end customers > loss of trust, adoption problems\n\n\u00b7 For your organization > brand image/reputation, loss of revenue\n\nWhere do you start?\n\nV Creation of an internal/external ethics charter specifying the company's values regarding its use of AI (values, dos and don'ts for using a GenAI (e.g. ChatGPT), etc.)\n\nV Setting up an ethics committee: ethical Al is not a formalized field. Setting up a committee\n\nof experts makes it possible to arbitrate on problematic use cases\n\n(whether or not to collect personal data, whether or not to rectify a bias, etc.)\n\nand to make objective, reasoned decisions on these issues\n\nV Responsible governance: defining roles and responsibilities is essential\n\nto ensure that responsible solutions are integrated into all the organization's processes\n\nV Model Cards documentation: basic information (= date, version, model type, model creator, licenses, etc.), training data, model architecture, use cases, performance metrics, limitations, etc.\n\nV Systematic request for user consent\n\n#### What's the competitive advantage?\n\n\u00b7 For your customers > trust\n\n. For your organization > robustness, maintenance, compliance (with GDPR and the Al Act, for instance, which also apply to organizations, in particular the GAFAM, operating on European soil)\n\nDON'T\n\nLack of transparency: the failure of StopCovid in France in 2020\n\nThe application was never adopted by the French population. Main grievance: jeopardizing individual liberties due to the tracking of individuals and the storage of their personal data.\n\nAutomating surveillance of employees and their eventual firing Fired by algorithms at Amazon in the US if performance was below expectations.\n\nThis practice raised many complaints, from the tracking of performance by algorithms, the lack of transparency on the factors influencing the decision, to firing by email instead of by HR1.\n\n1 https://www.bloomberg.com/news/ features/2021-06-28/fired-by-bot- amazon-turns-to-machine-managers- and-workers-are-losing-out\n\n## CUSTOMER STORIES: FOSTERING TRANSPARENCY IN DATA SCIENCE FOR ACCELERATED INNOVATION IN BEAUTY TECHNOLOGY\n\n. Challenge: Our client, leader of the beauty industry, needed to rationalize and formalize their Data Science capabilities by implementing standards and best practices, as well as a registry of the different AI models.\n\n. Approach: We helped them build a platform, write the standards (including Responsible Al) and write Model Cards for each model deployed within the company. We also created and moderated a Data Scientist community around this platform to share experience and grow together.\n\n. Outcome: These changes allowed them to step up the development of new projects, improve their quality and ensure greater control of Al initiatives.\n\n<!-- PageFooter: page 11 -->\n<!-- PageBreak -->\n\n",
+    "12": "<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF INTERPRETABILITY AI FAILURE:\n\n- BLACK BOX EFFECT\n\n- UNSTABLE SYSTEM\n\n- LEGAL RISK\n\n## WHO'S IN CHARGE?\n\nCDO DATA TEAMS\n\n## 3\u00b7 Interpretability pillar\n\n### Core concept\n\nEnsure access to the factors (characteristics and/or variables) that determine a model's decisions and/or predictions\n\n### What are the risks?\n\n\u00b7 For your business customers > inability to explain model decisions/predictions. Example: what factors enable an algorithm to establish a medical diagnosis? Or refuse a loan?\n\n\u00b7 For your end customers > discrimination, prejudice against the legal right to know the factors leading to the decision/prediction (black box effect).\n\n\u00b7 For your organization > loss of control over your model (black box effect), legal and compliance risks, business risks\n\nWhere do you start? For directly interpretable algorithms:\n\nV Use simple regressions and decision trees\n\nFor algorithms that are not directly interpretable:\n\nV Add control libraries or algorithmic layers to determine how the model works (Lime and Shape are frequently used tools)\n\nWhat's the competitive advantage?\n\n\u00b7 For your customers > trust\n\n\u00b7 For your organization > control your system, compliance, rigorous customer service (= giving objective reasons to end customers)\n\n## WHAT IS A \"BLACK BOX EFFECT\"?\n\nIt's the inability to explain how an algorithmic model makes its decisions. In other words, it's providing the link between the initial data and the final decision.\n\n## DIRECTLY, NOT DIRECTLY INTERPRETABLE: WHAT'S THE DIFFERENCE?\n\nThere are 3 types of directly interpretable algorithm: linear regression, logistic regression and the simple decision tree. This type of algorithm provides direct access to a model's characteristics.\n\nOther algorithms are not directly interpretable: this is the case for most of the models used: set models, SVMs, artificial neural networks, etc. In these cases, additional toolboxes are needed to access the interpretability of the model and prediction.\n\n## CUSTOMER STORIES: UNRAVELING INSIGHTS WITH STATE-OF-THE-ART INTERPRETABILITY METHODS\n\n\u00b7 Challenge: The client needed a better understanding of the factors influencing their marketing levers in order to make informed decisions.\n\n. Approach: We developed and implemented state-of-the-art interpretability methods to break down the different effects using an Explainable Boosting Machine (EBM).\n\n. Outcome: This allowed our client to better steer their marketing investments, with greater control and understanding of the underlying factors, leading to increased ROI of their marketing campaigns.\n\n<!-- PageFooter: page 12 -->\n<!-- PageBreak -->\n\n",
+    "13": "<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF EXPLAINABILITY AI FAILURE:\n\n- ADOPTION PROBLEM\n\n## WHO'S IN CHARGE?\n\nUX DESIGNERS DATA TEAMS DEVELOPERS\n\n## 4. Explainability pillar\n\n### Core concept Explain a model's decision/prediction through a user/business interface\n\nWhat are the risks?\n\n\u00b7 For your business customers > non-adoption of a solution, mistrust\n\n\u00b7 For your end customers > dissatisfaction, lack of information\n\n\u00b7 For your organization > impact on productivity and business\n\nWhere do you start?\n\nV Build UX with and according to the business needs and business language (=medical terms for doctors, financial terms for banks, etc.)\n\nV Implement almost systematic requests for feedback\n\n(= business user satisfaction survey)\n\nWhat's the competitive advantage?\n\n\u00b7 For your customers > trust\n\n\u00b7 For your organization > robustness, maintenance, compliance (with GDPR and the Al Act, for instance, which also apply to organizations, in particular the GAFAM, operating on European soil)\n\n## INTERPRETABILITY, EXPLAINABILITY: WHAT'S THE DIFFERENCE?\n\nThe interpretability pillar consists in configuring an algorithmic model to allow access to the factors that influence predictions/decisions throughout the Al lifecycle. This work is carried out by a data scientist.\n\nThe explainability pillar consists in explaining the results (derived from interpretability) to the users of an Al solution (so that they can understand them and adopt the solution).\n\n## KEEP HUMANS IN THE LOOP\n\nIt refers to the practice of preserving human involvement and oversight in the decision-making processes of artificial intelligence systems. This involvement ensures accountability and helps prevent potential biases or errors in Al-driven decisions. Moreover, by preserving the fundamental human need for control and agency in decision- making processes, it fosters adoption of the solution.\n\n## CUSTOMER STORIES: CRAFTING EXPLAINABLE SOLUTIONS FOR ENHANCED ADOPTION THROUGH USER-CENTRIC APPROACHES\n\n\u00b7 Challenge: We build all our solutions with explainability by design. For users, to understand where the recommendations of the algorithms are coming from is key for trust and adoption. For example, we have two customers from very different industries (food and publishing) both wanting a solution displaying the performance of their point of sales on interactive maps.\n\n. Approach: Different types of users, from different businesses, need different types of information. User experience interviews are essential to understand their specific needs, and frequent user tests during the development allow the interface to be tweaked to be as relevant as possible.\n\n. Outcome: The interfaces produced for both clients were very different, addressing the specific needs of each, increasing user satisfaction and adoption rates. This method establishes a foundation of trust through customized interfaces, that is adapted to diverse user needs.\n\n<!-- PageFooter: page 13 -->\n<!-- PageBreak -->\n\n",
+    "14": "<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF VIGILANCE AI FAILURE:\n\n- DISCRIMINATION\n\n- ADDICTIVE PROCESSES (=Gamification, misuse of recommendations)\n\n- SCANDALS\n\n## WHO'S IN CHARGE?\n\nEXCOM CDO DATA TEAMS IT MANAGEMENT\n\n## 5\u00b7 Vigilance pillar\n\n### Core concept\n\nAvoid prejudice to the users' interests, in particular discriminatory biases and addictive processes\n\n### What are the risks?\n\n\u00b7 For your end customers > Discrimination based on gender, age, skin color, nationality, sexual orientation, etc.\n\n\u00b7 For your organization > brand image/reputation, ethics and compliance issues, loss of customers\n\nWhere do you start?\n\nV Building inclusive/diverse development teams\n\nV Creation of checklists to standardize bias checks*\n\nV Add algorithmic layers to verify the absence of bias, particularly in the selection\n\nof input data and output predictions\n\nV Bias correction/mitigation\n\n### What's the competitive advantage?\n\n\u00b7 For your end customers > trust\n\n\u00b7 For your business customers > service satisfaction, development of new marketing or sales strategies\n\n(= a properly identified bias can be used to target new categories of people, products or services in the market, which would have previously been excluded. See business case below)\n\n\u00b7 For your organization > compliance, respect for fairness\n\n### *BIAS CONTROL: 9 QUESTIONS BEFORE PROCEEDING\n\n- Does my dataset contain personal data?\n\n- If so, are you GDPR compliant?\n\n- Is the data pseudo-anonymized?\n\n- Does my dataset contain populations at risk of discrimination?\n\n- Can my solution have a strong impact on my users?\n\n- Have I tested for potential discrimination?\n\n- Is my dataset balanced?\n\n- Is there a risk of bias in the way the data was collected?\n\n- Do I have a diverse team of data scientists?\n\n## CUSTOMER STORIES: BREAKING GENDER BIAS IN TARGETED MARKETING FOR A CAR MANUFACTURER\n\n. Challenge: A car manufacturer scoring their client base to target those with a high probability of buying a second car, were concerned that the model was biased in favor of men.\n\n. Approach: We performed a bias measurement and observed that women had a lower probability of being targeted. This bias limited outreach to a significant portion of the customer base and resulted in missed opportunities.\n\n. Outcome: We mitigated the bias without lowering the model's performance and increased the potential client base.\n\n<!-- PageFooter: page 14 -->\n<!-- PageBreak -->\n\n",
+    "15": "<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF ROBUSTNESS AI FAILURE:\n\n- UNSTABLE SYSTEM\n\n- BUGS AND UNPREDICTABLE FAILURES\n\n- CYBERATTACKS\n\n- NO BUSINESS RESPONSIVENESS\n\nWHO'S IN CHARGE?\n\nIT MANAGEMENT CDO DATA TEAMS\n\n## 6\u00b7 Robustness pillar\n\n### Core concept Measure and ensure model performance and stability throughout its lifecycle\n\n#### What are the risks?\n\n\u00b7 For your business customers > incorrect predictions, obsolete solution\n\n\u00b7 For your organization > model maintenance problems, additional financial costs, brand image/reputation and business, industrial espionage, sabotage, ethics and compliance issues, non-reactivity to changes\n\nWhere do you start?\n\nV Deploying a data architecture designed to check the reliability of the prediction results while continuing to integrate new data.\n\nV Operationalize and standardize continuous model training using model training pipelines (thus avoiding drift)\n\nV Implement observability and monitoring of data and the Al by gathering statistics, performance data and metrics to improve system performance\n\n### What's the competitive advantage?\n\n\u00b7 For your business customers > trust, adoption\n\n\u00b7 For your organization > permanently maintained solution, business reactivity in the event of change\n\n(= typical scenarios: arrival of a new competing product on the market or Covid-19 crisis)\n\n## DATA AND MODEL DRIFTS\n\n- Data drift refers to the phenomenon where the characteristics of the input data that an AI model was trained on, gradually diverge from the characteristics of the data it encounters in a real-world production environment. This can occur due to changes in user behavior, shifts in market trends, or other external factors that influence data distribution over time.\n\n- Model drift refers to the situation where an AI model's performance gradually diminishes over time as the underlying assumptions or conditions in the operational environment change. This can occur due to shifts in user preferences, alterations in the business landscape, or other dynamic factors that impact the relevance of the model.\n\n## CUSTOMER STORIES: UNLEASHING THE POWER OF MMM THROUGH PROACTIVE MONITORING AND RETRAINING\n\n\u00b7 Challenge: Putting Mixed Marketing Models (MMM) in production provides the ability to make near real-time adjustments, leading to a more agile and adaptive marketing strategy. However, the performance of the models can decrease over time with market changes.\n\n. Approach: Monitoring and retraining are integral components of mixed marketing models in production. Monitoring ensures that the models produce accurate predictions, while retraining upholds the models' effectiveness over time, adapting to evolving market dynamics.\n\n. Outcome: Together, monitoring and retraining establish a robust feedback loop. This iterative cycle is paramount in preserving the models' effectiveness.\n\n<!-- PageFooter: page 15 -->\n<!-- PageBreak -->\n\n",
+    "16": "<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF SUSTAINABILITY AI FAILURE:\n\n- UNSTABLE SYSTEM\n\n- BUGS AND UNPREDICTABLE FAILURES\n\n- CYBERATTACKS\n\n- NO BUSINESS RESPONSIVENESS\n\n## WHO'S IN CHARGE?\n\nEXCOM CDO IT MANAGEMENT DATA TEAMS FINAL USERS\n\n## 7\u00b7 Sustainability pillar\n\n### Core concept\n\nLimit energy consumption and reduce the system's carbon footprint (= reducing the impact of AI itself)\n\n### What are the risks?\n\n\u00b7 For all > pollution, carbon-based electricity production, contribution to global warming\n\n\u00b7 For your organization > increase IT's contribution to your organization's carbon footprint, brand image/reputation\n\nWhere do you start?\n\nV Measure the carbon footprint of your Al projects to identify potential savings\n\n- By creating dedicated governance and a carbon footprint tracking table\n\n- Install consumption trackers (=free software in open-source libraries such as CodeCarbon) that monitor energy and the impact of electricity consumption\n\nV Reduce consumption\n\n- By using simpler, more frugal models\n\n- Implement good consumer practices.\n\nExample: close clusters on the cloud or your servers.\n\n### What's the competitive advantage?\n\n\u00b7 For all > improved carbon footprint\n\n\u00b7 For your business customers > simplification of systems, easier to check and debug, improved interpretability and vigilance\n\n\u00b7 For your organization > lower energy costs, reduced CO2 emissions\n\n## THE ENERGY COST OF GENAI\n\n- Data drift refers to the phenomenon It is predicted that current AI technology could be on track to consume annually as much electricity as the entire country of Ireland (29.3 terawatt-hours per year)1.\n\n\"A single LLM interaction may consume as much power as leaving a low-brightness LED lightbulb on for one hour.\" -Alex de Vries, VU Amsterdam\n\n1 Read: https://www.cell.com/joule/ fulltext/S2542-4351(23)00365-3? returnURL=https%3A%2F%2Flinkinghub.\n\n## CUSTOMER STORIES: TRACKING AND MINIMIZING THE CARBON FOOTPRINT OF DATA AND AI PROJECTS FOR SUSTAINABLE INNOVATION\n\n\u00b7 Challenge: With the current need to evaluate companies' energy consumption and carbon footprint, many of our customers are concerned about their Data and AI impact. Most cloud providers provide access to a dashboard of overall activity, but without direct measurements of CO2 or energy, and not to the scale of a project or process.\n\n. Approach: We are implementing different tools to track the energy consumption and CO2 emissions of our client's data and Al projects, tools that are either taken from the open-source library or developed by our team. We will then provide recommendations to lower this impact.\n\n. Outcome: We can easily lower by 20-25% the annual carbon footprint of the Data and Al projects. This also leads to financial gains and greater control.\n\n<!-- PageFooter: page 16 -->\n<!-- PageBreak -->\n\n",
+    "17": "<!-- PageHeader: Ekimetrics. -->\n\n## About the authors\n\nAnnabelle Blangero\n\nPhD Neurosciences, Senior Manager Data Science, Lead Responsible Al - Ekimetrics\n\nBoth at Ekimetrics and with her customers, Annabelle supervises Responsible AI practices, setting up standards, processes and tools. She has a PhD in cognitive and computational neuroscience. She has worked at Oxford University and in New York, studying human decision-making mechanisms. in\n\n## Nicolas Chesneau\n\nHead of Innovation, Research and Development - Ekimetrics\n\nNicolas supervises and trains consultants on new machine learning techniques, and works on R&D projects. He has a PhD in video action recognition and has worked as a researcher in object recognition for a company offering retail solutions. He is currently in charge of all things innovation for Ekimetrics.\n\nin\n\n## About us\n\nEkimetrics is a pioneering leader in data science and industrialized solutions. For over 16 years, we've pioneered the use of AI and advanced data science applied to unified marketing measurement, holistic business optimization and broad-ranging sustainability goals.\n\nOur aim is to combine high impact with long-term business purpose.\n\nEkimetrics is one of the world's largest independent analytics firms, with offices on 3 continents and with over 400 data experts. Since 2006, we have led more than one thousand data science projects in over 50 countries, generating more than \u20ac1bn in profit for our customers.\n\nREDEFINING PERFORMANCE\n\nWe help companies rethink the way they operate, so they can reconcile financial KPIs with non-financial goals. We are uniquely specialized in creating scalable data and analytics solutions that drive high-impact optimizations in alignment with overarching brand strategy and sustainability goals.\n\n## Our AI methodology is responsible and certified:\n\n## Ekimetrics is a purpose-driven company:\n\n\"Accelerate organizations' transformation towards sustainability, through the application of data science and artificial intelligence\": We've enshrined this mission in our articles of association.\n\n<!-- PageFooter: page 17 -->\n<!-- PageBreak -->\n\n",
+    "18": "Ekimetrics.\n\n## Contact us\n\nReady to talk or simply curious to learn more? Reach out to our experts to help shape your future measures. marketing@ekimetrics.com\n\nEager for more case studies or data science insights? Visit our website: ekimetrics.com\n\n<!-- PageFooter: page 18 -->\n<!-- PageBreak -->\n\n",
+    "19": ""
+  },
+  "full_text": "Ekimetrics.\n\n# Responsible AI: A competitive edge in the data and GenAI landscape\n\nHow Responsible Al enables the use of data, Al, and Gen Al technologies to create a strategic business advantage\n\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## Introduction\n\n### Understand how and why AI makes a decision...\n\nYou have probably already applied for a loan from a bank. You have submitted your application for review by your account manager. Income, account management, personal situation, residual savings, downpayment: did you know that all these loan approval criteria are already analyzed by algorithms and artificial intelligence (AI)? Objective criteria? Are you sure?! How can you prove that you have not been discriminated against due to a black box effect? So what is a black box effect? It's a bit like trying to study a car engine without being able to open the hood. You input data into the box -the Al, a Machine Learning system for example- and results are output, which may be remarkable ... yet you're unable to explain the process that allowed the algorithm to make its choices. Understanding the reasons behind the decisions made by an algorithm is essential to ensure its accuracy and avoid bias (often the same discriminations as in the \"real world\", linked to gender, age, skin color or nationality1). In other words, the aim is to guarantee equal rights, whether for securing a loan, access to public services, hiring ...\n\n### ... and make it strategic\n\nAnd here's when we need to talk about responsible Al. Let's say that in our first example, you're no longer the one applying for the loan. You're the one who manages the bank or the IT system or the analytics. And for you, \"Responsible AI\" means \"yet more new regulations, more rules to change and implement!\". But if we tell you that responsible AI will help you optimize your costs, beef up your customer service or even your loyalty/satisfaction strategy, and easily maintain your platforms while complying with regulations, perhaps you'll see it as a major opportunity to build future-proof practices and business models. Let's rephrase: responsible AI does not have to be synonymous with constraints and compliance. On the contrary: because it is responsible, this approach to AI creates value and gives companies a true competitive edge.\n\nResponsible AI is all the more critical now that generative AIs (see below) have entered with a bang into all strata of society. The biases remain the same as those of the \"old\" AI. But their effects have multiplied: using colossal volumes of data2 , these \"GenAI\" generate new data, which is in turn used as input for decision-making. How can we trust them, and guarantee that an organization's products and services are reliable? Responsible AI is therefore becoming a cornerstone of business strategy. And we're not talking here about 5, 10 or 15-year business strategies. We're talking about what can be implemented now, with today's know-how and knowledge. This white paper is a practical guide to responsible AI for business.\n\n\\* 1 There are already many examples of algorithmic discriminatory behaviors that led to scandals that have tarnished the reputation and business of large companies. Read: \"Apple card investigated after gender discrimination complaints\", \"Amazon scraps secret Al recruiting tool that showed bias against women\", \"LAPD will end controversial program that aimed to predict where crimes would occur\"\n\n\\* 2 Gartner predicts that, within three years, generative AI will produce 10% of all data, i.e. tens of billions of gigabytes. Read: https://www.gartner.com/en/newsroom/press-releases/2021-10-18-gartner-identifies-the-top-strategic-technology-trends-for-2022\n\n<!-- PageFooter: page 02 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## \u00b7 Generative AI for dummies\n\n### Generative AIs create content...\n\n... as if they were you, based on one of your requests. Text, images, video, sound: they magnify human creative processes; it only takes them a few seconds to generate a text (with ChatGPT3) or an image (with Midjourney).\n\n### What is the difference with the \"old\" AI?\n\nUntil now, AIs were based mainly on \"structured\" data: descriptive, numerical information in spreadsheets (business accounts, temperature measurements for weather forecasts, sales figures, etc.). Generative AIs are based on \"unstructured\" data (text, images, video, sound); in a way, they create \"new\" content.\n\n### What challenges to achieve what success?\n\n### Relevance.\n\nHow do we control hallucinations and biases while respecting the regulatory framework, in a context with a low acceptable error on decision-making? How do we ensure that the content is contextualized and actionable in a specific sector, business, use and time?\n\n<!-- PageFooter: 3 3 GPT-3 and GPT-4 are LLMs (Large Language Models), which are generative AI algorithms, a Deep Learning method, a subset of Machine Learning, itself a subset of Data Science. page 03 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\nGenerative AI's true significance lies in its capacity to address specific problems within well-structured ecosystems. Beyond the hype, it becomes a valuable tool when applying meticulous data preprocessing and interface development to deliver human-readable results, through techniques like Reinforcement Learning from Human Feedback (RLHF) (a technique incorporating the corrections made by annotators to a ranking of answers proposed by the generative AI algorithm. Thanks to RLHF, the algorithm learns to generate responses that would be validated by humans).\n\n>> From a business viewpoint, the goal is to overcome the current pitfalls of AI and LLMs to deliver trustworthy models that exactly and specifically match an organization's strategy and operations.\n\n### Embedding.\n\nHow do we embed these complex models in specific IT legacy and activation tools? How can we be sure they match an organization and its processes? How do we combine them with lighter models and human-led decision-making steps?\n\nIntegrating Generative AI into an ecosystem mirrors traditional data projects, involving data structuring and user-centric refinement. Its unique strength lies in presenting meaningful outcomes to users, through constant adaptation and incorporation of feedback to enhance its accuracy.\n\n>> In practice, AI needs to be fully integrated and embedded in a company's workflows, processes and systems.\n\n### Control.\n\nHow do we control the cost of internalizing such technologies? Beyond the tech component and the training cost, what technical skills are required? How can we trust the security and privacy of these technologies?\n\nMonitoring Generative AI in production poses distinctive challenges compared to traditional algorithms. User feedback and comparisons become pivotal in defining a good model and ensuring long-term effectiveness while mitigating bias. Maintenance efforts are vital to uphold performance quality, and users will play an essential role in adapting to and refining their interactions with Generative AI.\n\n>> Securing access to data requires deploying Responsible AI models by design, compliant with the EU AI Act and developed with weighted models to control for cost and energy consumption.\n\n<!-- PageFooter: page 04 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## \u00b7 Responsible AI for dummies\n\n### The issue of impact.\n\nPreviously, Al was often a matter for specialists - data, sales, marketing, IT, etc. Today, although not everyone works with Machine Learning, anyone can use ChatGPT. In fact, it took this technology just 5 days to pass the million-user mark, and two months to reach 100,000 million.\n\nThis democratization of AI use therefore represents a major turning point: HR, the justice system, public services, etc .: all spheres of society now benefit from it -sometimes with proven and critical societal impacts (see diagram). This democratization requires increased attention to excellence in AI implementation, with stronger monitoring and equal rights protection. Safeguards must therefore be implemented from both a technical and a human standpoint, taking risks into account and correcting them as best we can.\n\n## WHAT ARE BIASES AND WHY ARE THEY DANGEROUS?\n\nSocial bias broadly encompasses disparate treatment or outcomes between social groups, arising from historical and structural power asymmetries. In the context of Natural Language Processing (NLP), this entails representational harms (misrepresentation, stereotyping, unequal system performance, derogatory language, and exclusionary norms) and allocative harms (direct discrimination and indirect discrimination).\n\nDiscrimination is the unjust or prejudicial treatment of different categories of people, especially on the grounds of ethnicity, age, sex, or disability.\n\nA protected attribute is the shared identity trait that determines the group identity of a social group (gender, age, ethnicity, etc.).\n\n<!-- PageFooter: page 05 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## \u00b7 How businesses already use GenAI\n\n### AI in businesses now\n\nThere are five main uses for AI in organizations:\n\n1. Measure and predict operational, financial or environmental performance through key indicators, to inform decision-making\n\n2. Automate tasks and boost productivity\n\n3. Improve customer experience/service, with chatbots available 24/7 or customized options\n\n4. Optimize production lines,\n\nshortening development times and accelerating return on investment\n\n5. Creativity, ideation and brainstorming,\n\none of the new applications brought about by the arrival of generative AI in the business world.\n\nOften opportunistic, the use of AI in organizations has rarely been thought through responsibly by design until now. It's the democratization mentioned earlier that's forcing them to rethink their approach, often to comply with regulations or to avoid losing a competitive edge by remaining in a situation that puts their business at risk.\n\n### GenAIs are expanding into the world of business...\n\n... to win the race against time, cumbersome tasks such as taking minutes at meetings, writing e-mails and summarizing documents can now be performed by generative AIs like ChatGPT. Corollary: employees can refocus their productivity on higher value-added tasks.\n\nBanking4, finance, media, NGOs, ESG players: some sectors are pioneers in the use of these new technologies. In fact, Ekimetrics has already been asked to implement:\n\n. Question answering and sourcing: with their ability to search for information in massive databases, new-generation AIs produce immediate answers to business questions, and can isolate specific criteria (a selection of CVs for HR; or in healthcare, in diagnosis tools or looking up information in research literature, for example). The demand for transparency, explainability and security is driving companies to implement a kind of internal ChatGPT, enabling them to track the source of the information they need. From a technological standpoint, generative AI is most often based on either: - Q&A based on proprietary documentary sources, to guarantee the veracity of the data -which does not preclude Azure's use of GPT - local open-source LLM models, to further increase data security.\n\n. Report completion: the aim here is to fill in reports semi- automatically, such as ESG or financial reports. This advantage also facilitates the work of analysts for their recap memos or to enrich the company's knowledge bases.\n\n. Ideation: a player in the French press asked us to analyze press article archives (spanning several decades) to identify contradictions or subjects insufficiently or not at all covered by the competition, and find new editorial angles.\n\n. Extremely advanced customer segmentation: this involves cross- referencing heterogeneous data to create typical customer paths, with the goal of facilitating strategic decision-making on customer retention or conversion.\n\n. Analysis of customer comments and opinions: Being able to detect the themes most associated with a product in a large dataset of comments, as well as the sentiment expressed by the writer, is a valuable source of information for analyzing how a product is received, its qualities, and the improvements to be made to win over more customers.\n\n<!-- PageFooter: 4 In banking, consider a couple of recent examples: JPMorgan Chase has filed a patent application for a GenAI-powered service to help investors choose equities. Read: https://www.kinandcarta.com/en/insights/2023/08/impactful-genai-applications/. And Morgan Stanley has built a tool to help Relationship Managers deliver relevant ideas to customers in real time. Read: https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai. page 06 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## \u00b7 And mitigating AI risks is a true challenge in business adoption\n\nHallucination, bias, confidentiality: these are the risks and limits that are holding companies back from using AI, through a healthy respect for both the regulatory framework, and a context where the acceptable margin of error in decision-making is low. So what do we mean by this?\n\n\u00b7 Hallucination: generative Als are based on a multitude of documents. When the next word to predict matches the truth, all is well. But otherwise? They must choose one option, and can hallucinate untruths with great aplomb. Users therefore need to be trained to use these AIs properly, and to verify every single claim they make.\n\n. Bias: they are rarely intentional, but algorithmic biases are based on data reflecting human practice. The system can therefore discriminate against a specific group of people. A major obstacle for businesses is to identify potential biases (lack of qualified data), raise awareness among employees and have the resources to do so (a dedicated inclusive team, for instance, or a taxonomy programmed with contextual information), and then deal with the biases.\n\n. Privacy: The confidentiality rules of GenAl, and ChatGPT in particular, are still poorly understood. Bear in mind that any data and/or code sent to one of these platforms is likely to be used for subsequent training, which raises issues of confidentiality of corporate data (or that of its customers) and intellectual property.\n\nOvercoming these risks is not an option, it's a sine qua non condition for some businesses. However, the adoption of AI itself is facilitated when it is designed responsibly from the outset: ethical standards reinforce confidence in its use; responsible practices in critical sectors such as human resources guarantee a positive and equitable societal impact; operational excellence prevents abuse and ensures that the AI is beneficial and reliable... Adopting a responsible AI is thus becoming a crucial approach to minimizing risk.\n\n<!-- PageFooter: page 07 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## . Key Issue\n\n### How do we turn this AI revolution into a competitive advantage?\n\nWe need new \"software\" to tackle this profound change in the way we work, and even in the way we do business. New responsible governance must overcome all the risks generated by the use of AI and generative AI. By evolving into an \"AI-ready\" business, organizations put in place the conditions that will enable them to meet the key business challenges of the future, and perpetuate their business practices and even their business model. It's a moment of truth for organizations: yes, there is a turning point ahead; yet it does not have to be a problem: by implementing a \"responsible-by-design\" approach, organizations are better equipped to deal with the risks -not just compliance risks, but also business risks- created by the exploding use of Al (see pillars).\n\nEkimetrics intends to accompany this revolution with a simple, easy-to-understand framework to support these organizations in their AI transformation and the use of these technologies. We have therefore developed 7 pillars of responsible AI, designed to create this competitive edge (see next chapter).\n\n<!-- PageFooter: page 08 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## \u00b7 Empower business with AI and GenAI solutions through responsible governance\n\nAnticipate future regulations, limit the risk of damage to image and reputation, improve the efficiency, accuracy and durability of models, all while generating value: to meet all these challenges, Ekimetrics has developed 7 pillars of responsible governance, which can be considered true operational and business tools.\n\nTHE 7 PILLARS OF RESPONSIBLE AI AND THEIR BUSINESS ADVANTAGES\n\n<Figure>\nTHE 7 PILLARS OF RESPONSIBLE AI AND THEIR BUSINESS ADVANTAGES\n</Figure>\n\n1. Security\n\nEnsure the security of personal and sensitive data. GDPR compliance. Data Clean Rooms: value of personal data.\n\n2. Transparency\n\nCommunicate intentions clearly regarding data and models. Improve trustworthiness and product adoption. Model cards are important for documentation, transmission, and reuse. Registries are probably needed for the AI Act.\n\n3. Interpretability Provide access to the factors that influenced the decision/prediction. More control, easier to debug. Allows explainability. Required for some products in the AI Act.\n\n4. Explainability Explain the predictions provided by the models, work on the user interfaces. Improve adoption/trust. Human agency.\n\n5. Vigilance\n\nAvoid possible prejudice to the users' interests, exclude discriminatory biases. Scandal prevention. AI Act compliance. Potential new customers.\n\n6. Robustness Measure and ensure performance and stability throughout the system lifecycle. Performance. Control.\n\n7. Sustainability\n\nLimit the system's energy consumption and carbon footprint. Financial gains, simplicity, control, acceleration.\n\n<!-- PageFooter: page 09 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n### TYPES OF SECURITY AI FAILURE:\n\n- DATA BREACH OR LEAKAGE\n\n- NON-COMPLIANCE\n\n- RANSOMWARE / MALWARE\n\n- PHISHING\n\n- FAKE NEWS\n\n- MODEL AND DATA POISONING\n\n### WHO'S IN CHARGE?\n\nEXCOM DPO\n\nCOMPLIANCE/LEGAL IT MANAGEMENT DATA TEAMS FINAL USERS\n\n## 1. Security pillar\n\n### Core concept\n\nEnsure the protection and control of your customers' or users' personal data and your organization's sensitive data.\n\nWhat are the risks?\n\n\u00b7 For your end customers > disclosure and misuse\n\nof their data, possibly damaging to their image\n\n\u00b7 For your organization > brand image/reputation and business, industrial espionage, sabotage, ethics and compliance issues, GDPR fines\n\nWhere do you start? If you use a public tool like ChatGPT:\n\nV Don't share any personal or confidential data, whether about your customers or your organization\n\nV Do not provide information protected by intellectual property rights\n\nV Do not use the generated answers without first ensuring that they are reliable\n\nIf you have concerns about GAFAM technologies:\n\nv Customize your own open-source GenAl\n\nV Train: whether it's your teams ... or your Machine Learning algorithms\n\nV Set up Data Clean Rooms\n\n(=a secure environment allowing at least two entities to share and centralize data within an anonymized platform)\n\n### What's the competitive advantage?\n\n\u00b7 For your customers > reputation, loyalty\n\n. For your organization > robustness, maintenance, compliance (with GDPR and the Al Act,\n\nfor instance, which also apply to organizations, in particular the GAFAM, operating on European soil)\n\n## EXAMPLES OF CONFIDENTIAL DATA\n\nPersonal data\n\n- first & last name - postal or e-mail addresses - ID document number\n\n- location data - IP address or cookie identifier - your phone's advertising identifier - medical records\n\nSensitive data - Financial reports - Business plan\n\n- Product innovation\n\nDON'T X\n\nChatGPT: Samsung\n\nemployees leak sensitive data Using ChatGPT to correct errors in their source code, engineers at the Korean company leaked sensitive information1. The chatbot stores everything and uses the conversations to improve and re-train its models. Samsung has since banned the use of this generative AI internally and plans to develop its own AI.\n\n1 Read: https://economist.co.kr/article/ view/ecn202303300057?s=31\n\n## CUSTOMER STORIES: EMPOWERING A SPORTS COMPANY'S DATA STRATEGY THROUGH DATA CLEAN ROOMS\n\n. Challenge: The disappearance of third-party cookies and lower tracking consent rates are challenging companies' marketing models to extract insights from the massive amount of data available.\n\n. Approach: We are helping a sports company take the next step in the design and development of Data Clean Room analytics capabilities, considered a priority of the strategic plan going forward.\n\n. Outcome: initial gains to be achieved by proving value on a restricted scope before scaling to the rest of the activity.\n\n<!-- PageFooter: page 10 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF TRANSPARENCY AI FAILURE:\n\n- NON-ADOPTION\n\n- MISINFORMATION\n\n- REPUTATION\n\n## WHO'S IN CHARGE?\n\nEXCOM\n\nCDO\n\nIT MANAGEMENT DATA TEAMS\n\nFINAL USERS\n\n## 2\u00b7 Transparency pillar\n\n### Core concept Document and communicate clearly about data retrieval and processing (methods and values)\n\nWhat are the risks?\n\n\u00b7 For your end customers > loss of trust, adoption problems\n\n\u00b7 For your organization > brand image/reputation, loss of revenue\n\nWhere do you start?\n\nV Creation of an internal/external ethics charter specifying the company's values regarding its use of AI (values, dos and don'ts for using a GenAI (e.g. ChatGPT), etc.)\n\nV Setting up an ethics committee: ethical Al is not a formalized field. Setting up a committee\n\nof experts makes it possible to arbitrate on problematic use cases\n\n(whether or not to collect personal data, whether or not to rectify a bias, etc.)\n\nand to make objective, reasoned decisions on these issues\n\nV Responsible governance: defining roles and responsibilities is essential\n\nto ensure that responsible solutions are integrated into all the organization's processes\n\nV Model Cards documentation: basic information (= date, version, model type, model creator, licenses, etc.), training data, model architecture, use cases, performance metrics, limitations, etc.\n\nV Systematic request for user consent\n\n#### What's the competitive advantage?\n\n\u00b7 For your customers > trust\n\n. For your organization > robustness, maintenance, compliance (with GDPR and the Al Act, for instance, which also apply to organizations, in particular the GAFAM, operating on European soil)\n\nDON'T\n\nLack of transparency: the failure of StopCovid in France in 2020\n\nThe application was never adopted by the French population. Main grievance: jeopardizing individual liberties due to the tracking of individuals and the storage of their personal data.\n\nAutomating surveillance of employees and their eventual firing Fired by algorithms at Amazon in the US if performance was below expectations.\n\nThis practice raised many complaints, from the tracking of performance by algorithms, the lack of transparency on the factors influencing the decision, to firing by email instead of by HR1.\n\n1 https://www.bloomberg.com/news/ features/2021-06-28/fired-by-bot- amazon-turns-to-machine-managers- and-workers-are-losing-out\n\n## CUSTOMER STORIES: FOSTERING TRANSPARENCY IN DATA SCIENCE FOR ACCELERATED INNOVATION IN BEAUTY TECHNOLOGY\n\n. Challenge: Our client, leader of the beauty industry, needed to rationalize and formalize their Data Science capabilities by implementing standards and best practices, as well as a registry of the different AI models.\n\n. Approach: We helped them build a platform, write the standards (including Responsible Al) and write Model Cards for each model deployed within the company. We also created and moderated a Data Scientist community around this platform to share experience and grow together.\n\n. Outcome: These changes allowed them to step up the development of new projects, improve their quality and ensure greater control of Al initiatives.\n\n<!-- PageFooter: page 11 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF INTERPRETABILITY AI FAILURE:\n\n- BLACK BOX EFFECT\n\n- UNSTABLE SYSTEM\n\n- LEGAL RISK\n\n## WHO'S IN CHARGE?\n\nCDO DATA TEAMS\n\n## 3\u00b7 Interpretability pillar\n\n### Core concept\n\nEnsure access to the factors (characteristics and/or variables) that determine a model's decisions and/or predictions\n\n### What are the risks?\n\n\u00b7 For your business customers > inability to explain model decisions/predictions. Example: what factors enable an algorithm to establish a medical diagnosis? Or refuse a loan?\n\n\u00b7 For your end customers > discrimination, prejudice against the legal right to know the factors leading to the decision/prediction (black box effect).\n\n\u00b7 For your organization > loss of control over your model (black box effect), legal and compliance risks, business risks\n\nWhere do you start? For directly interpretable algorithms:\n\nV Use simple regressions and decision trees\n\nFor algorithms that are not directly interpretable:\n\nV Add control libraries or algorithmic layers to determine how the model works (Lime and Shape are frequently used tools)\n\nWhat's the competitive advantage?\n\n\u00b7 For your customers > trust\n\n\u00b7 For your organization > control your system, compliance, rigorous customer service (= giving objective reasons to end customers)\n\n## WHAT IS A \"BLACK BOX EFFECT\"?\n\nIt's the inability to explain how an algorithmic model makes its decisions. In other words, it's providing the link between the initial data and the final decision.\n\n## DIRECTLY, NOT DIRECTLY INTERPRETABLE: WHAT'S THE DIFFERENCE?\n\nThere are 3 types of directly interpretable algorithm: linear regression, logistic regression and the simple decision tree. This type of algorithm provides direct access to a model's characteristics.\n\nOther algorithms are not directly interpretable: this is the case for most of the models used: set models, SVMs, artificial neural networks, etc. In these cases, additional toolboxes are needed to access the interpretability of the model and prediction.\n\n## CUSTOMER STORIES: UNRAVELING INSIGHTS WITH STATE-OF-THE-ART INTERPRETABILITY METHODS\n\n\u00b7 Challenge: The client needed a better understanding of the factors influencing their marketing levers in order to make informed decisions.\n\n. Approach: We developed and implemented state-of-the-art interpretability methods to break down the different effects using an Explainable Boosting Machine (EBM).\n\n. Outcome: This allowed our client to better steer their marketing investments, with greater control and understanding of the underlying factors, leading to increased ROI of their marketing campaigns.\n\n<!-- PageFooter: page 12 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF EXPLAINABILITY AI FAILURE:\n\n- ADOPTION PROBLEM\n\n## WHO'S IN CHARGE?\n\nUX DESIGNERS DATA TEAMS DEVELOPERS\n\n## 4. Explainability pillar\n\n### Core concept Explain a model's decision/prediction through a user/business interface\n\nWhat are the risks?\n\n\u00b7 For your business customers > non-adoption of a solution, mistrust\n\n\u00b7 For your end customers > dissatisfaction, lack of information\n\n\u00b7 For your organization > impact on productivity and business\n\nWhere do you start?\n\nV Build UX with and according to the business needs and business language (=medical terms for doctors, financial terms for banks, etc.)\n\nV Implement almost systematic requests for feedback\n\n(= business user satisfaction survey)\n\nWhat's the competitive advantage?\n\n\u00b7 For your customers > trust\n\n\u00b7 For your organization > robustness, maintenance, compliance (with GDPR and the Al Act, for instance, which also apply to organizations, in particular the GAFAM, operating on European soil)\n\n## INTERPRETABILITY, EXPLAINABILITY: WHAT'S THE DIFFERENCE?\n\nThe interpretability pillar consists in configuring an algorithmic model to allow access to the factors that influence predictions/decisions throughout the Al lifecycle. This work is carried out by a data scientist.\n\nThe explainability pillar consists in explaining the results (derived from interpretability) to the users of an Al solution (so that they can understand them and adopt the solution).\n\n## KEEP HUMANS IN THE LOOP\n\nIt refers to the practice of preserving human involvement and oversight in the decision-making processes of artificial intelligence systems. This involvement ensures accountability and helps prevent potential biases or errors in Al-driven decisions. Moreover, by preserving the fundamental human need for control and agency in decision- making processes, it fosters adoption of the solution.\n\n## CUSTOMER STORIES: CRAFTING EXPLAINABLE SOLUTIONS FOR ENHANCED ADOPTION THROUGH USER-CENTRIC APPROACHES\n\n\u00b7 Challenge: We build all our solutions with explainability by design. For users, to understand where the recommendations of the algorithms are coming from is key for trust and adoption. For example, we have two customers from very different industries (food and publishing) both wanting a solution displaying the performance of their point of sales on interactive maps.\n\n. Approach: Different types of users, from different businesses, need different types of information. User experience interviews are essential to understand their specific needs, and frequent user tests during the development allow the interface to be tweaked to be as relevant as possible.\n\n. Outcome: The interfaces produced for both clients were very different, addressing the specific needs of each, increasing user satisfaction and adoption rates. This method establishes a foundation of trust through customized interfaces, that is adapted to diverse user needs.\n\n<!-- PageFooter: page 13 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF VIGILANCE AI FAILURE:\n\n- DISCRIMINATION\n\n- ADDICTIVE PROCESSES (=Gamification, misuse of recommendations)\n\n- SCANDALS\n\n## WHO'S IN CHARGE?\n\nEXCOM CDO DATA TEAMS IT MANAGEMENT\n\n## 5\u00b7 Vigilance pillar\n\n### Core concept\n\nAvoid prejudice to the users' interests, in particular discriminatory biases and addictive processes\n\n### What are the risks?\n\n\u00b7 For your end customers > Discrimination based on gender, age, skin color, nationality, sexual orientation, etc.\n\n\u00b7 For your organization > brand image/reputation, ethics and compliance issues, loss of customers\n\nWhere do you start?\n\nV Building inclusive/diverse development teams\n\nV Creation of checklists to standardize bias checks*\n\nV Add algorithmic layers to verify the absence of bias, particularly in the selection\n\nof input data and output predictions\n\nV Bias correction/mitigation\n\n### What's the competitive advantage?\n\n\u00b7 For your end customers > trust\n\n\u00b7 For your business customers > service satisfaction, development of new marketing or sales strategies\n\n(= a properly identified bias can be used to target new categories of people, products or services in the market, which would have previously been excluded. See business case below)\n\n\u00b7 For your organization > compliance, respect for fairness\n\n### *BIAS CONTROL: 9 QUESTIONS BEFORE PROCEEDING\n\n- Does my dataset contain personal data?\n\n- If so, are you GDPR compliant?\n\n- Is the data pseudo-anonymized?\n\n- Does my dataset contain populations at risk of discrimination?\n\n- Can my solution have a strong impact on my users?\n\n- Have I tested for potential discrimination?\n\n- Is my dataset balanced?\n\n- Is there a risk of bias in the way the data was collected?\n\n- Do I have a diverse team of data scientists?\n\n## CUSTOMER STORIES: BREAKING GENDER BIAS IN TARGETED MARKETING FOR A CAR MANUFACTURER\n\n. Challenge: A car manufacturer scoring their client base to target those with a high probability of buying a second car, were concerned that the model was biased in favor of men.\n\n. Approach: We performed a bias measurement and observed that women had a lower probability of being targeted. This bias limited outreach to a significant portion of the customer base and resulted in missed opportunities.\n\n. Outcome: We mitigated the bias without lowering the model's performance and increased the potential client base.\n\n<!-- PageFooter: page 14 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF ROBUSTNESS AI FAILURE:\n\n- UNSTABLE SYSTEM\n\n- BUGS AND UNPREDICTABLE FAILURES\n\n- CYBERATTACKS\n\n- NO BUSINESS RESPONSIVENESS\n\nWHO'S IN CHARGE?\n\nIT MANAGEMENT CDO DATA TEAMS\n\n## 6\u00b7 Robustness pillar\n\n### Core concept Measure and ensure model performance and stability throughout its lifecycle\n\n#### What are the risks?\n\n\u00b7 For your business customers > incorrect predictions, obsolete solution\n\n\u00b7 For your organization > model maintenance problems, additional financial costs, brand image/reputation and business, industrial espionage, sabotage, ethics and compliance issues, non-reactivity to changes\n\nWhere do you start?\n\nV Deploying a data architecture designed to check the reliability of the prediction results while continuing to integrate new data.\n\nV Operationalize and standardize continuous model training using model training pipelines (thus avoiding drift)\n\nV Implement observability and monitoring of data and the Al by gathering statistics, performance data and metrics to improve system performance\n\n### What's the competitive advantage?\n\n\u00b7 For your business customers > trust, adoption\n\n\u00b7 For your organization > permanently maintained solution, business reactivity in the event of change\n\n(= typical scenarios: arrival of a new competing product on the market or Covid-19 crisis)\n\n## DATA AND MODEL DRIFTS\n\n- Data drift refers to the phenomenon where the characteristics of the input data that an AI model was trained on, gradually diverge from the characteristics of the data it encounters in a real-world production environment. This can occur due to changes in user behavior, shifts in market trends, or other external factors that influence data distribution over time.\n\n- Model drift refers to the situation where an AI model's performance gradually diminishes over time as the underlying assumptions or conditions in the operational environment change. This can occur due to shifts in user preferences, alterations in the business landscape, or other dynamic factors that impact the relevance of the model.\n\n## CUSTOMER STORIES: UNLEASHING THE POWER OF MMM THROUGH PROACTIVE MONITORING AND RETRAINING\n\n\u00b7 Challenge: Putting Mixed Marketing Models (MMM) in production provides the ability to make near real-time adjustments, leading to a more agile and adaptive marketing strategy. However, the performance of the models can decrease over time with market changes.\n\n. Approach: Monitoring and retraining are integral components of mixed marketing models in production. Monitoring ensures that the models produce accurate predictions, while retraining upholds the models' effectiveness over time, adapting to evolving market dynamics.\n\n. Outcome: Together, monitoring and retraining establish a robust feedback loop. This iterative cycle is paramount in preserving the models' effectiveness.\n\n<!-- PageFooter: page 15 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## TYPES OF SUSTAINABILITY AI FAILURE:\n\n- UNSTABLE SYSTEM\n\n- BUGS AND UNPREDICTABLE FAILURES\n\n- CYBERATTACKS\n\n- NO BUSINESS RESPONSIVENESS\n\n## WHO'S IN CHARGE?\n\nEXCOM CDO IT MANAGEMENT DATA TEAMS FINAL USERS\n\n## 7\u00b7 Sustainability pillar\n\n### Core concept\n\nLimit energy consumption and reduce the system's carbon footprint (= reducing the impact of AI itself)\n\n### What are the risks?\n\n\u00b7 For all > pollution, carbon-based electricity production, contribution to global warming\n\n\u00b7 For your organization > increase IT's contribution to your organization's carbon footprint, brand image/reputation\n\nWhere do you start?\n\nV Measure the carbon footprint of your Al projects to identify potential savings\n\n- By creating dedicated governance and a carbon footprint tracking table\n\n- Install consumption trackers (=free software in open-source libraries such as CodeCarbon) that monitor energy and the impact of electricity consumption\n\nV Reduce consumption\n\n- By using simpler, more frugal models\n\n- Implement good consumer practices.\n\nExample: close clusters on the cloud or your servers.\n\n### What's the competitive advantage?\n\n\u00b7 For all > improved carbon footprint\n\n\u00b7 For your business customers > simplification of systems, easier to check and debug, improved interpretability and vigilance\n\n\u00b7 For your organization > lower energy costs, reduced CO2 emissions\n\n## THE ENERGY COST OF GENAI\n\n- Data drift refers to the phenomenon It is predicted that current AI technology could be on track to consume annually as much electricity as the entire country of Ireland (29.3 terawatt-hours per year)1.\n\n\"A single LLM interaction may consume as much power as leaving a low-brightness LED lightbulb on for one hour.\" -Alex de Vries, VU Amsterdam\n\n1 Read: https://www.cell.com/joule/ fulltext/S2542-4351(23)00365-3? returnURL=https%3A%2F%2Flinkinghub.\n\n## CUSTOMER STORIES: TRACKING AND MINIMIZING THE CARBON FOOTPRINT OF DATA AND AI PROJECTS FOR SUSTAINABLE INNOVATION\n\n\u00b7 Challenge: With the current need to evaluate companies' energy consumption and carbon footprint, many of our customers are concerned about their Data and AI impact. Most cloud providers provide access to a dashboard of overall activity, but without direct measurements of CO2 or energy, and not to the scale of a project or process.\n\n. Approach: We are implementing different tools to track the energy consumption and CO2 emissions of our client's data and Al projects, tools that are either taken from the open-source library or developed by our team. We will then provide recommendations to lower this impact.\n\n. Outcome: We can easily lower by 20-25% the annual carbon footprint of the Data and Al projects. This also leads to financial gains and greater control.\n\n<!-- PageFooter: page 16 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: Ekimetrics. -->\n\n## About the authors\n\nAnnabelle Blangero\n\nPhD Neurosciences, Senior Manager Data Science, Lead Responsible Al - Ekimetrics\n\nBoth at Ekimetrics and with her customers, Annabelle supervises Responsible AI practices, setting up standards, processes and tools. She has a PhD in cognitive and computational neuroscience. She has worked at Oxford University and in New York, studying human decision-making mechanisms. in\n\n## Nicolas Chesneau\n\nHead of Innovation, Research and Development - Ekimetrics\n\nNicolas supervises and trains consultants on new machine learning techniques, and works on R&D projects. He has a PhD in video action recognition and has worked as a researcher in object recognition for a company offering retail solutions. He is currently in charge of all things innovation for Ekimetrics.\n\nin\n\n## About us\n\nEkimetrics is a pioneering leader in data science and industrialized solutions. For over 16 years, we've pioneered the use of AI and advanced data science applied to unified marketing measurement, holistic business optimization and broad-ranging sustainability goals.\n\nOur aim is to combine high impact with long-term business purpose.\n\nEkimetrics is one of the world's largest independent analytics firms, with offices on 3 continents and with over 400 data experts. Since 2006, we have led more than one thousand data science projects in over 50 countries, generating more than \u20ac1bn in profit for our customers.\n\nREDEFINING PERFORMANCE\n\nWe help companies rethink the way they operate, so they can reconcile financial KPIs with non-financial goals. We are uniquely specialized in creating scalable data and analytics solutions that drive high-impact optimizations in alignment with overarching brand strategy and sustainability goals.\n\n## Our AI methodology is responsible and certified:\n\n## Ekimetrics is a purpose-driven company:\n\n\"Accelerate organizations' transformation towards sustainability, through the application of data science and artificial intelligence\": We've enshrined this mission in our articles of association.\n\n<!-- PageFooter: page 17 -->\n<!-- PageBreak -->\n\nEkimetrics.\n\n## Contact us\n\nReady to talk or simply curious to learn more? Reach out to our experts to help shape your future measures. marketing@ekimetrics.com\n\nEager for more case studies or data science insights? Visit our website: ekimetrics.com\n\n<!-- PageFooter: page 18 -->\n<!-- PageBreak -->\n\n",
+  "split_points": [
+    13,
+    197,
+    217,
+    251,
+    1452,
+    2328,
+    3720,
+    3749,
+    3769,
+    3803,
+    4096,
+    4455,
+    4779,
+    4985,
+    5005,
+    5039,
+    5804,
+    6446,
+    7263,
+    7292,
+    7312,
+    7346,
+    8214,
+    8970,
+    8999,
+    9019,
+    9053,
+    10011,
+    10498,
+    11290,
+    12328,
+    12819,
+    12839,
+    12873,
+    14889,
+    14918,
+    14938,
+    14972,
+    15825,
+    16129,
+    16158,
+    16178,
+    16212,
+    16679,
+    16761,
+    17854,
+    17883,
+    17903,
+    17937,
+    18093,
+    18181,
+    19215,
+    19491,
+    20227,
+    20833,
+    20862,
+    20882,
+    20916,
+    21002,
+    21074,
+    22257,
+    23242,
+    23999,
+    24028,
+    24048,
+    24082,
+    24177,
+    24214,
+    24382,
+    25337,
+    25537,
+    26058,
+    26656,
+    26685,
+    26705,
+    26739,
+    26799,
+    26856,
+    27701,
+    28163,
+    28584,
+    29633,
+    29662,
+    29682,
+    29716,
+    29847,
+    29904,
+    30048,
+    30565,
+    30985,
+    31448,
+    32056,
+    32085,
+    32105,
+    32139,
+    32323,
+    33162,
+    33445,
+    34178,
+    34960,
+    34989,
+    35009,
+    35043,
+    35183,
+    35252,
+    35403,
+    36125,
+    36399,
+    36881,
+    37769,
+    37798,
+    37818,
+    37852,
+    38268,
+    38660,
+    39610,
+    39905,
+    39934,
+    39954,
+    39967,
+    40205,
+    40234
+  ],
+  "titles": [
+    {
+      "title": "# Responsible AI: A competitive edge in the data and GenAI landscape",
+      "start": 13,
+      "level": 1,
+      "end": 40254
+    },
+    {
+      "title": "## Introduction",
+      "start": 251,
+      "level": 2,
+      "end": 3803
+    },
+    {
+      "title": "### Understand how and why AI makes a decision...",
+      "start": 268,
+      "level": 3,
+      "end": 1452
+    },
+    {
+      "title": "### ... and make it strategic",
+      "start": 1452,
+      "level": 3,
+      "end": 3803
+    },
+    {
+      "title": "## \u00b7 Generative AI for dummies",
+      "start": 3803,
+      "level": 2,
+      "end": 7346
+    },
+    {
+      "title": "### Generative AIs create content...",
+      "start": 3835,
+      "level": 3,
+      "end": 4096
+    },
+    {
+      "title": "### What is the difference with the \"old\" AI?",
+      "start": 4096,
+      "level": 3,
+      "end": 4455
+    },
+    {
+      "title": "### What challenges to achieve what success?",
+      "start": 4455,
+      "level": 3,
+      "end": 4501
+    },
+    {
+      "title": "### Relevance.",
+      "start": 4501,
+      "level": 3,
+      "end": 5804
+    },
+    {
+      "title": "### Embedding.",
+      "start": 5804,
+      "level": 3,
+      "end": 6446
+    },
+    {
+      "title": "### Control.",
+      "start": 6446,
+      "level": 3,
+      "end": 7346
+    },
+    {
+      "title": "## \u00b7 Responsible AI for dummies",
+      "start": 7346,
+      "level": 2,
+      "end": 8214
+    },
+    {
+      "title": "### The issue of impact.",
+      "start": 7379,
+      "level": 3,
+      "end": 8214
+    },
+    {
+      "title": "## WHAT ARE BIASES AND WHY ARE THEY DANGEROUS?",
+      "start": 8214,
+      "level": 2,
+      "end": 9053
+    },
+    {
+      "title": "## \u00b7 How businesses already use GenAI",
+      "start": 9053,
+      "level": 2,
+      "end": 12873
+    },
+    {
+      "title": "### AI in businesses now",
+      "start": 9092,
+      "level": 3,
+      "end": 10011
+    },
+    {
+      "title": "### GenAIs are expanding into the world of business...",
+      "start": 10011,
+      "level": 3,
+      "end": 12873
+    },
+    {
+      "title": "## \u00b7 And mitigating AI risks is a true challenge in business adoption",
+      "start": 12873,
+      "level": 2,
+      "end": 14972
+    },
+    {
+      "title": "## . Key Issue",
+      "start": 14972,
+      "level": 2,
+      "end": 16212
+    },
+    {
+      "title": "### How do we turn this AI revolution into a competitive advantage?",
+      "start": 14988,
+      "level": 3,
+      "end": 16212
+    },
+    {
+      "title": "## \u00b7 Empower business with AI and GenAI solutions through responsible governance",
+      "start": 16212,
+      "level": 2,
+      "end": 18181
+    },
+    {
+      "title": "### TYPES OF SECURITY AI FAILURE:",
+      "start": 17937,
+      "level": 3,
+      "end": 18093
+    },
+    {
+      "title": "### WHO'S IN CHARGE?",
+      "start": 18093,
+      "level": 3,
+      "end": 18181
+    },
+    {
+      "title": "## 1. Security pillar",
+      "start": 18181,
+      "level": 2,
+      "end": 19491
+    },
+    {
+      "title": "### Core concept",
+      "start": 18204,
+      "level": 3,
+      "end": 19215
+    },
+    {
+      "title": "### What's the competitive advantage?",
+      "start": 19215,
+      "level": 3,
+      "end": 19491
+    },
+    {
+      "title": "## EXAMPLES OF CONFIDENTIAL DATA",
+      "start": 19491,
+      "level": 2,
+      "end": 20227
+    },
+    {
+      "title": "## CUSTOMER STORIES: EMPOWERING A SPORTS COMPANY'S DATA STRATEGY THROUGH DATA CLEAN ROOMS",
+      "start": 20227,
+      "level": 2,
+      "end": 20916
+    },
+    {
+      "title": "## TYPES OF TRANSPARENCY AI FAILURE:",
+      "start": 20916,
+      "level": 2,
+      "end": 21002
+    },
+    {
+      "title": "## WHO'S IN CHARGE?",
+      "start": 21002,
+      "level": 2,
+      "end": 21074
+    },
+    {
+      "title": "## 2\u00b7 Transparency pillar",
+      "start": 21074,
+      "level": 2,
+      "end": 23242
+    },
+    {
+      "title": "### Core concept Document and communicate clearly about data retrieval and processing (methods and values)",
+      "start": 21101,
+      "level": 3,
+      "end": 23242
+    },
+    {
+      "title": "#### What's the competitive advantage?",
+      "start": 22257,
+      "level": 4,
+      "end": 23242
+    },
+    {
+      "title": "## CUSTOMER STORIES: FOSTERING TRANSPARENCY IN DATA SCIENCE FOR ACCELERATED INNOVATION IN BEAUTY TECHNOLOGY",
+      "start": 23242,
+      "level": 2,
+      "end": 24082
+    },
+    {
+      "title": "## TYPES OF INTERPRETABILITY AI FAILURE:",
+      "start": 24082,
+      "level": 2,
+      "end": 24177
+    },
+    {
+      "title": "## WHO'S IN CHARGE?",
+      "start": 24177,
+      "level": 2,
+      "end": 24214
+    },
+    {
+      "title": "## 3\u00b7 Interpretability pillar",
+      "start": 24214,
+      "level": 2,
+      "end": 25337
+    },
+    {
+      "title": "### Core concept",
+      "start": 24245,
+      "level": 3,
+      "end": 24382
+    },
+    {
+      "title": "### What are the risks?",
+      "start": 24382,
+      "level": 3,
+      "end": 25337
+    },
+    {
+      "title": "## WHAT IS A \"BLACK BOX EFFECT\"?",
+      "start": 25337,
+      "level": 2,
+      "end": 25537
+    },
+    {
+      "title": "## DIRECTLY, NOT DIRECTLY INTERPRETABLE: WHAT'S THE DIFFERENCE?",
+      "start": 25537,
+      "level": 2,
+      "end": 26058
+    },
+    {
+      "title": "## CUSTOMER STORIES: UNRAVELING INSIGHTS WITH STATE-OF-THE-ART INTERPRETABILITY METHODS",
+      "start": 26058,
+      "level": 2,
+      "end": 26739
+    },
+    {
+      "title": "## TYPES OF EXPLAINABILITY AI FAILURE:",
+      "start": 26739,
+      "level": 2,
+      "end": 26799
+    },
+    {
+      "title": "## WHO'S IN CHARGE?",
+      "start": 26799,
+      "level": 2,
+      "end": 26856
+    },
+    {
+      "title": "## 4. Explainability pillar",
+      "start": 26856,
+      "level": 2,
+      "end": 27701
+    },
+    {
+      "title": "### Core concept Explain a model's decision/prediction through a user/business interface",
+      "start": 26885,
+      "level": 3,
+      "end": 27701
+    },
+    {
+      "title": "## INTERPRETABILITY, EXPLAINABILITY: WHAT'S THE DIFFERENCE?",
+      "start": 27701,
+      "level": 2,
+      "end": 28163
+    },
+    {
+      "title": "## KEEP HUMANS IN THE LOOP",
+      "start": 28163,
+      "level": 2,
+      "end": 28584
+    },
+    {
+      "title": "## CUSTOMER STORIES: CRAFTING EXPLAINABLE SOLUTIONS FOR ENHANCED ADOPTION THROUGH USER-CENTRIC APPROACHES",
+      "start": 28584,
+      "level": 2,
+      "end": 29716
+    },
+    {
+      "title": "## TYPES OF VIGILANCE AI FAILURE:",
+      "start": 29716,
+      "level": 2,
+      "end": 29847
+    },
+    {
+      "title": "## WHO'S IN CHARGE?",
+      "start": 29847,
+      "level": 2,
+      "end": 29904
+    },
+    {
+      "title": "## 5\u00b7 Vigilance pillar",
+      "start": 29904,
+      "level": 2,
+      "end": 31448
+    },
+    {
+      "title": "### Core concept",
+      "start": 29928,
+      "level": 3,
+      "end": 30048
+    },
+    {
+      "title": "### What are the risks?",
+      "start": 30048,
+      "level": 3,
+      "end": 30565
+    },
+    {
+      "title": "### What's the competitive advantage?",
+      "start": 30565,
+      "level": 3,
+      "end": 30985
+    },
+    {
+      "title": "### *BIAS CONTROL: 9 QUESTIONS BEFORE PROCEEDING",
+      "start": 30985,
+      "level": 3,
+      "end": 31448
+    },
+    {
+      "title": "## CUSTOMER STORIES: BREAKING GENDER BIAS IN TARGETED MARKETING FOR A CAR MANUFACTURER",
+      "start": 31448,
+      "level": 2,
+      "end": 32139
+    },
+    {
+      "title": "## TYPES OF ROBUSTNESS AI FAILURE:",
+      "start": 32139,
+      "level": 2,
+      "end": 32323
+    },
+    {
+      "title": "## 6\u00b7 Robustness pillar",
+      "start": 32323,
+      "level": 2,
+      "end": 33445
+    },
+    {
+      "title": "### Core concept Measure and ensure model performance and stability throughout its lifecycle",
+      "start": 32348,
+      "level": 3,
+      "end": 33162
+    },
+    {
+      "title": "#### What are the risks?",
+      "start": 32442,
+      "level": 4,
+      "end": 33162
+    },
+    {
+      "title": "### What's the competitive advantage?",
+      "start": 33162,
+      "level": 3,
+      "end": 33445
+    },
+    {
+      "title": "## DATA AND MODEL DRIFTS",
+      "start": 33445,
+      "level": 2,
+      "end": 34178
+    },
+    {
+      "title": "## CUSTOMER STORIES: UNLEASHING THE POWER OF MMM THROUGH PROACTIVE MONITORING AND RETRAINING",
+      "start": 34178,
+      "level": 2,
+      "end": 35043
+    },
+    {
+      "title": "## TYPES OF SUSTAINABILITY AI FAILURE:",
+      "start": 35043,
+      "level": 2,
+      "end": 35183
+    },
+    {
+      "title": "## WHO'S IN CHARGE?",
+      "start": 35183,
+      "level": 2,
+      "end": 35252
+    },
+    {
+      "title": "## 7\u00b7 Sustainability pillar",
+      "start": 35252,
+      "level": 2,
+      "end": 36399
+    },
+    {
+      "title": "### Core concept",
+      "start": 35281,
+      "level": 3,
+      "end": 35403
+    },
+    {
+      "title": "### What are the risks?",
+      "start": 35403,
+      "level": 3,
+      "end": 36125
+    },
+    {
+      "title": "### What's the competitive advantage?",
+      "start": 36125,
+      "level": 3,
+      "end": 36399
+    },
+    {
+      "title": "## THE ENERGY COST OF GENAI",
+      "start": 36399,
+      "level": 2,
+      "end": 36881
+    },
+    {
+      "title": "## CUSTOMER STORIES: TRACKING AND MINIMIZING THE CARBON FOOTPRINT OF DATA AND AI PROJECTS FOR SUSTAINABLE INNOVATION",
+      "start": 36881,
+      "level": 2,
+      "end": 37852
+    },
+    {
+      "title": "## About the authors",
+      "start": 37852,
+      "level": 2,
+      "end": 38268
+    },
+    {
+      "title": "## Nicolas Chesneau",
+      "start": 38268,
+      "level": 2,
+      "end": 38660
+    },
+    {
+      "title": "## About us",
+      "start": 38660,
+      "level": 2,
+      "end": 39610
+    },
+    {
+      "title": "## Our AI methodology is responsible and certified:",
+      "start": 39610,
+      "level": 2,
+      "end": 39663
+    },
+    {
+      "title": "## Ekimetrics is a purpose-driven company:",
+      "start": 39663,
+      "level": 2,
+      "end": 39967
+    },
+    {
+      "title": "## Contact us",
+      "start": 39967,
+      "level": 2,
+      "end": 40254
+    }
+  ]
+}

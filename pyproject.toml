@@ -1,0 +1,95 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "adaptive-chunking"
+version = "0.1.0"
+description = "Multi-domain document chunking evaluation framework with adaptive recursive splitting"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    { name = "Paulo Roberto de Moura Junior" },
+    { name = "Jean Lelong" },
+    { name = "Annabelle Blangero" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
+keywords = ["chunking", "nlp", "rag", "document-splitting", "evaluation"]
+
+dependencies = [
+    "tiktoken>=0.9.0",
+    "pandas>=2.2.3",
+    "numpy",
+    "tqdm>=4.67.1",
+    "python-dotenv>=1.1.0",
+    "sentence-transformers>=3.1",
+    "spacy>=3.8.4",
+    "scikit-learn",
+    "scipy",
+    "langdetect",
+]
+
+[project.optional-dependencies]
+coref = [
+    "maverick-coref",
+]
+parsing = [
+    "docling",
+    "pymupdf4llm",
+    "azure-ai-documentintelligence",
+    "markdownify",
+]
+paper = [
+    "adaptive-chunking[parsing,coref]",
+    "torch==2.6.0",
+    "torchvision==0.21.0",
+    "langchain>=0.3.21",
+    "langchain-experimental",
+    "stanza>=1.10.1",
+    "nltk",
+    "haystack-ai",
+    "openai",
+    "deepeval",
+    "groq>=0.21.0",
+    "pydantic",
+    "matplotlib",
+    "seaborn",
+    "ipywidgets",
+    "markdown",
+    "tabulate",
+    "langdetect",
+    "ipykernel>=6.29.5",
+]
+dev = [
+    "adaptive-chunking[paper]",
+    "pytest>=8.0",
+    "pytest-asyncio",
+]
+
+[project.urls]
+Repository = "https://github.com/ekimetrics/adaptive-chunking"
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/adaptive_chunking"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

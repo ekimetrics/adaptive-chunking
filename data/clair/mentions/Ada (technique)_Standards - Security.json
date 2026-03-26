@@ -1,0 +1,136 @@
+{
+  "document_name": "Ada (technique)_Standards - Security",
+  "pages": {
+    "1": "# 2- Security\n\nThe Security pilar of Responsible AI is linked to many scandals in the recent years (as we saw in introduction) and is a major source of worries for the general population.\n\nThe core concept is that you should ensure the protection of personal and sensitive data.\n\nIt refers to the GDPR regulation of course, but not only as we will see.\n\n## A. GDPR compliance\n\nThe digital revolution has led to the digitalization of a huge quantity of information relative to our personal lives, and with that, the risk that this information will be leaked or misused. In order to protect the rights of European citizen, the European Union passed a law to ensure the security of our personal data. It is the General Data Protection Regulation or GDPR (RGPD in French). It was adopted on 14 April 2016 and became enforceable beginning 25 May 2018.\n\nThe regulation contains provisions and requirements related to the processing of personal data of individuals who are located in the European union and applies to any enterprise (regardless of its location) that is processing the personal information of individuals (regardless of their citizenship or residence inside) the European Union.\n\nYou can find the regulation text here : General Data Protection Regulation (GDPR) - Final text neatly arranged\n\nBut here is a summary of the important parts.\n\n### A.1. Definition of Personal Data\n\nAccording to the European Commission, \"Personal data is information that relates to an identified or identifiable individual. If you cannot directly identify an individual from that information, then you need to consider whether the individual is still identifiable. You should take into account the information you are processing together with all the means reasonably likely to be used by either you or any other person to identify that individual\"\n\nExamples of personal data\n\n\u00b7 a name and surname;\n\n\u00b7 a home address;\n\n<!-- PageBreak -->\n\n",
+    "2": ". an email address such as name.surname@company.com;\n\n\u00b7 an identification card number;\n\n\u00b7 location data (for example the location data function on a mobile phone);\n\n\u00b7 an Internet Protocol (IP) address;\n\n\u00b7 a cookie ID;\n\n\u00b7 the advertising identifier of your phone;\n\n\u00b7 data held by a hospital or doctor, which could be a symbol that uniquely identifies a person.\n\nAs a Data Scientist, you should know if you have personal data in your database. Sometimes they can be there by mistake so you should be extra careful. We will show you some technics in Section 2.B for detecting and removing personally identifiable information.\n\n# A.2. Principles of the regulation\n\nPersonal data may not be processed unless there is at least one legal basis to do so.\n\nArticle 6 states the lawful purposes are:\n\n\u00b7 If the data subject has given consent to the processing of his or her personal data;\n\n\u00b7 To fulfill contractual obligations with a data subject, or for tasks at the request of a data subject who is in the process of entering into a contract;\n\n\u00b7 To comply with a data controller's legal obligations;\n\n\u00b7 To protect the vital interests of a data subject or another individual;\n\n\u00b7 To perform a task in the public interest or in official authority;\n\nIn most cases for our clients, the informed consent will be the lawful basis for processing. You have to make sure that the consent was explicit for the data collected and its usage.\n\nConsent must be a specific, freely-given, plainly-worded, and unambiguous affirmation given by the data subject; an online form which has consent options structured as an opt-out selected by default is a violation of the GDPR, as the consent is not unambiguously affirmed by the user. In addition, multiple types of processing may not be \"bundled\" together into a single affirmation prompt, as this is not specific to each use of data, and the individual permissions are not freely given.\n\n<!-- PageBreak -->\n\n",
+    "3": "Users must be allowed to withdraw this consent at any time, and the process of doing so must not be harder than it was to opt in.\n\n# A.3. Rights of the users\n\nThe regulation gives important rights to the users:\n\n## Transparency and modalities\n\nArticle 12 requires that we provide information to the users \"in a concise, transparent, intelligible and easily accessible form, using clear and plain language\".\n\n## Information and access\n\nThe right of access gives people the right to access their personal data and information about how this personal data is being processed. We must provide, upon request, an overview of the categories of data that are being processed as well as a copy of the actual data.\n\n## Rectification and erasure\n\nA right to be forgotten was replaced by a more limited right of erasure in the version of the GDPR that was adopted by the European Parliament in March 2014. Article 17 provides that the users have the right to request erasure of personal data within 30 days.\n\n## Right to object and automated decisions\n\nArticle 21 of the GDPR allows an individual to object to processing personal information for marketing or non-service related purposes. This means we must allow an individual the right to stop or prevent us from processing their personal data.\n\nAll these rights should be applicable to our client's product, which means some specific developments to have easy way to delete idividual personal data for example.\n\n### A.4. Records of processing activities\n\nAccording to Article 30, records of processing activities have to be maintained by each organization, L'Or\u00e9al being one of them.\n\nThese records should contain all of the following information:\n\n\u00b7 the purposes of the processing;\n\n<!-- PageBreak -->\n\n",
+    "4": "\u00b7 a description of the categories of data subjects and of the categories of personal data;\n\n\u00b7 a detailed description of all the processing done\n\n\u00b7 the envisaged time limits for erasure of the different categories of data\n\n\u00b7 a general description of the technical and organisational security measures\n\nAt Ekimetrics, we use OneTrust as a tool to help you for all these requirements.\n\nGo to this page for more information : OneTrust - GDPR Record Management Software\n\n## B. Minimization/Anonymization/Pseudoanonymizati on\n\nThe GDPR apply to personal data, if you remove them or render impossible to identify your users, you are then alleviate from this regulation!\n\n### B.1. Minimization\n\nIf the personal data is not critical for your model, the best way is to just not collect them!\n\nThe principle of \"data minimization\" means that we should limit the collection of personal information to what is directly relevant and necessary to our models. We should also retain the data only for as long as is necessary to fulfil that purpose.\n\nIBM proposes a tool to help you with minimization as part of their AI privacy 360 toolbox (aip360 : https://aip360.mybluemix.net/tools#minimization ). You can find the github of that module here : https://github.com/IBM/ai-privacy-\n\ntoolkit/blob/main/apt/minimization/README.md and their paper explaining how it works here : http://export.arxiv.org/pdf/2008.04113\n\n### B.2. Anonymization/Pseudoanonymization\n\nIf you have no other choice than to collect personal data, you can try to remove all the personally identifiable information (PII) that is present in this data before storing and processing it. This is the process of anonymization. However, it has been\n\n<!-- PageBreak -->\n\n",
+    "5": "shown that it is almost impossible to really anonymize data (more on that later), so we usually use the term Pseudoanonymization.\n\nAs a Data Scientist, you should know if you have personal data in your database. Sometimes they can be there by mistake. You can create filters based on regular expressions (https://towardsdatascience.com/remove-personal-information-from- text-with-python-232cb69cf074) or use toolboxes to automatically check and replace personal data.\n\nThere are different toolboxes:\n\n\u00b7 Cape Privacy (GitHub - capeprivacy/cape-dataframes: Privacy transformations on Spark and Pandas dataframes backed by a simple policy language. )\n\nHere is an article on how this toolbox works: Cape Python: Apply Privacy-Enhancing Techniques to Protect Sensitive Data in Pandas and Spark\n\n\u00b7 Piidetect ( piidetect )\n\n\u00b7 Pii (GitHub )\n\n### B.3. Data Pseudoanonymization Techniques\n\nOnce you have detected all the personally identifiable information (PII), you have different ways to do Pseudoanonymization:\n\n\u00b7 Data masking: transforming the data with altered values.\n\nAn example is encryption, which renders the original data unintelligible in a process that cannot be reversed without access to the correct decryption key. The GDPR requires for the additional information (such as the decryption key) to be kept separately from the pseudonymised data.\n\nAnother example is tokenisation, which is a non-mathematical approach to protecting data at rest that replaces sensitive data with non-sensitive substitutes, referred to as tokens. While the tokens have no extrinsic or exploitable meaning or value, they allow for specific data to be fully or partially visible for processing and analytics while sensitive information is kept hidden. Tokenisation does not alter the type or length of data, which means it can be processed by legacy systems such as databases that may be sensitive to data length and type. This also requires much fewer computational resources to process and less storage space in databases than traditionally-encrypted data.\n\nA last option is hashing, which refers to the process of using an algorithm to transform data of any size into a unique fixed-sized output. To do so, some piece of information (e.g., a name) is run through an equation that creates a unique string of\n\n<!-- PageBreak -->\n\n",
+    "6": "characters. Hashlib is a useful python tool to do hashing ( hashlib - Secure hashes and message digests )\n\n\u00b7 Generalization: deliberately removes some of the data to make it less identifiable.\n\nData can be modified into a set of ranges or a broad area with appropriate boundaries. You can remove the address and replace it by the town or postcode, you can remove the date of birth and put the age at the time instead. The purpose is to eliminate some of the identifiers while retaining most of data accuracy.\n\n\u00b7 Fake or synthetic data: manufactured information that has no connection to real events but similar types.\n\nFake data is used to create artificial datasets instead of altering the original dataset or using it as is and risking privacy and security. The process involves creating statistical models based on patterns found in the original dataset. You can use standard deviations, medians, linear regression or other statistical techniques to generate the fake data for numerical values. For categorial, you simply replace the real information, for example replacing the identifier \"John Smith\" with \"Mark Spencer\". You can use Faker (GitHub - joke2k/faker: Faker is a Python package that generates fake data for you. ) to create categorial fake information like names and addresses : from faker import Faker fake = Faker () fake. name () # 'Lucy Cechtelar' fake. address () # '426 Jordy Lodge, Cartwrightshire, SC 88120-6700' fake.text ()\n\n# 'Sint velit eveniet. Rerum atque repellat voluptatem quia rerum. Numquam excepturi beatae sint laudantium consequatur. Magni occaecati itaque sint et sit tempore. Nesciunt\n\nYou should always use fake data in your dev and qual environments as it preserves statistical accuracy and data integrity, allowing the modified data to be used for training, development, testing, and analytics while protecting data privacy.\n\n## C. Advanced techniques\n\nThere are multiple techniques (and new ones coming out all the time) that allows sharing or analysing data while preserving/protecting the privacy of the users.\n\n<!-- PageBreak -->\n\n"
+  },
+  "full_text": "# 2- Security\n\nThe Security pilar of Responsible AI is linked to many scandals in the recent years (as we saw in introduction) and is a major source of worries for the general population.\n\nThe core concept is that you should ensure the protection of personal and sensitive data.\n\nIt refers to the GDPR regulation of course, but not only as we will see.\n\n## A. GDPR compliance\n\nThe digital revolution has led to the digitalization of a huge quantity of information relative to our personal lives, and with that, the risk that this information will be leaked or misused. In order to protect the rights of European citizen, the European Union passed a law to ensure the security of our personal data. It is the General Data Protection Regulation or GDPR (RGPD in French). It was adopted on 14 April 2016 and became enforceable beginning 25 May 2018.\n\nThe regulation contains provisions and requirements related to the processing of personal data of individuals who are located in the European union and applies to any enterprise (regardless of its location) that is processing the personal information of individuals (regardless of their citizenship or residence inside) the European Union.\n\nYou can find the regulation text here : General Data Protection Regulation (GDPR) - Final text neatly arranged\n\nBut here is a summary of the important parts.\n\n### A.1. Definition of Personal Data\n\nAccording to the European Commission, \"Personal data is information that relates to an identified or identifiable individual. If you cannot directly identify an individual from that information, then you need to consider whether the individual is still identifiable. You should take into account the information you are processing together with all the means reasonably likely to be used by either you or any other person to identify that individual\"\n\nExamples of personal data\n\n\u00b7 a name and surname;\n\n\u00b7 a home address;\n\n<!-- PageBreak -->\n\n. an email address such as name.surname@company.com;\n\n\u00b7 an identification card number;\n\n\u00b7 location data (for example the location data function on a mobile phone);\n\n\u00b7 an Internet Protocol (IP) address;\n\n\u00b7 a cookie ID;\n\n\u00b7 the advertising identifier of your phone;\n\n\u00b7 data held by a hospital or doctor, which could be a symbol that uniquely identifies a person.\n\nAs a Data Scientist, you should know if you have personal data in your database. Sometimes they can be there by mistake so you should be extra careful. We will show you some technics in Section 2.B for detecting and removing personally identifiable information.\n\n# A.2. Principles of the regulation\n\nPersonal data may not be processed unless there is at least one legal basis to do so.\n\nArticle 6 states the lawful purposes are:\n\n\u00b7 If the data subject has given consent to the processing of his or her personal data;\n\n\u00b7 To fulfill contractual obligations with a data subject, or for tasks at the request of a data subject who is in the process of entering into a contract;\n\n\u00b7 To comply with a data controller's legal obligations;\n\n\u00b7 To protect the vital interests of a data subject or another individual;\n\n\u00b7 To perform a task in the public interest or in official authority;\n\nIn most cases for our clients, the informed consent will be the lawful basis for processing. You have to make sure that the consent was explicit for the data collected and its usage.\n\nConsent must be a specific, freely-given, plainly-worded, and unambiguous affirmation given by the data subject; an online form which has consent options structured as an opt-out selected by default is a violation of the GDPR, as the consent is not unambiguously affirmed by the user. In addition, multiple types of processing may not be \"bundled\" together into a single affirmation prompt, as this is not specific to each use of data, and the individual permissions are not freely given.\n\n<!-- PageBreak -->\n\nUsers must be allowed to withdraw this consent at any time, and the process of doing so must not be harder than it was to opt in.\n\n# A.3. Rights of the users\n\nThe regulation gives important rights to the users:\n\n## Transparency and modalities\n\nArticle 12 requires that we provide information to the users \"in a concise, transparent, intelligible and easily accessible form, using clear and plain language\".\n\n## Information and access\n\nThe right of access gives people the right to access their personal data and information about how this personal data is being processed. We must provide, upon request, an overview of the categories of data that are being processed as well as a copy of the actual data.\n\n## Rectification and erasure\n\nA right to be forgotten was replaced by a more limited right of erasure in the version of the GDPR that was adopted by the European Parliament in March 2014. Article 17 provides that the users have the right to request erasure of personal data within 30 days.\n\n## Right to object and automated decisions\n\nArticle 21 of the GDPR allows an individual to object to processing personal information for marketing or non-service related purposes. This means we must allow an individual the right to stop or prevent us from processing their personal data.\n\nAll these rights should be applicable to our client's product, which means some specific developments to have easy way to delete idividual personal data for example.\n\n### A.4. Records of processing activities\n\nAccording to Article 30, records of processing activities have to be maintained by each organization, L'Or\u00e9al being one of them.\n\nThese records should contain all of the following information:\n\n\u00b7 the purposes of the processing;\n\n<!-- PageBreak -->\n\n\u00b7 a description of the categories of data subjects and of the categories of personal data;\n\n\u00b7 a detailed description of all the processing done\n\n\u00b7 the envisaged time limits for erasure of the different categories of data\n\n\u00b7 a general description of the technical and organisational security measures\n\nAt Ekimetrics, we use OneTrust as a tool to help you for all these requirements.\n\nGo to this page for more information : OneTrust - GDPR Record Management Software\n\n## B. Minimization/Anonymization/Pseudoanonymizati on\n\nThe GDPR apply to personal data, if you remove them or render impossible to identify your users, you are then alleviate from this regulation!\n\n### B.1. Minimization\n\nIf the personal data is not critical for your model, the best way is to just not collect them!\n\nThe principle of \"data minimization\" means that we should limit the collection of personal information to what is directly relevant and necessary to our models. We should also retain the data only for as long as is necessary to fulfil that purpose.\n\nIBM proposes a tool to help you with minimization as part of their AI privacy 360 toolbox (aip360 : https://aip360.mybluemix.net/tools#minimization ). You can find the github of that module here : https://github.com/IBM/ai-privacy-\n\ntoolkit/blob/main/apt/minimization/README.md and their paper explaining how it works here : http://export.arxiv.org/pdf/2008.04113\n\n### B.2. Anonymization/Pseudoanonymization\n\nIf you have no other choice than to collect personal data, you can try to remove all the personally identifiable information (PII) that is present in this data before storing and processing it. This is the process of anonymization. However, it has been\n\n<!-- PageBreak -->\n\nshown that it is almost impossible to really anonymize data (more on that later), so we usually use the term Pseudoanonymization.\n\nAs a Data Scientist, you should know if you have personal data in your database. Sometimes they can be there by mistake. You can create filters based on regular expressions (https://towardsdatascience.com/remove-personal-information-from- text-with-python-232cb69cf074) or use toolboxes to automatically check and replace personal data.\n\nThere are different toolboxes:\n\n\u00b7 Cape Privacy (GitHub - capeprivacy/cape-dataframes: Privacy transformations on Spark and Pandas dataframes backed by a simple policy language. )\n\nHere is an article on how this toolbox works: Cape Python: Apply Privacy-Enhancing Techniques to Protect Sensitive Data in Pandas and Spark\n\n\u00b7 Piidetect ( piidetect )\n\n\u00b7 Pii (GitHub )\n\n### B.3. Data Pseudoanonymization Techniques\n\nOnce you have detected all the personally identifiable information (PII), you have different ways to do Pseudoanonymization:\n\n\u00b7 Data masking: transforming the data with altered values.\n\nAn example is encryption, which renders the original data unintelligible in a process that cannot be reversed without access to the correct decryption key. The GDPR requires for the additional information (such as the decryption key) to be kept separately from the pseudonymised data.\n\nAnother example is tokenisation, which is a non-mathematical approach to protecting data at rest that replaces sensitive data with non-sensitive substitutes, referred to as tokens. While the tokens have no extrinsic or exploitable meaning or value, they allow for specific data to be fully or partially visible for processing and analytics while sensitive information is kept hidden. Tokenisation does not alter the type or length of data, which means it can be processed by legacy systems such as databases that may be sensitive to data length and type. This also requires much fewer computational resources to process and less storage space in databases than traditionally-encrypted data.\n\nA last option is hashing, which refers to the process of using an algorithm to transform data of any size into a unique fixed-sized output. To do so, some piece of information (e.g., a name) is run through an equation that creates a unique string of\n\n<!-- PageBreak -->\n\ncharacters. Hashlib is a useful python tool to do hashing ( hashlib - Secure hashes and message digests )\n\n\u00b7 Generalization: deliberately removes some of the data to make it less identifiable.\n\nData can be modified into a set of ranges or a broad area with appropriate boundaries. You can remove the address and replace it by the town or postcode, you can remove the date of birth and put the age at the time instead. The purpose is to eliminate some of the identifiers while retaining most of data accuracy.\n\n\u00b7 Fake or synthetic data: manufactured information that has no connection to real events but similar types.\n\nFake data is used to create artificial datasets instead of altering the original dataset or using it as is and risking privacy and security. The process involves creating statistical models based on patterns found in the original dataset. You can use standard deviations, medians, linear regression or other statistical techniques to generate the fake data for numerical values. For categorial, you simply replace the real information, for example replacing the identifier \"John Smith\" with \"Mark Spencer\". You can use Faker (GitHub - joke2k/faker: Faker is a Python package that generates fake data for you. ) to create categorial fake information like names and addresses : from faker import Faker fake = Faker () fake. name () # 'Lucy Cechtelar' fake. address () # '426 Jordy Lodge, Cartwrightshire, SC 88120-6700' fake.text ()\n\n# 'Sint velit eveniet. Rerum atque repellat voluptatem quia rerum. Numquam excepturi beatae sint laudantium consequatur. Magni occaecati itaque sint et sit tempore. Nesciunt\n\nYou should always use fake data in your dev and qual environments as it preserves statistical accuracy and data integrity, allowing the modified data to be used for training, development, testing, and analytics while protecting data privacy.\n\n## C. Advanced techniques\n\nThere are multiple techniques (and new ones coming out all the time) that allows sharing or analysing data while preserving/protecting the privacy of the users.\n\n<!-- PageBreak -->\n\n",
+  "split_points": [
+    354,
+    1348,
+    1907,
+    1927,
+    2551,
+    3348,
+    3838,
+    3858,
+    3989,
+    4070,
+    4266,
+    4564,
+    4855,
+    5311,
+    5583,
+    5603,
+    6069,
+    6267,
+    7001,
+    7299,
+    7319,
+    8153,
+    8671,
+    9363,
+    9614,
+    9634,
+    10253,
+    11085,
+    11503,
+    11692
+  ],
+  "titles": [
+    {
+      "title": "# 2- Security",
+      "start": 0,
+      "level": 1,
+      "end": 2551
+    },
+    {
+      "title": "## A. GDPR compliance",
+      "start": 354,
+      "level": 2,
+      "end": 2551
+    },
+    {
+      "title": "### A.1. Definition of Personal Data",
+      "start": 1348,
+      "level": 3,
+      "end": 2551
+    },
+    {
+      "title": "# A.2. Principles of the regulation",
+      "start": 2551,
+      "level": 1,
+      "end": 3989
+    },
+    {
+      "title": "# A.3. Rights of the users",
+      "start": 3989,
+      "level": 1,
+      "end": 11712
+    },
+    {
+      "title": "## Transparency and modalities",
+      "start": 4070,
+      "level": 2,
+      "end": 4266
+    },
+    {
+      "title": "## Information and access",
+      "start": 4266,
+      "level": 2,
+      "end": 4564
+    },
+    {
+      "title": "## Rectification and erasure",
+      "start": 4564,
+      "level": 2,
+      "end": 4855
+    },
+    {
+      "title": "## Right to object and automated decisions",
+      "start": 4855,
+      "level": 2,
+      "end": 6069
+    },
+    {
+      "title": "### A.4. Records of processing activities",
+      "start": 5311,
+      "level": 3,
+      "end": 6069
+    },
+    {
+      "title": "## B. Minimization/Anonymization/Pseudoanonymizati on",
+      "start": 6069,
+      "level": 2,
+      "end": 11503
+    },
+    {
+      "title": "### B.1. Minimization",
+      "start": 6267,
+      "level": 3,
+      "end": 7001
+    },
+    {
+      "title": "### B.2. Anonymization/Pseudoanonymization",
+      "start": 7001,
+      "level": 3,
+      "end": 8153
+    },
+    {
+      "title": "### B.3. Data Pseudoanonymization Techniques",
+      "start": 8153,
+      "level": 3,
+      "end": 11503
+    },
+    {
+      "title": "## C. Advanced techniques",
+      "start": 11503,
+      "level": 2,
+      "end": 11712
+    }
+  ]
+}

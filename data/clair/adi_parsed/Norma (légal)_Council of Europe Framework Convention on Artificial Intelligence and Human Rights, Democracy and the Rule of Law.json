@@ -1,0 +1,385 @@
+{
+  "document_name": "Norma (l\u00e9gal)_Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law",
+  "pages": {
+    "1": "<!-- PageHeader: Council of Europe Treaty Series - No. 225 -->\n\nCOUNCIL OF EUROPE\n\nCONSEIL DE L'EUROPE\n\n# Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law\n\nVilnius, 5.IX.2024\n\n## Preamble\n\nThe member States of the Council of Europe and the other signatories hereto,\n\nConsidering that the aim of the Council of Europe is to achieve greater unity between its members, based in particular on the respect for human rights, democracy and the rule of law;\n\nRecognising the value of fostering co-operation between the Parties to this Convention and of extending such co-operation to other States that share the same values;\n\nConscious of the accelerating developments in science and technology and the profound changes brought about through activities within the lifecycle of artificial intelligence systems, which have the potential to promote human prosperity as well as individual and societal well- being, sustainable development, gender equality and the empowerment of all women and girls, as well as other important goals and interests, by enhancing progress and innovation;\n\nRecognising that activities within the lifecycle of artificial intelligence systems may offer unprecedented opportunities to protect and promote human rights, democracy and the rule of law;\n\nConcerned that certain activities within the lifecycle of artificial intelligence systems may undermine human dignity and individual autonomy, human rights, democracy and the rule of law;\n\nConcerned about the risks of discrimination in digital contexts, particularly those involving artificial intelligence systems, and their potential effect of creating or aggravating inequalities, including those experienced by women and individuals in vulnerable situations, regarding the enjoyment of their human rights and their full, equal and effective participation in economic, social, cultural and political affairs;\n\nConcerned by the misuse of artificial intelligence systems and opposing the use of such systems for repressive purposes in violation of international human rights law, including through arbitrary or unlawful surveillance and censorship practices that erode privacy and individual autonomy;\n\nConscious of the fact that human rights, democracy and the rule of law are inherently interwoven;\n\n<!-- PageBreak -->\n\n",
+    "2": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\nConvinced of the need to establish, as a matter of priority, a globally applicable legal framework setting out common general principles and rules governing the activities within the lifecycle of artificial intelligence systems that effectively preserves shared values and harnesses the benefits of artificial intelligence for the promotion of these values in a manner conducive to responsible innovation;\n\nRecognising the need to promote digital literacy, knowledge about, and trust in the design, development, use and decommissioning of artificial intelligence systems;\n\nRecognising the framework character of this Convention, which may be supplemented by further instruments to address specific issues relating to the activities within the lifecycle of artificial intelligence systems;\n\nUnderlining that this Convention is intended to address specific challenges which arise throughout the lifecycle of artificial intelligence systems and encourage the consideration of the wider risks and impacts related to these technologies including, but not limited to, human health and the environment, and socio-economic aspects, such as employment and labour;\n\nNoting relevant efforts to advance international understanding and co-operation on artificial intelligence by other international and supranational organisations and fora;\n\nMindful of applicable international human rights instruments, such as the 1948 Universal Declaration of Human Rights, the 1950 Convention for the Protection of Human Rights and Fundamental Freedoms (ETS No. 5), the 1966 International Covenant on Civil and Political Rights, the 1966 International Covenant on Economic, Social and Cultural Rights, the 1961 European Social Charter (ETS No. 35), as well as their respective protocols, and the 1996 European Social Charter (Revised) (ETS No. 163);\n\nMindful also of the 1989 United Nations Convention on the Rights of the Child and the 2006 United Nations Convention on the Rights of Persons with Disabilities;\n\nMindful also of the privacy rights of individuals and the protection of personal data, as applicable and conferred, for example, by the 1981 Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data (ETS No. 108) and its protocols;\n\nAffirming the commitment of the Parties to protecting human rights, democracy and the rule of law, and fostering trustworthiness of artificial intelligence systems through this Convention,\n\nHave agreed as follows:\n\n## Chapter I - General provisions\n\n### Article 1 - Object and purpose\n\n1 The provisions of this Convention aim to ensure that activities within the lifecycle of artificial intelligence systems are fully consistent with human rights, democracy and the rule of law.\n\n2 Each Party shall adopt or maintain appropriate legislative, administrative or other measures to give effect to the provisions set out in this Convention. These measures shall be graduated and differentiated as may be necessary in view of the severity and probability of the occurrence of adverse impacts on human rights, democracy and the rule of law throughout the lifecycle of artificial intelligence systems. This may include specific or horizontal measures that apply irrespective of the type of technology used.\n\n<!-- PageFooter: page 2 -->\n<!-- PageBreak -->\n\n",
+    "3": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n3 In order to ensure effective implementation of its provisions by the Parties, this Convention establishes a follow-up mechanism and provides for international co-operation.\n\n## Article 2 - Definition of artificial intelligence systems\n\nFor the purposes of this Convention, \"artificial intelligence system\" means a machine-based system that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations or decisions that may influence physical or virtual environments. Different artificial intelligence systems vary in their levels of autonomy and adaptiveness after deployment.\n\n### Article 3 - Scope\n\n1 The scope of this Convention covers the activities within the lifecycle of artificial intelligence systems that have the potential to interfere with human rights, democracy and the rule of law as follows:\n\na Each Party shall apply this Convention to the activities within the lifecycle of artificial intelligence systems undertaken by public authorities, or private actors acting on their behalf.\n\nb Each Party shall address risks and impacts arising from activities within the lifecycle of artificial intelligence systems by private actors to the extent not covered in subparagraph a in a manner conforming with the object and purpose of this Convention.\n\nEach Party shall specify in a declaration submitted to the Secretary General of the Council of Europe at the time of signature, or when depositing its instrument of ratification, acceptance, approval or accession, how it intends to implement this obligation, either by applying the principles and obligations set forth in Chapters II to VI of this Convention to activities of private actors or by taking other appropriate measures to fulfil the obligation set out in this subparagraph. Parties may, at any time and in the same manner, amend their declarations.\n\nWhen implementing the obligation under this subparagraph, a Party may not derogate from or limit the application of its international obligations undertaken to protect human rights, democracy and the rule of law.\n\n2 A Party shall not be required to apply this Convention to activities within the lifecycle of artificial intelligence systems related to the protection of its national security interests, with the understanding that such activities are conducted in a manner consistent with applicable international law, including international human rights law obligations, and with respect for its democratic institutions and processes.\n\n3 Without prejudice to Article 13 and Article 25, paragraph 2, this Convention shall not apply to research and development activities regarding artificial intelligence systems not yet made available for use, unless testing or similar activities are undertaken in such a way that they have the potential to interfere with human rights, democracy and the rule of law.\n\n4 Matters relating to national defence do not fall within the scope of this Convention.\n\n<!-- PageFooter: page 3 -->\n<!-- PageBreak -->\n\n",
+    "4": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n## Chapter II - General obligations\n\n### Article 4 - Protection of human rights\n\nEach Party shall adopt or maintain measures to ensure that the activities within the lifecycle of artificial intelligence systems are consistent with obligations to protect human rights, as enshrined in applicable international law and in its domestic law.\n\n### Article 5 - Integrity of democratic processes and respect for the rule of law\n\nEach Party shall adopt or maintain measures that seek to ensure that artificial intelligence\n\n1 systems are not used to undermine the integrity, independence and effectiveness of democratic institutions and processes, including the principle of the separation of powers, respect for judicial independence and access to justice.\n\n2 Each Party shall adopt or maintain measures that seek to protect its democratic processes in the context of activities within the lifecycle of artificial intelligence systems, including individuals' fair access to and participation in public debate, as well as their ability to freely form opinions.\n\n## Chapter III - Principles related to activities within the lifecycle of artificial intelligence systems\n\n### Article 6 - General approach\n\nThis chapter sets forth general common principles that each Party shall implement in regard to artificial intelligence systems in a manner appropriate to its domestic legal system and the other obligations of this Convention.\n\n### Article 7 - Human dignity and individual autonomy\n\nEach Party shall adopt or maintain measures to respect human dignity and individual autonomy in relation to activities within the lifecycle of artificial intelligence systems.\n\n### Article 8 - Transparency and oversight\n\nEach Party shall adopt or maintain measures to ensure that adequate transparency and oversight requirements tailored to the specific contexts and risks are in place in respect of activities within the lifecycle of artificial intelligence systems, including with regard to the identification of content generated by artificial intelligence systems.\n\n### Article 9 - Accountability and responsibility\n\nEach Party shall adopt or maintain measures to ensure accountability and responsibility for adverse impacts on human rights, democracy and the rule of law resulting from activities within the lifecycle of artificial intelligence systems.\n\n### Article 10 - Equality and non-discrimination\n\n1 Each Party shall adopt or maintain measures with a view to ensuring that activities within the lifecycle of artificial intelligence systems respect equality, including gender equality, and the prohibition of discrimination, as provided under applicable international and domestic law.\n\n2 Each Party undertakes to adopt or maintain measures aimed at overcoming inequalities to achieve fair, just and equitable outcomes, in line with its applicable domestic and international human rights obligations, in relation to activities within the lifecycle of artificial intelligence systems.\n\n<!-- PageFooter: page 4 -->\n<!-- PageBreak -->\n\n",
+    "5": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n## Article 11 - Privacy and personal data protection\n\nEach Party shall adopt or maintain measures to ensure that, with regard to activities within the lifecycle of artificial intelligence systems:\n\na privacy rights of individuals and their personal data are protected, including through applicable domestic and international laws, standards and frameworks; and\n\nb effective guarantees and safeguards have been put in place for individuals, in accordance with applicable domestic and international legal obligations.\n\n## Article 12 - Reliability\n\nEach Party shall take, as appropriate, measures to promote the reliability of artificial intelligence systems and trust in their outputs, which could include requirements related to adequate quality and security throughout the lifecycle of artificial intelligence systems.\n\n## Article 13 - Safe innovation\n\nWith a view to fostering innovation while avoiding adverse impacts on human rights, democracy and the rule of law, each Party is called upon to enable, as appropriate, the establishment of controlled environments for developing, experimenting and testing artificial intelligence systems under the supervision of its competent authorities.\n\n# Chapter IV - Remedies\n\n## Article 14 - Remedies\n\n1 Each Party shall, to the extent remedies are required by its international obligations and consistent with its domestic legal system, adopt or maintain measures to ensure the availability of accessible and effective remedies for violations of human rights resulting from the activities within the lifecycle of artificial intelligence systems.\n\n2 With the aim of supporting paragraph 1 above, each Party shall adopt or maintain measures including:\n\na measures to ensure that relevant information regarding artificial intelligence systems which have the potential to significantly affect human rights and their relevant usage is documented, provided to bodies authorised to access that information and, where appropriate and applicable, made available or communicated to affected persons;\n\nb measures to ensure that the information referred to in subparagraph a is sufficient for the affected persons to contest the decision(s) made or substantially informed by the use of the system, and, where relevant and appropriate, the use of the system itself; and\n\nc an effective possibility for persons concerned to lodge a complaint to competent authorities.\n\n## Article 15 - Procedural safeguards\n\n1 Each Party shall ensure that, where an artificial intelligence system significantly impacts upon the enjoyment of human rights, effective procedural guarantees, safeguards and rights, in accordance with the applicable international and domestic law, are available to persons affected thereby.\n\n<!-- PageFooter: page 5 -->\n<!-- PageBreak -->\n\n",
+    "6": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n2 Each Party shall seek to ensure that, as appropriate for the context, persons interacting with artificial intelligence systems are notified that they are interacting with such systems rather than with a human.\n\n## Chapter V - Assessment and mitigation of risks and adverse impacts\n\n### Article 16 - Risk and impact management framework\n\n1 Each Party shall, taking into account the principles set forth in Chapter III, adopt or maintain measures for the identification, assessment, prevention and mitigation of risks posed by artificial intelligence systems by considering actual and potential impacts to human rights, democracy and the rule of law.\n\n2 Such measures shall be graduated and differentiated, as appropriate, and:\n\na take due account of the context and intended use of artificial intelligence systems, in particular as concerns risks to human rights, democracy, and the rule of law;\n\nb take due account of the severity and probability of potential impacts;\n\nc consider, where appropriate, the perspectives of relevant stakeholders, in particular persons whose rights may be impacted;\n\nd apply iteratively throughout the activities within the lifecycle of the artificial intelligence system;\n\ne include monitoring for risks and adverse impacts to human rights, democracy, and the rule of law;\n\nf include documentation of risks, actual and potential impacts, and the risk management approach; and\n\ng require, where appropriate, testing of artificial intelligence systems before making them available for first use and when they are significantly modified.\n\n3 Each Party shall adopt or maintain measures that seek to ensure that adverse impacts of artificial intelligence systems to human rights, democracy, and the rule of law are adequately addressed. Such adverse impacts and measures to address them should be documented and inform the relevant risk management measures described in paragraph 2.\n\n4 Each Party shall assess the need for a moratorium or ban or other appropriate measures in respect of certain uses of artificial intelligence systems where it considers such uses incompatible with the respect for human rights, the functioning of democracy or the rule of law.\n\n## Chapter VI - Implementation of the Convention\n\n### Article 17 - Non-discrimination\n\nThe implementation of the provisions of this Convention by the Parties shall be secured without discrimination on any ground, in accordance with their international human rights obligations.\n\n<!-- PageFooter: page 6 -->\n<!-- PageBreak -->\n\n",
+    "7": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n## Article 18 - Rights of persons with disabilities and of children\n\nEach Party shall, in accordance with its domestic law and applicable international obligations, take due account of any specific needs and vulnerabilities in relation to respect for the rights of persons with disabilities and of children.\n\n### Article 19 - Public consultation\n\nEach Party shall seek to ensure that important questions raised in relation to artificial intelligence systems are, as appropriate, duly considered through public discussion and multistakeholder consultation in the light of social, economic, legal, ethical, environmental and other relevant implications.\n\n### Article 20 - Digital literacy and skills\n\nEach Party shall encourage and promote adequate digital literacy and digital skills for all segments of the population, including specific expert skills for those responsible for the identification, assessment, prevention and mitigation of risks posed by artificial intelligence systems.\n\n### Article 21 - Safeguard for existing human rights\n\nNothing in this Convention shall be construed as limiting, derogating from or otherwise affecting the human rights or other related legal rights and obligations which may be guaranteed under the relevant laws of a Party or any other relevant international agreement to which it is party.\n\n### Article 22 - Wider protection\n\nNone of the provisions of this Convention shall be interpreted as limiting or otherwise affecting the possibility for a Party to grant a wider measure of protection than is stipulated in this Convention.\n\n# Chapter VII - Follow-up mechanism and co-operation\n\n## Article 23 - Conference of the Parties\n\n1 The Conference of the Parties shall be composed of representatives of the Parties to this Convention.\n\n2 The Parties shall consult periodically with a view to:\n\na facilitating the effective application and implementation of this Convention, including the identification of any problems and the effects of any reservation made in pursuance of Article 34, paragraph 1, or any declaration made under this Convention;\n\nb considering the possible supplementation to or amendment of this Convention;\n\nc considering matters and making specific recommendations concerning the interpretation and application of this Convention;\n\nd facilitating the exchange of information on significant legal, policy or technological developments of relevance, including in pursuit of the objectives defined in Article 25, for the implementation of this Convention;\n\ne facilitating, where necessary, the friendly settlement of disputes related to the application of this Convention; and\n\n<!-- PageFooter: page 7 -->\n<!-- PageBreak -->\n\n",
+    "8": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\nf facilitating co-operation with relevant stakeholders concerning pertinent aspects of the implementation of this Convention, including through public hearings where appropriate.\n\n3 The Conference of the Parties shall be convened by the Secretary General of the Council of Europe whenever necessary and, in any case, when a majority of the Parties or the Committee of Ministers requests its convocation.\n\n4 The Conference of the Parties shall adopt its own rules of procedure by consensus within twelve months of the entry into force of this Convention.\n\n5 The Parties shall be assisted by the Secretariat of the Council of Europe in carrying out their functions pursuant to this article.\n\n6 The Conference of the Parties may propose to the Committee of Ministers appropriate ways to engage relevant expertise in support of the effective implementation of this Convention.\n\n7 Any Party which is not a member of the Council of Europe shall contribute to the funding of the activities of the Conference of the Parties. The contribution of a non-member of the Council of Europe shall be established jointly by the Committee of Ministers and that non-member.\n\n8 The Conference of the Parties may decide to restrict the participation in its work of a Party that has ceased to be a member of the Council of Europe under Article 8 of the Statute of the Council of Europe (ETS No. 1) for a serious violation of Article 3 of the Statute. Similarly, measures can be taken in respect of any Party that is not a member State of the Council of Europe by a decision of the Committee of Ministers to cease its relations with that State on grounds similar to those mentioned in Article 3 of the Statute.\n\n## Article 24 - Reporting obligation\n\n1 Each Party shall provide a report to the Conference of the Parties within the first two years after becoming a Party, and then periodically thereafter with details of the activities undertaken to give effect to Article 3, paragraph 1, sub-paragraphs a and b.\n\n2 The Conference of the Parties shall determine the format and the process for the report in accordance with its rules of procedure.\n\n## Article 25 - International co-operation\n\n1 The Parties shall co-operate in the realisation of the purpose of this Convention. Parties are further encouraged, as appropriate, to assist States that are not Parties to this Convention in acting consistently with the terms of this Convention and becoming a Party to it.\n\n2 The Parties shall, as appropriate, exchange relevant and useful information between themselves concerning aspects related to artificial intelligence which may have significant positive or negative effects on the enjoyment of human rights, the functioning of democracy and the observance of the rule of law, including risks and effects that have arisen in research contexts and in relation to the private sector. Parties are encouraged to involve, as appropriate, relevant stakeholders and States that are not Parties to this Convention in such exchanges of information.\n\n<!-- PageFooter: page 8 -->\n<!-- PageBreak -->\n\n",
+    "9": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n3 The Parties are encouraged to strengthen co-operation, including with relevant stakeholders where appropriate, to prevent and mitigate risks and adverse impacts on human rights, democracy and the rule of law in the context of activities within the lifecycle of artificial intelligence systems.\n\n# Article 26 - Effective oversight mechanisms\n\n1 Each Party shall establish or designate one or more effective mechanisms to oversee compliance with the obligations in this Convention.\n\n2 Each Party shall ensure that such mechanisms exercise their duties independently and impartially and that they have the necessary powers, expertise and resources to effectively fulfil their tasks of overseeing compliance with the obligations in this Convention, as given effect by the Parties.\n\n3 If a Party has provided for more than one such mechanism, it shall take measures, where practicable, to facilitate effective cooperation among them.\n\n4 If a Party has provided for mechanisms different from existing human rights structures, it shall take measures, where practicable, to promote effective cooperation between the mechanisms referred to in paragraph 1 and those existing domestic human rights structures.\n\n# Chapter VIII - Final clauses\n\n## Article 27 - Effects of the Convention\n\n1 If two or more Parties have already concluded an agreement or treaty on the matters dealt with in this Convention, or have otherwise established relations on such matters, they shall also be entitled to apply that agreement or treaty or to regulate those relations accordingly, so long as they do so in a manner which is not inconsistent with the object and purpose of this Convention.\n\n2 Parties which are members of the European Union shall, in their mutual relations, apply European Union rules governing the matters within the scope of this Convention without prejudice to the object and purpose of this Convention and without prejudice to its full application with other Parties. The same applies to other Parties to the extent that they are bound by such rules.\n\n## Article 28 - Amendments\n\n1 Amendments to this Convention may be proposed by any Party, the Committee of Ministers of the Council of Europe or the Conference of the Parties.\n\n2 Any proposal for amendment shall be communicated by the Secretary General of the Council of Europe to the Parties.\n\n3 Any amendment proposed by a Party, or the Committee of Ministers, shall be communicated to the Conference of the Parties, which shall submit to the Committee of Ministers its opinion on the proposed amendment.\n\n4 The Committee of Ministers shall consider the proposed amendment and the opinion submitted by the Conference of the Parties and may approve the amendment.\n\n5 The text of any amendment approved by the Committee of Ministers in accordance with paragraph 4 shall be forwarded to the Parties for acceptance.\n\n<!-- PageFooter: page 9 -->\n<!-- PageBreak -->\n\n",
+    "10": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n6 Any amendment approved in accordance with paragraph 4 shall come into force on the thirtieth day after all Parties have informed the Secretary General of their acceptance thereof.\n\n# Article 29 - Dispute settlement\n\nIn the event of a dispute between Parties as to the interpretation or application of this Convention, these Parties shall seek a settlement of the dispute through negotiation or any other peaceful means of their choice, including through the Conference of the Parties, as provided for in Article 23, paragraph 2, sub-paragraph e.\n\n# Article 30 - Signature and entry into force\n\n1 This Convention shall be open for signature by the member States of the Council of Europe, the non-member States which have participated in its elaboration and the European Union.\n\n2 This Convention is subject to ratification, acceptance or approval. Instruments of ratification, acceptance or approval shall be deposited with the Secretary General of the Council of Europe.\n\n3 This Convention shall enter into force on the first day of the month following the expiration of a period of three months after the date on which five signatories, including at least three member States of the Council of Europe, have expressed their consent to be bound by this Convention in accordance with paragraph 2.\n\n4 In respect of any signatory which subsequently expresses its consent to be bound by it, this Convention shall enter into force on the first day of the month following the expiration of a period of three months after the date of the deposit of its instrument of ratification, acceptance or approval.\n\n# Article 31 - Accession\n\n1 After the entry into force of this Convention, the Committee of Ministers of the Council of Europe may, after consulting the Parties to this Convention and obtaining their unanimous consent, invite any non-member State of the Council of Europe which has not participated in the elaboration of this Convention to accede to this Convention by a decision taken by the majority provided for in Article 20.d of the Statute of the Council of Europe, and by unanimous vote of the representatives of the Parties entitled to sit on the Committee of Ministers.\n\n2 In respect of any acceding State, this Convention shall enter into force on the first day of the month following the expiration of a period of three months after the date of deposit of the instrument of accession with the Secretary General of the Council of Europe.\n\n# Article 32 - Territorial application\n\n1 Any State or the European Union may, at the time of signature or when depositing its instrument of ratification, acceptance, approval or accession, specify the territory or territories to which this Convention shall apply.\n\n2 Any Party may, at a later date, by a declaration addressed to the Secretary General of the Council of Europe, extend the application of this Convention to any other territory specified in the declaration. In respect of such territory, this Convention shall enter into force on the first day of the month following the expiration of a period of three months after the date of receipt of the declaration by the Secretary General.\n\n<!-- PageFooter: page 10 -->\n<!-- PageBreak -->\n\n",
+    "11": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n3 Any declaration made under the two preceding paragraphs may, in respect of any territory specified in said declaration, be withdrawn by a notification addressed to the Secretary General of the Council of Europe. The withdrawal shall become effective on the first day of the month following the expiration of a period of three months after the date of receipt of such notification by the Secretary General.\n\n# Article 33 - Federal clause\n\n1 A federal State may reserve the right to assume obligations under this Convention consistent with its fundamental principles governing the relationship between its central government and constituent states or other similar territorial entities, provided that this Convention shall apply to the central government of the federal State.\n\n2 With regard to the provisions of this Convention, the application of, which come under the jurisdiction of constituent states or other similar territorial entities that are not obliged by the constitutional system of the federation to take legislative measures, the federal government shall inform the competent authorities of such states of the said provisions with its favourable opinion, and encourage them to take appropriate action to give them effect.\n\n# Article 34 - Reservations\n\n1 By a written notification addressed to the Secretary General of the Council of Europe, any State may, at the time of signature or when depositing its instrument of ratification, acceptance, approval or accession, declare that it avails itself of the reservation provided for in Article 33, paragraph 1.\n\n2 No other reservation may be made in respect of this Convention.\n\n# Article 35 - Denunciation\n\n1 Any Party may, at any time, denounce this Convention by means of a notification addressed to the Secretary General of the Council of Europe.\n\n2 Such denunciation shall become effective on the first day of the month following the expiration of a period of three months after the date of receipt of the notification by the Secretary General.\n\n# Article 36 - Notification\n\nThe Secretary General of the Council of Europe shall notify the member States of the Council of Europe, the non-member States which have participated in the elaboration of this Convention, the European Union, any signatory, any contracting State, any Party and any other State which has been invited to accede to this Convention, of:\n\na any signature;\n\nb the deposit of any instrument of ratification, acceptance, approval or accession;\n\nc any date of entry into force of this Convention, in accordance with Article 30, paragraphs 3 and 4, and Article 31, paragraph 2;\n\nd any amendment adopted in accordance with Article 28 and the date on which such an amendment enters into force;\n\ne any declaration made in pursuance of Article 3, paragraph 1, sub-paragraph b;\n\nf any reservation and withdrawal of a reservation made in pursuance of Article 34;\n\n<!-- PageFooter: page 11 -->\n<!-- PageBreak -->\n\n",
+    "12": "<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\ng any denunciation made in pursuance of Article 35;\n\nh any other act, declaration, notification or communication relating to this Convention.\n\nIn witness whereof the undersigned, being duly authorised thereto, have signed this Convention.\n\nDone in Vilnius, this 5th day of September 2024, in English and in French, both texts being equally authentic, in a single copy which shall be deposited in the archives of the Council of Europe. The Secretary General of the Council of Europe shall transmit certified copies to each member State of the Council of Europe, to the non-member States which have participated in the elaboration of this Convention, to the European Union and to any State invited to accede to this Convention.\n\n<!-- PageFooter: page 12 -->\n<!-- PageBreak -->\n\n"
+  },
+  "full_text": "<!-- PageHeader: Council of Europe Treaty Series - No. 225 -->\n\nCOUNCIL OF EUROPE\n\nCONSEIL DE L'EUROPE\n\n# Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law\n\nVilnius, 5.IX.2024\n\n## Preamble\n\nThe member States of the Council of Europe and the other signatories hereto,\n\nConsidering that the aim of the Council of Europe is to achieve greater unity between its members, based in particular on the respect for human rights, democracy and the rule of law;\n\nRecognising the value of fostering co-operation between the Parties to this Convention and of extending such co-operation to other States that share the same values;\n\nConscious of the accelerating developments in science and technology and the profound changes brought about through activities within the lifecycle of artificial intelligence systems, which have the potential to promote human prosperity as well as individual and societal well- being, sustainable development, gender equality and the empowerment of all women and girls, as well as other important goals and interests, by enhancing progress and innovation;\n\nRecognising that activities within the lifecycle of artificial intelligence systems may offer unprecedented opportunities to protect and promote human rights, democracy and the rule of law;\n\nConcerned that certain activities within the lifecycle of artificial intelligence systems may undermine human dignity and individual autonomy, human rights, democracy and the rule of law;\n\nConcerned about the risks of discrimination in digital contexts, particularly those involving artificial intelligence systems, and their potential effect of creating or aggravating inequalities, including those experienced by women and individuals in vulnerable situations, regarding the enjoyment of their human rights and their full, equal and effective participation in economic, social, cultural and political affairs;\n\nConcerned by the misuse of artificial intelligence systems and opposing the use of such systems for repressive purposes in violation of international human rights law, including through arbitrary or unlawful surveillance and censorship practices that erode privacy and individual autonomy;\n\nConscious of the fact that human rights, democracy and the rule of law are inherently interwoven;\n\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\nConvinced of the need to establish, as a matter of priority, a globally applicable legal framework setting out common general principles and rules governing the activities within the lifecycle of artificial intelligence systems that effectively preserves shared values and harnesses the benefits of artificial intelligence for the promotion of these values in a manner conducive to responsible innovation;\n\nRecognising the need to promote digital literacy, knowledge about, and trust in the design, development, use and decommissioning of artificial intelligence systems;\n\nRecognising the framework character of this Convention, which may be supplemented by further instruments to address specific issues relating to the activities within the lifecycle of artificial intelligence systems;\n\nUnderlining that this Convention is intended to address specific challenges which arise throughout the lifecycle of artificial intelligence systems and encourage the consideration of the wider risks and impacts related to these technologies including, but not limited to, human health and the environment, and socio-economic aspects, such as employment and labour;\n\nNoting relevant efforts to advance international understanding and co-operation on artificial intelligence by other international and supranational organisations and fora;\n\nMindful of applicable international human rights instruments, such as the 1948 Universal Declaration of Human Rights, the 1950 Convention for the Protection of Human Rights and Fundamental Freedoms (ETS No. 5), the 1966 International Covenant on Civil and Political Rights, the 1966 International Covenant on Economic, Social and Cultural Rights, the 1961 European Social Charter (ETS No. 35), as well as their respective protocols, and the 1996 European Social Charter (Revised) (ETS No. 163);\n\nMindful also of the 1989 United Nations Convention on the Rights of the Child and the 2006 United Nations Convention on the Rights of Persons with Disabilities;\n\nMindful also of the privacy rights of individuals and the protection of personal data, as applicable and conferred, for example, by the 1981 Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data (ETS No. 108) and its protocols;\n\nAffirming the commitment of the Parties to protecting human rights, democracy and the rule of law, and fostering trustworthiness of artificial intelligence systems through this Convention,\n\nHave agreed as follows:\n\n## Chapter I - General provisions\n\n### Article 1 - Object and purpose\n\n1 The provisions of this Convention aim to ensure that activities within the lifecycle of artificial intelligence systems are fully consistent with human rights, democracy and the rule of law.\n\n2 Each Party shall adopt or maintain appropriate legislative, administrative or other measures to give effect to the provisions set out in this Convention. These measures shall be graduated and differentiated as may be necessary in view of the severity and probability of the occurrence of adverse impacts on human rights, democracy and the rule of law throughout the lifecycle of artificial intelligence systems. This may include specific or horizontal measures that apply irrespective of the type of technology used.\n\n<!-- PageFooter: page 2 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n3 In order to ensure effective implementation of its provisions by the Parties, this Convention establishes a follow-up mechanism and provides for international co-operation.\n\n## Article 2 - Definition of artificial intelligence systems\n\nFor the purposes of this Convention, \"artificial intelligence system\" means a machine-based system that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations or decisions that may influence physical or virtual environments. Different artificial intelligence systems vary in their levels of autonomy and adaptiveness after deployment.\n\n### Article 3 - Scope\n\n1 The scope of this Convention covers the activities within the lifecycle of artificial intelligence systems that have the potential to interfere with human rights, democracy and the rule of law as follows:\n\na Each Party shall apply this Convention to the activities within the lifecycle of artificial intelligence systems undertaken by public authorities, or private actors acting on their behalf.\n\nb Each Party shall address risks and impacts arising from activities within the lifecycle of artificial intelligence systems by private actors to the extent not covered in subparagraph a in a manner conforming with the object and purpose of this Convention.\n\nEach Party shall specify in a declaration submitted to the Secretary General of the Council of Europe at the time of signature, or when depositing its instrument of ratification, acceptance, approval or accession, how it intends to implement this obligation, either by applying the principles and obligations set forth in Chapters II to VI of this Convention to activities of private actors or by taking other appropriate measures to fulfil the obligation set out in this subparagraph. Parties may, at any time and in the same manner, amend their declarations.\n\nWhen implementing the obligation under this subparagraph, a Party may not derogate from or limit the application of its international obligations undertaken to protect human rights, democracy and the rule of law.\n\n2 A Party shall not be required to apply this Convention to activities within the lifecycle of artificial intelligence systems related to the protection of its national security interests, with the understanding that such activities are conducted in a manner consistent with applicable international law, including international human rights law obligations, and with respect for its democratic institutions and processes.\n\n3 Without prejudice to Article 13 and Article 25, paragraph 2, this Convention shall not apply to research and development activities regarding artificial intelligence systems not yet made available for use, unless testing or similar activities are undertaken in such a way that they have the potential to interfere with human rights, democracy and the rule of law.\n\n4 Matters relating to national defence do not fall within the scope of this Convention.\n\n<!-- PageFooter: page 3 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n## Chapter II - General obligations\n\n### Article 4 - Protection of human rights\n\nEach Party shall adopt or maintain measures to ensure that the activities within the lifecycle of artificial intelligence systems are consistent with obligations to protect human rights, as enshrined in applicable international law and in its domestic law.\n\n### Article 5 - Integrity of democratic processes and respect for the rule of law\n\nEach Party shall adopt or maintain measures that seek to ensure that artificial intelligence\n\n1 systems are not used to undermine the integrity, independence and effectiveness of democratic institutions and processes, including the principle of the separation of powers, respect for judicial independence and access to justice.\n\n2 Each Party shall adopt or maintain measures that seek to protect its democratic processes in the context of activities within the lifecycle of artificial intelligence systems, including individuals' fair access to and participation in public debate, as well as their ability to freely form opinions.\n\n## Chapter III - Principles related to activities within the lifecycle of artificial intelligence systems\n\n### Article 6 - General approach\n\nThis chapter sets forth general common principles that each Party shall implement in regard to artificial intelligence systems in a manner appropriate to its domestic legal system and the other obligations of this Convention.\n\n### Article 7 - Human dignity and individual autonomy\n\nEach Party shall adopt or maintain measures to respect human dignity and individual autonomy in relation to activities within the lifecycle of artificial intelligence systems.\n\n### Article 8 - Transparency and oversight\n\nEach Party shall adopt or maintain measures to ensure that adequate transparency and oversight requirements tailored to the specific contexts and risks are in place in respect of activities within the lifecycle of artificial intelligence systems, including with regard to the identification of content generated by artificial intelligence systems.\n\n### Article 9 - Accountability and responsibility\n\nEach Party shall adopt or maintain measures to ensure accountability and responsibility for adverse impacts on human rights, democracy and the rule of law resulting from activities within the lifecycle of artificial intelligence systems.\n\n### Article 10 - Equality and non-discrimination\n\n1 Each Party shall adopt or maintain measures with a view to ensuring that activities within the lifecycle of artificial intelligence systems respect equality, including gender equality, and the prohibition of discrimination, as provided under applicable international and domestic law.\n\n2 Each Party undertakes to adopt or maintain measures aimed at overcoming inequalities to achieve fair, just and equitable outcomes, in line with its applicable domestic and international human rights obligations, in relation to activities within the lifecycle of artificial intelligence systems.\n\n<!-- PageFooter: page 4 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n## Article 11 - Privacy and personal data protection\n\nEach Party shall adopt or maintain measures to ensure that, with regard to activities within the lifecycle of artificial intelligence systems:\n\na privacy rights of individuals and their personal data are protected, including through applicable domestic and international laws, standards and frameworks; and\n\nb effective guarantees and safeguards have been put in place for individuals, in accordance with applicable domestic and international legal obligations.\n\n## Article 12 - Reliability\n\nEach Party shall take, as appropriate, measures to promote the reliability of artificial intelligence systems and trust in their outputs, which could include requirements related to adequate quality and security throughout the lifecycle of artificial intelligence systems.\n\n## Article 13 - Safe innovation\n\nWith a view to fostering innovation while avoiding adverse impacts on human rights, democracy and the rule of law, each Party is called upon to enable, as appropriate, the establishment of controlled environments for developing, experimenting and testing artificial intelligence systems under the supervision of its competent authorities.\n\n# Chapter IV - Remedies\n\n## Article 14 - Remedies\n\n1 Each Party shall, to the extent remedies are required by its international obligations and consistent with its domestic legal system, adopt or maintain measures to ensure the availability of accessible and effective remedies for violations of human rights resulting from the activities within the lifecycle of artificial intelligence systems.\n\n2 With the aim of supporting paragraph 1 above, each Party shall adopt or maintain measures including:\n\na measures to ensure that relevant information regarding artificial intelligence systems which have the potential to significantly affect human rights and their relevant usage is documented, provided to bodies authorised to access that information and, where appropriate and applicable, made available or communicated to affected persons;\n\nb measures to ensure that the information referred to in subparagraph a is sufficient for the affected persons to contest the decision(s) made or substantially informed by the use of the system, and, where relevant and appropriate, the use of the system itself; and\n\nc an effective possibility for persons concerned to lodge a complaint to competent authorities.\n\n## Article 15 - Procedural safeguards\n\n1 Each Party shall ensure that, where an artificial intelligence system significantly impacts upon the enjoyment of human rights, effective procedural guarantees, safeguards and rights, in accordance with the applicable international and domestic law, are available to persons affected thereby.\n\n<!-- PageFooter: page 5 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n2 Each Party shall seek to ensure that, as appropriate for the context, persons interacting with artificial intelligence systems are notified that they are interacting with such systems rather than with a human.\n\n## Chapter V - Assessment and mitigation of risks and adverse impacts\n\n### Article 16 - Risk and impact management framework\n\n1 Each Party shall, taking into account the principles set forth in Chapter III, adopt or maintain measures for the identification, assessment, prevention and mitigation of risks posed by artificial intelligence systems by considering actual and potential impacts to human rights, democracy and the rule of law.\n\n2 Such measures shall be graduated and differentiated, as appropriate, and:\n\na take due account of the context and intended use of artificial intelligence systems, in particular as concerns risks to human rights, democracy, and the rule of law;\n\nb take due account of the severity and probability of potential impacts;\n\nc consider, where appropriate, the perspectives of relevant stakeholders, in particular persons whose rights may be impacted;\n\nd apply iteratively throughout the activities within the lifecycle of the artificial intelligence system;\n\ne include monitoring for risks and adverse impacts to human rights, democracy, and the rule of law;\n\nf include documentation of risks, actual and potential impacts, and the risk management approach; and\n\ng require, where appropriate, testing of artificial intelligence systems before making them available for first use and when they are significantly modified.\n\n3 Each Party shall adopt or maintain measures that seek to ensure that adverse impacts of artificial intelligence systems to human rights, democracy, and the rule of law are adequately addressed. Such adverse impacts and measures to address them should be documented and inform the relevant risk management measures described in paragraph 2.\n\n4 Each Party shall assess the need for a moratorium or ban or other appropriate measures in respect of certain uses of artificial intelligence systems where it considers such uses incompatible with the respect for human rights, the functioning of democracy or the rule of law.\n\n## Chapter VI - Implementation of the Convention\n\n### Article 17 - Non-discrimination\n\nThe implementation of the provisions of this Convention by the Parties shall be secured without discrimination on any ground, in accordance with their international human rights obligations.\n\n<!-- PageFooter: page 6 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n## Article 18 - Rights of persons with disabilities and of children\n\nEach Party shall, in accordance with its domestic law and applicable international obligations, take due account of any specific needs and vulnerabilities in relation to respect for the rights of persons with disabilities and of children.\n\n### Article 19 - Public consultation\n\nEach Party shall seek to ensure that important questions raised in relation to artificial intelligence systems are, as appropriate, duly considered through public discussion and multistakeholder consultation in the light of social, economic, legal, ethical, environmental and other relevant implications.\n\n### Article 20 - Digital literacy and skills\n\nEach Party shall encourage and promote adequate digital literacy and digital skills for all segments of the population, including specific expert skills for those responsible for the identification, assessment, prevention and mitigation of risks posed by artificial intelligence systems.\n\n### Article 21 - Safeguard for existing human rights\n\nNothing in this Convention shall be construed as limiting, derogating from or otherwise affecting the human rights or other related legal rights and obligations which may be guaranteed under the relevant laws of a Party or any other relevant international agreement to which it is party.\n\n### Article 22 - Wider protection\n\nNone of the provisions of this Convention shall be interpreted as limiting or otherwise affecting the possibility for a Party to grant a wider measure of protection than is stipulated in this Convention.\n\n# Chapter VII - Follow-up mechanism and co-operation\n\n## Article 23 - Conference of the Parties\n\n1 The Conference of the Parties shall be composed of representatives of the Parties to this Convention.\n\n2 The Parties shall consult periodically with a view to:\n\na facilitating the effective application and implementation of this Convention, including the identification of any problems and the effects of any reservation made in pursuance of Article 34, paragraph 1, or any declaration made under this Convention;\n\nb considering the possible supplementation to or amendment of this Convention;\n\nc considering matters and making specific recommendations concerning the interpretation and application of this Convention;\n\nd facilitating the exchange of information on significant legal, policy or technological developments of relevance, including in pursuit of the objectives defined in Article 25, for the implementation of this Convention;\n\ne facilitating, where necessary, the friendly settlement of disputes related to the application of this Convention; and\n\n<!-- PageFooter: page 7 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\nf facilitating co-operation with relevant stakeholders concerning pertinent aspects of the implementation of this Convention, including through public hearings where appropriate.\n\n3 The Conference of the Parties shall be convened by the Secretary General of the Council of Europe whenever necessary and, in any case, when a majority of the Parties or the Committee of Ministers requests its convocation.\n\n4 The Conference of the Parties shall adopt its own rules of procedure by consensus within twelve months of the entry into force of this Convention.\n\n5 The Parties shall be assisted by the Secretariat of the Council of Europe in carrying out their functions pursuant to this article.\n\n6 The Conference of the Parties may propose to the Committee of Ministers appropriate ways to engage relevant expertise in support of the effective implementation of this Convention.\n\n7 Any Party which is not a member of the Council of Europe shall contribute to the funding of the activities of the Conference of the Parties. The contribution of a non-member of the Council of Europe shall be established jointly by the Committee of Ministers and that non-member.\n\n8 The Conference of the Parties may decide to restrict the participation in its work of a Party that has ceased to be a member of the Council of Europe under Article 8 of the Statute of the Council of Europe (ETS No. 1) for a serious violation of Article 3 of the Statute. Similarly, measures can be taken in respect of any Party that is not a member State of the Council of Europe by a decision of the Committee of Ministers to cease its relations with that State on grounds similar to those mentioned in Article 3 of the Statute.\n\n## Article 24 - Reporting obligation\n\n1 Each Party shall provide a report to the Conference of the Parties within the first two years after becoming a Party, and then periodically thereafter with details of the activities undertaken to give effect to Article 3, paragraph 1, sub-paragraphs a and b.\n\n2 The Conference of the Parties shall determine the format and the process for the report in accordance with its rules of procedure.\n\n## Article 25 - International co-operation\n\n1 The Parties shall co-operate in the realisation of the purpose of this Convention. Parties are further encouraged, as appropriate, to assist States that are not Parties to this Convention in acting consistently with the terms of this Convention and becoming a Party to it.\n\n2 The Parties shall, as appropriate, exchange relevant and useful information between themselves concerning aspects related to artificial intelligence which may have significant positive or negative effects on the enjoyment of human rights, the functioning of democracy and the observance of the rule of law, including risks and effects that have arisen in research contexts and in relation to the private sector. Parties are encouraged to involve, as appropriate, relevant stakeholders and States that are not Parties to this Convention in such exchanges of information.\n\n<!-- PageFooter: page 8 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n3 The Parties are encouraged to strengthen co-operation, including with relevant stakeholders where appropriate, to prevent and mitigate risks and adverse impacts on human rights, democracy and the rule of law in the context of activities within the lifecycle of artificial intelligence systems.\n\n# Article 26 - Effective oversight mechanisms\n\n1 Each Party shall establish or designate one or more effective mechanisms to oversee compliance with the obligations in this Convention.\n\n2 Each Party shall ensure that such mechanisms exercise their duties independently and impartially and that they have the necessary powers, expertise and resources to effectively fulfil their tasks of overseeing compliance with the obligations in this Convention, as given effect by the Parties.\n\n3 If a Party has provided for more than one such mechanism, it shall take measures, where practicable, to facilitate effective cooperation among them.\n\n4 If a Party has provided for mechanisms different from existing human rights structures, it shall take measures, where practicable, to promote effective cooperation between the mechanisms referred to in paragraph 1 and those existing domestic human rights structures.\n\n# Chapter VIII - Final clauses\n\n## Article 27 - Effects of the Convention\n\n1 If two or more Parties have already concluded an agreement or treaty on the matters dealt with in this Convention, or have otherwise established relations on such matters, they shall also be entitled to apply that agreement or treaty or to regulate those relations accordingly, so long as they do so in a manner which is not inconsistent with the object and purpose of this Convention.\n\n2 Parties which are members of the European Union shall, in their mutual relations, apply European Union rules governing the matters within the scope of this Convention without prejudice to the object and purpose of this Convention and without prejudice to its full application with other Parties. The same applies to other Parties to the extent that they are bound by such rules.\n\n## Article 28 - Amendments\n\n1 Amendments to this Convention may be proposed by any Party, the Committee of Ministers of the Council of Europe or the Conference of the Parties.\n\n2 Any proposal for amendment shall be communicated by the Secretary General of the Council of Europe to the Parties.\n\n3 Any amendment proposed by a Party, or the Committee of Ministers, shall be communicated to the Conference of the Parties, which shall submit to the Committee of Ministers its opinion on the proposed amendment.\n\n4 The Committee of Ministers shall consider the proposed amendment and the opinion submitted by the Conference of the Parties and may approve the amendment.\n\n5 The text of any amendment approved by the Committee of Ministers in accordance with paragraph 4 shall be forwarded to the Parties for acceptance.\n\n<!-- PageFooter: page 9 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n6 Any amendment approved in accordance with paragraph 4 shall come into force on the thirtieth day after all Parties have informed the Secretary General of their acceptance thereof.\n\n# Article 29 - Dispute settlement\n\nIn the event of a dispute between Parties as to the interpretation or application of this Convention, these Parties shall seek a settlement of the dispute through negotiation or any other peaceful means of their choice, including through the Conference of the Parties, as provided for in Article 23, paragraph 2, sub-paragraph e.\n\n# Article 30 - Signature and entry into force\n\n1 This Convention shall be open for signature by the member States of the Council of Europe, the non-member States which have participated in its elaboration and the European Union.\n\n2 This Convention is subject to ratification, acceptance or approval. Instruments of ratification, acceptance or approval shall be deposited with the Secretary General of the Council of Europe.\n\n3 This Convention shall enter into force on the first day of the month following the expiration of a period of three months after the date on which five signatories, including at least three member States of the Council of Europe, have expressed their consent to be bound by this Convention in accordance with paragraph 2.\n\n4 In respect of any signatory which subsequently expresses its consent to be bound by it, this Convention shall enter into force on the first day of the month following the expiration of a period of three months after the date of the deposit of its instrument of ratification, acceptance or approval.\n\n# Article 31 - Accession\n\n1 After the entry into force of this Convention, the Committee of Ministers of the Council of Europe may, after consulting the Parties to this Convention and obtaining their unanimous consent, invite any non-member State of the Council of Europe which has not participated in the elaboration of this Convention to accede to this Convention by a decision taken by the majority provided for in Article 20.d of the Statute of the Council of Europe, and by unanimous vote of the representatives of the Parties entitled to sit on the Committee of Ministers.\n\n2 In respect of any acceding State, this Convention shall enter into force on the first day of the month following the expiration of a period of three months after the date of deposit of the instrument of accession with the Secretary General of the Council of Europe.\n\n# Article 32 - Territorial application\n\n1 Any State or the European Union may, at the time of signature or when depositing its instrument of ratification, acceptance, approval or accession, specify the territory or territories to which this Convention shall apply.\n\n2 Any Party may, at a later date, by a declaration addressed to the Secretary General of the Council of Europe, extend the application of this Convention to any other territory specified in the declaration. In respect of such territory, this Convention shall enter into force on the first day of the month following the expiration of a period of three months after the date of receipt of the declaration by the Secretary General.\n\n<!-- PageFooter: page 10 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\n3 Any declaration made under the two preceding paragraphs may, in respect of any territory specified in said declaration, be withdrawn by a notification addressed to the Secretary General of the Council of Europe. The withdrawal shall become effective on the first day of the month following the expiration of a period of three months after the date of receipt of such notification by the Secretary General.\n\n# Article 33 - Federal clause\n\n1 A federal State may reserve the right to assume obligations under this Convention consistent with its fundamental principles governing the relationship between its central government and constituent states or other similar territorial entities, provided that this Convention shall apply to the central government of the federal State.\n\n2 With regard to the provisions of this Convention, the application of, which come under the jurisdiction of constituent states or other similar territorial entities that are not obliged by the constitutional system of the federation to take legislative measures, the federal government shall inform the competent authorities of such states of the said provisions with its favourable opinion, and encourage them to take appropriate action to give them effect.\n\n# Article 34 - Reservations\n\n1 By a written notification addressed to the Secretary General of the Council of Europe, any State may, at the time of signature or when depositing its instrument of ratification, acceptance, approval or accession, declare that it avails itself of the reservation provided for in Article 33, paragraph 1.\n\n2 No other reservation may be made in respect of this Convention.\n\n# Article 35 - Denunciation\n\n1 Any Party may, at any time, denounce this Convention by means of a notification addressed to the Secretary General of the Council of Europe.\n\n2 Such denunciation shall become effective on the first day of the month following the expiration of a period of three months after the date of receipt of the notification by the Secretary General.\n\n# Article 36 - Notification\n\nThe Secretary General of the Council of Europe shall notify the member States of the Council of Europe, the non-member States which have participated in the elaboration of this Convention, the European Union, any signatory, any contracting State, any Party and any other State which has been invited to accede to this Convention, of:\n\na any signature;\n\nb the deposit of any instrument of ratification, acceptance, approval or accession;\n\nc any date of entry into force of this Convention, in accordance with Article 30, paragraphs 3 and 4, and Article 31, paragraph 2;\n\nd any amendment adopted in accordance with Article 28 and the date on which such an amendment enters into force;\n\ne any declaration made in pursuance of Article 3, paragraph 1, sub-paragraph b;\n\nf any reservation and withdrawal of a reservation made in pursuance of Article 34;\n\n<!-- PageFooter: page 11 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: CETS 225 - Artificial Intelligence, 5.IX.2024 -->\n\ng any denunciation made in pursuance of Article 35;\n\nh any other act, declaration, notification or communication relating to this Convention.\n\nIn witness whereof the undersigned, being duly authorised thereto, have signed this Convention.\n\nDone in Vilnius, this 5th day of September 2024, in English and in French, both texts being equally authentic, in a single copy which shall be deposited in the archives of the Council of Europe. The Secretary General of the Council of Europe shall transmit certified copies to each member State of the Council of Europe, to the non-member States which have participated in the elaboration of this Convention, to the European Union and to any State invited to accede to this Convention.\n\n<!-- PageFooter: page 12 -->\n<!-- PageBreak -->\n\n",
+  "split_points": [
+    64,
+    104,
+    241,
+    2334,
+    2354,
+    2422,
+    3751,
+    4247,
+    4897,
+    5682,
+    5710,
+    5730,
+    5798,
+    5974,
+    6461,
+    7143,
+    7705,
+    8799,
+    8827,
+    8847,
+    8915,
+    9254,
+    9969,
+    10337,
+    10569,
+    10962,
+    11252,
+    11888,
+    11916,
+    11936,
+    12004,
+    12521,
+    12824,
+    13197,
+    14402,
+    14737,
+    14765,
+    14785,
+    14853,
+    15066,
+    17043,
+    17322,
+    17350,
+    17370,
+    17438,
+    17747,
+    18091,
+    18426,
+    18769,
+    19009,
+    20071,
+    20099,
+    20119,
+    20187,
+    21343,
+    21876,
+    22310,
+    23203,
+    23231,
+    23251,
+    23319,
+    23616,
+    24521,
+    25367,
+    26182,
+    26210,
+    26230,
+    26298,
+    26481,
+    26847,
+    27898,
+    28478,
+    28747,
+    29444,
+    29473,
+    29493,
+    29561,
+    29970,
+    30800,
+    31202,
+    31574,
+    32452,
+    32481,
+    32501,
+    32569,
+    33296,
+    33325
+  ],
+  "titles": [
+    {
+      "title": "# Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law",
+      "start": 104,
+      "level": 1,
+      "end": 13197
+    },
+    {
+      "title": "## Preamble",
+      "start": 241,
+      "level": 2,
+      "end": 4897
+    },
+    {
+      "title": "## Chapter I - General provisions",
+      "start": 4897,
+      "level": 2,
+      "end": 5974
+    },
+    {
+      "title": "### Article 1 - Object and purpose",
+      "start": 4932,
+      "level": 3,
+      "end": 5974
+    },
+    {
+      "title": "## Article 2 - Definition of artificial intelligence systems",
+      "start": 5974,
+      "level": 2,
+      "end": 8915
+    },
+    {
+      "title": "### Article 3 - Scope",
+      "start": 6461,
+      "level": 3,
+      "end": 8915
+    },
+    {
+      "title": "## Chapter II - General obligations",
+      "start": 8915,
+      "level": 2,
+      "end": 9969
+    },
+    {
+      "title": "### Article 4 - Protection of human rights",
+      "start": 8952,
+      "level": 3,
+      "end": 9254
+    },
+    {
+      "title": "### Article 5 - Integrity of democratic processes and respect for the rule of law",
+      "start": 9254,
+      "level": 3,
+      "end": 9969
+    },
+    {
+      "title": "## Chapter III - Principles related to activities within the lifecycle of artificial intelligence systems",
+      "start": 9969,
+      "level": 2,
+      "end": 12004
+    },
+    {
+      "title": "### Article 6 - General approach",
+      "start": 10076,
+      "level": 3,
+      "end": 10337
+    },
+    {
+      "title": "### Article 7 - Human dignity and individual autonomy",
+      "start": 10337,
+      "level": 3,
+      "end": 10569
+    },
+    {
+      "title": "### Article 8 - Transparency and oversight",
+      "start": 10569,
+      "level": 3,
+      "end": 10962
+    },
+    {
+      "title": "### Article 9 - Accountability and responsibility",
+      "start": 10962,
+      "level": 3,
+      "end": 11252
+    },
+    {
+      "title": "### Article 10 - Equality and non-discrimination",
+      "start": 11252,
+      "level": 3,
+      "end": 12004
+    },
+    {
+      "title": "## Article 11 - Privacy and personal data protection",
+      "start": 12004,
+      "level": 2,
+      "end": 12521
+    },
+    {
+      "title": "## Article 12 - Reliability",
+      "start": 12521,
+      "level": 2,
+      "end": 12824
+    },
+    {
+      "title": "## Article 13 - Safe innovation",
+      "start": 12824,
+      "level": 2,
+      "end": 13197
+    },
+    {
+      "title": "# Chapter IV - Remedies",
+      "start": 13197,
+      "level": 1,
+      "end": 19009
+    },
+    {
+      "title": "## Article 14 - Remedies",
+      "start": 13222,
+      "level": 2,
+      "end": 14402
+    },
+    {
+      "title": "## Article 15 - Procedural safeguards",
+      "start": 14402,
+      "level": 2,
+      "end": 15066
+    },
+    {
+      "title": "## Chapter V - Assessment and mitigation of risks and adverse impacts",
+      "start": 15066,
+      "level": 2,
+      "end": 17043
+    },
+    {
+      "title": "### Article 16 - Risk and impact management framework",
+      "start": 15137,
+      "level": 3,
+      "end": 17043
+    },
+    {
+      "title": "## Chapter VI - Implementation of the Convention",
+      "start": 17043,
+      "level": 2,
+      "end": 17438
+    },
+    {
+      "title": "### Article 17 - Non-discrimination",
+      "start": 17093,
+      "level": 3,
+      "end": 17438
+    },
+    {
+      "title": "## Article 18 - Rights of persons with disabilities and of children",
+      "start": 17438,
+      "level": 2,
+      "end": 19009
+    },
+    {
+      "title": "### Article 19 - Public consultation",
+      "start": 17747,
+      "level": 3,
+      "end": 18091
+    },
+    {
+      "title": "### Article 20 - Digital literacy and skills",
+      "start": 18091,
+      "level": 3,
+      "end": 18426
+    },
+    {
+      "title": "### Article 21 - Safeguard for existing human rights",
+      "start": 18426,
+      "level": 3,
+      "end": 18769
+    },
+    {
+      "title": "### Article 22 - Wider protection",
+      "start": 18769,
+      "level": 3,
+      "end": 19009
+    },
+    {
+      "title": "# Chapter VII - Follow-up mechanism and co-operation",
+      "start": 19009,
+      "level": 1,
+      "end": 23616
+    },
+    {
+      "title": "## Article 23 - Conference of the Parties",
+      "start": 19063,
+      "level": 2,
+      "end": 21876
+    },
+    {
+      "title": "## Article 24 - Reporting obligation",
+      "start": 21876,
+      "level": 2,
+      "end": 22310
+    },
+    {
+      "title": "## Article 25 - International co-operation",
+      "start": 22310,
+      "level": 2,
+      "end": 23616
+    },
+    {
+      "title": "# Article 26 - Effective oversight mechanisms",
+      "start": 23616,
+      "level": 1,
+      "end": 24521
+    },
+    {
+      "title": "# Chapter VIII - Final clauses",
+      "start": 24521,
+      "level": 1,
+      "end": 26481
+    },
+    {
+      "title": "## Article 27 - Effects of the Convention",
+      "start": 24553,
+      "level": 2,
+      "end": 25367
+    },
+    {
+      "title": "## Article 28 - Amendments",
+      "start": 25367,
+      "level": 2,
+      "end": 26481
+    },
+    {
+      "title": "# Article 29 - Dispute settlement",
+      "start": 26481,
+      "level": 1,
+      "end": 26847
+    },
+    {
+      "title": "# Article 30 - Signature and entry into force",
+      "start": 26847,
+      "level": 1,
+      "end": 27898
+    },
+    {
+      "title": "# Article 31 - Accession",
+      "start": 27898,
+      "level": 1,
+      "end": 28747
+    },
+    {
+      "title": "# Article 32 - Territorial application",
+      "start": 28747,
+      "level": 1,
+      "end": 29970
+    },
+    {
+      "title": "# Article 33 - Federal clause",
+      "start": 29970,
+      "level": 1,
+      "end": 30800
+    },
+    {
+      "title": "# Article 34 - Reservations",
+      "start": 30800,
+      "level": 1,
+      "end": 31202
+    },
+    {
+      "title": "# Article 35 - Denunciation",
+      "start": 31202,
+      "level": 1,
+      "end": 31574
+    },
+    {
+      "title": "# Article 36 - Notification",
+      "start": 31574,
+      "level": 1,
+      "end": 33345
+    }
+  ]
+}
