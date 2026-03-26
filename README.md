@@ -66,9 +66,9 @@ All metrics are implemented in [`metrics.py`](src/adaptive_chunking/metrics.py) 
 
 | Method | Description |
 |--------|-------------|
-| **Recursive (merge-to-size)** | Splits on a hierarchy of separators then merges small chunks up to a target size |
-| **Recursive (merge-small-only)** | Same recursive split but only merges undersized chunks, preserving natural boundaries |
-| **Page** | Splits on page breaks |
+| **Recursive (s=1100)** | Split-then-merge recursive splitter with a target chunk size of 1100 tokens |
+| **Recursive (s=600)** | Same splitter with a smaller 600-token target, producing more granular chunks |
+| **Page** | Splits on page breaks, with post-processing to enforce size constraints |
 | **LLM Regex** | Asks an LLM to generate document-specific regex split patterns |
 
 The recursive splitter lives in [`splitters.py`](src/adaptive_chunking/splitters.py); the others are in [`paper/splitters.py`](src/adaptive_chunking/paper/splitters.py). You can register any callable that takes text and returns a list of chunks.
