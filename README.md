@@ -4,7 +4,7 @@
 
 **Selecting the Best Chunking Strategy per Document for RAG**
 
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
+[![arXiv](https://img.shields.io/badge/arXiv-2603.25333-b31b1b.svg)](https://arxiv.org/abs/2603.25333)
 [![Conference](https://img.shields.io/badge/LREC-2026-blue)](https://lrec2026.info/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
@@ -278,6 +278,7 @@ If you use this work, please cite our LREC 2026 paper:
     author={de Moura Junior, Paulo Roberto and Lelong, Jean and Blangero, Annabelle},
     booktitle={Proceedings of the 15th Language Resources and Evaluation Conference (LREC 2026)},
     year={2026},
+    url={https://arxiv.org/abs/2603.25333},
 }
 ```
 
