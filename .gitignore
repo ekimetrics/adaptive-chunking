@@ -100,3 +100,14 @@ uv.lock
 # Data exports (keep data/clair/ for paper reproduction)
 data/*
 !data/clair/
+
+CLAUDE.md
+
+# Playwright MCP debug artefacts (local only)
+.playwright-mcp/
+
+# Slides
+slides/
+
+# Poster sources & build artefacts (only the final PDF is published at repo root)
+poster/

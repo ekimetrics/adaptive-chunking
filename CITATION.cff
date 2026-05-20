@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the accompanying paper."
+title: "adaptive-chunking: Adaptive Chunking for Retrieval-Augmented Generation"
+abstract: "A multi-domain document chunking evaluation framework that automatically selects the best chunking strategy per document for RAG, using five intrinsic, document-based metrics (References Completeness, Intrachunk Cohesion, Document Contextual Coherence, Block Integrity, Size Compliance)."
+type: software
+version: "0.1.0"
+license: MIT
+repository-code: "https://github.com/ekimetrics/adaptive-chunking"
+url: "https://github.com/ekimetrics/adaptive-chunking"
+authors:
+  - family-names: "de Moura Júnior"
+    given-names: "Paulo Roberto"
+    orcid: "https://orcid.org/0009-0008-6148-8851"
+    affiliation: "Ekimetrics"
+  - family-names: "Lelong"
+    given-names: "Jean"
+    orcid: "https://orcid.org/0009-0001-6440-3381"
+    affiliation: "Ekimetrics"
+  - family-names: "Blangero"
+    given-names: "Annabelle"
+    orcid: "https://orcid.org/0000-0002-5799-5665"
+    affiliation: "Ekimetrics"
+keywords:
+  - retrieval-augmented-generation
+  - rag
+  - document-chunking
+  - natural-language-processing
+  - information-retrieval
+preferred-citation:
+  type: conference-paper
+  title: "Adaptive Chunking: Optimizing Chunking-Method Selection for RAG"
+  year: 2026
+  month: 3
+  collection-title: "Proceedings of the 2026 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC 2026)"
+  authors:
+    - family-names: "de Moura Júnior"
+      given-names: "Paulo Roberto"
+      orcid: "https://orcid.org/0009-0008-6148-8851"
+      affiliation: "Ekimetrics"
+    - family-names: "Lelong"
+      given-names: "Jean"
+      orcid: "https://orcid.org/0009-0001-6440-3381"
+      affiliation: "Ekimetrics"
+    - family-names: "Blangero"
+      given-names: "Annabelle"
+      orcid: "https://orcid.org/0000-0002-5799-5665"
+      affiliation: "Ekimetrics"
+  doi: "10.48550/arXiv.2603.25333"
+  url: "https://arxiv.org/abs/2603.25333"
+  identifiers:
+    - type: other
+      value: "arXiv:2603.25333"
+      description: "arXiv preprint"
