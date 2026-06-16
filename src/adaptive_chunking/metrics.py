@@ -540,9 +540,11 @@ def compute_filtered_missing_ref_error(
     chunk_bounds: list[tuple[int, int]] = []
     search_pos = 0
     for idx, chunk in enumerate(chunks):
-        try:
-            start_idx = full_text.find(chunk, search_pos)
-        except ValueError:
+        # str.find returns -1 when the chunk is absent (it never raises), so the
+        # sentinel must be checked explicitly — otherwise -1 silently becomes a
+        # valid-looking offset and corrupts every boundary that follows.
+        start_idx = full_text.find(chunk, search_pos)
+        if start_idx == -1:
             raise ValueError("Chunk not found in full_text.")
 
         end_idx = start_idx + len(chunk)
