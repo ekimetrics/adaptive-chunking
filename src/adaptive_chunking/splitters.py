@@ -4,6 +4,77 @@ import re
 from .chunking_utils import count_tokens
 
 
+def _split_keep_separator(
+    text: str,
+    regex_pattern: str,
+    attach_to: Literal["start", "end"],
+    min_len: int = 10,
+    on_error: Literal["raise", "return_text"] = "raise",
+) -> List[str]:
+    """Split *text* on *regex_pattern*, keeping each separator attached to the
+    neighbouring chunk (``"end"`` appends it, ``"start"`` prepends it to the
+    following text), then merge any chunk shorter than *min_len* into a
+    neighbour following the same attach rule.
+
+    Robust against patterns that contain capturing groups. On an invalid
+    pattern, either raises ``ValueError`` (``on_error="raise"``) or prints a
+    message and returns ``[text]`` (``on_error="return_text"``).
+    """
+    pieces = []
+    last_idx = 0
+    try:
+        for match in re.finditer(regex_pattern, text):
+            pieces.append(text[last_idx:match.start()])
+            pieces.append(match.group(0))
+            last_idx = match.end()
+        pieces.append(text[last_idx:])
+    except re.error as e:
+        if on_error == "return_text":
+            print(f"Error compiling or using regex pattern: {e}")
+            return [text]
+        raise ValueError(f"Invalid regex pattern: {regex_pattern}") from e
+
+    if len(pieces) <= 1:
+        return [p for p in pieces if p]
+
+    if attach_to == "end":
+        chunks, i = [], 0
+        while i < len(pieces):
+            separator = pieces[i + 1] if i + 1 < len(pieces) else ""
+            chunk = pieces[i] + separator
+            i += 2
+            if chunk:
+                chunks.append(chunk)
+
+        merged = []
+        for c in chunks:
+            if len(c) < min_len and merged:
+                merged[-1] += c
+            else:
+                merged.append(c)
+        return merged
+
+    if attach_to == "start":
+        chunks = [pieces[0]] if pieces[0] else []
+        i = 1
+        while i < len(pieces):
+            text_segment = pieces[i + 1] if i + 1 < len(pieces) else ""
+            chunk = pieces[i] + text_segment
+            chunks.append(chunk)
+            i += 2
+
+        merged, idx = [], 0
+        while idx < len(chunks):
+            if len(chunks[idx]) < min_len and idx + 1 < len(chunks):
+                chunks[idx + 1] = chunks[idx] + chunks[idx + 1]
+            else:
+                merged.append(chunks[idx])
+            idx += 1
+        return merged
+
+    raise ValueError('attach_to must be "start" or "end"')
+
+
 class RecursiveSplitter:
     """
     Splits text recursively into chunks.
@@ -74,56 +145,9 @@ class RecursiveSplitter:
 
         Robust against patterns that contain capturing groups.
         """
-        pieces = []
-        last_idx = 0
-        try:
-            for match in re.finditer(regex_pattern, text):
-                pieces.append(text[last_idx:match.start()])
-                pieces.append(match.group(0))
-                last_idx = match.end()
-            pieces.append(text[last_idx:])
-        except re.error as e:
-            raise ValueError(f"Invalid regex pattern: {regex_pattern}") from e
-
-        if len(pieces) <= 1:
-            return [p for p in pieces if p]
-
-        if self.attach_separator_to == "end":
-            chunks, i = [], 0
-            while i < len(pieces):
-                separator = pieces[i + 1] if i + 1 < len(pieces) else ""
-                chunk = pieces[i] + separator
-                i += 2
-                if chunk:
-                    chunks.append(chunk)
-
-            merged = []
-            for c in chunks:
-                if len(c) < min_len and merged:
-                    merged[-1] += c
-                else:
-                    merged.append(c)
-            return merged
-
-        elif self.attach_separator_to == "start":
-            chunks = [pieces[0]] if pieces[0] else []
-            i = 1
-            while i < len(pieces):
-                text_segment = pieces[i + 1] if i + 1 < len(pieces) else ""
-                chunk = pieces[i] + text_segment
-                chunks.append(chunk)
-                i += 2
-
-            merged, idx = [], 0
-            while idx < len(chunks):
-                if len(chunks[idx]) < min_len and idx + 1 < len(chunks):
-                    chunks[idx + 1] = chunks[idx] + chunks[idx + 1]
-                else:
-                    merged.append(chunks[idx])
-                idx += 1
-            return merged
-        else:
-            raise ValueError('attach_separator_to must be "start" or "end"')
+        return _split_keep_separator(
+            text, regex_pattern, self.attach_separator_to, min_len, on_error="raise"
+        )
 
     def _recursive_split(self, text: str, separators: List[str], max_length: int) -> List[str]:
         """Recursively splits text until all chunks are smaller than chunk_size."""
@@ -204,6 +228,38 @@ class RecursiveSplitter:
 
         return final_chunks
 
+    def _build_overlap(self, parts: List[str]) -> List[str]:
+        """Return the trailing parts of *parts* forming an overlap of up to
+        ``chunk_overlap`` tokens, recursively re-splitting an oversized trailing
+        part so the overlap can still be filled."""
+        overlap_parts: List[str] = []
+        overlap_len = 0
+        min_overlap_len = int(0.5 * self.chunk_overlap)  # minimum overlap length
+
+        for i, part in enumerate(reversed(parts)):
+            part_len = self.length_function(part)
+
+            # if a part is larger than chunk_overlap AND it is the first part or the
+            # current overlap is smaller than min_overlap_len, resplit it recursively
+            if part_len > self.chunk_overlap:
+                if i == 0 or overlap_len < min_overlap_len:
+                    remaining = self.chunk_overlap - overlap_len
+                    subparts = self._recursive_split(text=part, separators=self.separators, max_length=remaining)
+                    for subpart in reversed(subparts):
+                        if overlap_len + self.length_function(subpart) > self.chunk_overlap:
+                            break
+                        overlap_parts.insert(0, subpart)
+                        overlap_len += self.length_function(subpart)
+                    break
+
+            if overlap_len + part_len > self.chunk_overlap:
+                break
+
+            overlap_parts.insert(0, part)
+            overlap_len += part_len
+
+        return overlap_parts
+
     def _merge_splits(self, splits: List[str]) -> List[str]:
         """
         Merges small splits into larger chunks and introduces overlap if needed.
@@ -229,32 +285,8 @@ class RecursiveSplitter:
                     chunk = "".join(current_chunk_parts)
                 final_chunks.append(chunk)
 
-                # Start a new chunk, creating overlap by backtracking
-                overlap_parts = []
-                overlap_len = 0
-                min_overlap_len = int(0.5*self.chunk_overlap) # define the minimum overlap length
-
-                for i, part in enumerate(reversed(current_chunk_parts)):
-                    part_len = self.length_function(part)
-
-                    # if a part is larger than chunk_overlap AND it is the first part or the current overlap is smaller
-                    #  than min_overlap_len, we resplit that part recursively
-                    if part_len > self.chunk_overlap:
-                        if i == 0 or overlap_len < min_overlap_len:
-                            remaining = self.chunk_overlap - overlap_len
-                            subparts = self._recursive_split(text=part, separators=self.separators, max_length=remaining)
-                            for subpart in reversed(subparts):
-                                if overlap_len + self.length_function(subpart) > self.chunk_overlap:
-                                    break
-                                overlap_parts.insert(0, subpart)
-                                overlap_len += self.length_function(subpart)
-                            break
-
-                    if overlap_len + part_len > self.chunk_overlap:
-                        break
-
-                    overlap_parts.insert(0, part)
-                    overlap_len += part_len
+                # Start a new chunk with an overlap backtracked from the previous one
+                overlap_parts = self._build_overlap(current_chunk_parts)
 
                 # The new chunk starts with the overlap and the current split
                 current_chunk_parts = overlap_parts + [split]
@@ -337,35 +369,8 @@ class RecursiveSplitter:
             final_chunks.append(chunk)
 
             # Now, create the overlap FOR THE NEXT chunk by backtracking over the
-            # parts we just used for THIS chunk.
-            new_overlap_parts = []
-            overlap_len = 0
-            min_overlap_len = int(0.5*self.chunk_overlap) # define the minimum overlap length
-
-            for i, part in enumerate(reversed(parts_for_this_chunk)):
-                part_len = self.length_function(part)
-
-                # if a part is larger than chunk_overlap AND it is the first part or the current overlap is smaller
-                #  than min_overlap_len, we resplit that part recursively
-                if part_len > self.chunk_overlap:
-                    if i == 0 or overlap_len < min_overlap_len:
-                        remaining = self.chunk_overlap - overlap_len
-                        subparts = self._recursive_split(text=part, separators=self.separators, max_length=remaining)
-                        for subpart in reversed(subparts):
-                            if overlap_len + self.length_function(subpart) > self.chunk_overlap:
-                                break
-                            new_overlap_parts.insert(0, subpart)
-                            overlap_len += self.length_function(subpart)
-                        break
-
-                if overlap_len + part_len > self.chunk_overlap:
-                    break
-
-                new_overlap_parts.insert(0, part)
-                overlap_len += part_len
-
-            # This overlap will be used in the next iteration of the loop
-            overlap_parts = new_overlap_parts
+            # parts we just used for THIS chunk. Used on the next loop iteration.
+            overlap_parts = self._build_overlap(parts_for_this_chunk)
 
         # If we processed splits backward, reverse the result to maintain original order
         if self.merging_order == "backward":
@@ -565,54 +570,6 @@ def regex_splitter(text: str,
 
     *robust against patterns that contain capturing groups.
     """
-    pieces = []
-    last_idx = 0
-    try:
-        for match in re.finditer(regex_pattern, text):
-            pieces.append(text[last_idx:match.start()])
-            pieces.append(match.group(0))
-            last_idx = match.end()
-        pieces.append(text[last_idx:])
-    except re.error as e:
-        print(f"Error compiling or using regex pattern: {e}")
-        return [text]
-
-    if len(pieces) <= 1:
-        return [p for p in pieces if p]
-
-    if attach_to == "end":
-        chunks, i = [], 0
-        while i < len(pieces):
-            separator = pieces[i + 1] if i + 1 < len(pieces) else ""
-            chunk = pieces[i] + separator
-            i += 2
-            if chunk:
-                chunks.append(chunk)
-
-        merged = []
-        for c in chunks:
-            if len(c) < min_len and merged:
-                merged[-1] += c
-            else:
-                merged.append(c)
-        return merged
-
-    if attach_to == "start":
-        chunks = [pieces[0]] if pieces[0] else []
-        i = 1
-        while i < len(pieces):
-            text_segment = pieces[i + 1] if i + 1 < len(pieces) else ""
-            chunk = pieces[i] + text_segment
-            chunks.append(chunk)
-            i += 2
-
-        merged, idx = [], 0
-        while idx < len(chunks):
-            if len(chunks[idx]) < min_len and idx + 1 < len(chunks):
-                chunks[idx + 1] = chunks[idx] + chunks[idx + 1]
-            else:
-                merged.append(chunks[idx])
-            idx += 1
-        return merged
-
-    raise ValueError('attach_to must be "start" or "end"')
+    return _split_keep_separator(
+        text, regex_pattern, attach_to, min_len, on_error="return_text"
+    )
