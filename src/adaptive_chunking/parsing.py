@@ -9,6 +9,20 @@ import numpy as np
 from .chunking_utils import count_tokens
 
 
+def _assign_title_end_offsets(titles: list[dict], full_text_len: int) -> None:
+    """Set each title's ``end`` to the start of the next title at an
+    equal-or-shallower level (the span it encloses), or the document end if no
+    such title follows. Mutates the dicts in place."""
+    for idx, t in enumerate(titles):
+        level = t["level"]
+        end = full_text_len
+        for jdx in range(idx + 1, len(titles)):
+            if titles[jdx]["level"] <= level:
+                end = titles[jdx]["start"]
+                break
+        t["end"] = end
+
+
 class BaseParser(ABC):
     """Abstract base class for document parsers.
 
@@ -460,15 +474,7 @@ class AzureDIParser(BaseParser):
             full_text = "".join(pages_content.values())
 
             # compute end offsets for titles
-            for idx, t in enumerate(titles):
-                level = t["level"]
-                start = t["start"]
-                end = len(full_text)
-                for jdx in range(idx + 1, len(titles)):
-                    if titles[jdx]["level"] <= level:
-                        end = titles[jdx]["start"]
-                        break
-                t["end"] = end
+            _assign_title_end_offsets(titles, len(full_text))
 
             # Write output parsed doc as json
             out_data = {
@@ -641,15 +647,7 @@ class ExcelParser(BaseParser):
         full_text = "".join(pages_content[k] for k in sorted(pages_content))
 
         # compute end offsets for titles
-        for idx, t in enumerate(titles):
-            level = t["level"]
-            start_pos = t["start"]
-            end_pos = len(full_text)
-            for j in range(idx + 1, len(titles)):
-                if titles[j]["level"] <= level:
-                    end_pos = titles[j]["start"]
-                    break
-            t["end"] = end_pos
+        _assign_title_end_offsets(titles, len(full_text))
 
         split_points.pop()  # drop last point == len(full_text)
 
@@ -898,14 +896,7 @@ class DoclingParser(BaseParser):
             full_text = "".join(pages_content[k] for k in sorted(pages_content))
 
             # Compute end offsets for titles
-            for idx, t in enumerate(titles):
-                level_val = t["level"]
-                end = len(full_text)
-                for jdx in range(idx + 1, len(titles)):
-                    if titles[jdx]["level"] <= level_val:
-                        end = titles[jdx]["start"]
-                        break
-                t["end"] = end
+            _assign_title_end_offsets(titles, len(full_text))
 
             out_data = {
                 "document_name": doc_name,
@@ -1086,14 +1077,7 @@ class PyMuPDFParser(BaseParser):
             full_text = "".join(pages_content[k] for k in sorted(pages_content))
 
             # Compute end offsets for titles
-            for idx, t in enumerate(titles):
-                level_val = t["level"]
-                end = len(full_text)
-                for jdx in range(idx + 1, len(titles)):
-                    if titles[jdx]["level"] <= level_val:
-                        end = titles[jdx]["start"]
-                        break
-                t["end"] = end
+            _assign_title_end_offsets(titles, len(full_text))
 
             out_data = {
                 "document_name": doc_name,
