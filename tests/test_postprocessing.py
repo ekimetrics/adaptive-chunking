@@ -23,6 +23,12 @@ class TestFindChunksStartAndEnd:
         for i in range(len(positions) - 1):
             assert positions[i][1] == positions[i + 1][0]
 
+    def test_empty_returns_empty_list(self):
+        # Regression: previously returned None despite the list[tuple] hint,
+        # which broke callers that zip/iterate the result.
+        result = find_chunks_start_and_end([], "anything")
+        assert result == []
+
 
 class TestCheckChunkGaps:
     def test_no_gaps(self):
@@ -45,3 +51,6 @@ class TestRepairGaps:
         repaired = repair_gaps_between_chunks(chunks, text)
 
         assert check_chunk_gaps(repaired, text) is True
+
+    def test_empty_returns_empty_list(self):
+        assert repair_gaps_between_chunks([], "anything") == []
