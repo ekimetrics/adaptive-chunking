@@ -9,8 +9,8 @@ from .chunking_utils import count_tokens, is_high_confidence_non_english
 from .postprocessing import (
     repair_gaps_between_chunks,
     check_chunk_gaps,
-    get_title_info,
-    get_page_info
+    build_chunk_records,
+    upsert_parquet,
 )
 
 async def split_documents_from_dir(
@@ -144,87 +144,30 @@ async def split_documents_from_dir(
                 assert recover_success==True, "async chunking gap recovery failed"
 
     # save chunks parquet
-    records = []
-    for doc_name, methods in splits_per_doc.items():
-        for method, chunks in methods.items():
-            chunks_title_info = get_title_info(titles=parsed_docs[doc_name]["titles"], chunks=chunks, text=parsed_docs[doc_name]["full_text"])
-            chunks_page_info = get_page_info(pages=parsed_docs[doc_name]["pages"], chunks=chunks, text=parsed_docs[doc_name]["full_text"])
-            if chunks:
-                for i, chunk_text in enumerate(chunks):
-                    records.append({
-                        "doc_name": doc_name,
-                        "method": method,
-                        "type": "raw",
-                        "chunk_index": i,
-                        "chunk_text": chunk_text,
-                        "chunk_pages": chunks_page_info[i],
-                        "titles_context": chunks_title_info[i],
-                        "chunk_len": count_tokens_func(chunk_text),
-                    })
-    
+    records = build_chunk_records(
+        splits_per_doc, parsed_docs, record_type="raw", count_tokens_func=count_tokens_func
+    )
+
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    chunks_output_path = output_dir / "chunks.parquet"
-    performances_output_path = output_dir / "performances.parquet"
-    chunks_df = pd.DataFrame(records)
 
-    # If we only want to replace results for the provided splitters, merge with existing data
-    if not replace_all_results and chunks_output_path.exists():
-        try:
-            existing_chunks_df = pd.read_parquet(chunks_output_path)
-            # Identify methods that we are replacing (all supplied sync/async splitters)
-            methods_to_replace = set()
-            if sync_splitters:
-                methods_to_replace.update(sync_splitters.keys())
-            if async_splitters:
-                methods_to_replace.update(async_splitters.keys())
+    # methods being (re)written = every supplied sync/async splitter
+    methods_to_replace = set(sync_splitters or {}) | set(async_splitters or {})
 
-            print(f"Found existing chunks parquet. Replacing results for methods: {methods_to_replace}")
+    upsert_parquet(pd.DataFrame(records), output_dir / "chunks.parquet",
+                   methods_to_replace, replace_all_results)
 
-            # Keep only rows whose method is NOT in methods_to_replace
-            existing_chunks_df = existing_chunks_df[~existing_chunks_df["method"].isin(methods_to_replace)]
-
-            # Concatenate existing rows with the new ones
-            chunks_df = pd.concat([existing_chunks_df, chunks_df], ignore_index=True)
-        except Exception as e:
-            print(f"Warning: failed to read/merge existing chunks parquet. Overwriting. Error: {e}")
-
-    chunks_df.to_parquet(chunks_output_path)
-
-    # Build performances dataframe with times
+    # Build performances dataframe with times (records carry sync/async type)
     perf_records = []
     for doc_name, method_dict in time_per_doc_per_splitter.items():
         for method, time_spent in method_dict.items():
-            if async_splitters and method in async_splitters:
-                method_type = "async"
-            else:
-                method_type = "sync"
-
+            method_type = "async" if (async_splitters and method in async_splitters) else "sync"
             perf_records.append({
                 "doc_name": doc_name,
                 "method": method,
                 "method_type": method_type,
-                "time": time_spent
+                "time": time_spent,
             })
 
-    performances_df = pd.DataFrame(perf_records)
-
-    performances_output_path.parent.mkdir(parents=True, exist_ok=True)
-
-    if not replace_all_results and performances_output_path.exists():
-        try:
-            existing_perf_df = pd.read_parquet(performances_output_path)
-            methods_to_replace = set()
-            if sync_splitters:
-                methods_to_replace.update(sync_splitters.keys())
-            if async_splitters:
-                methods_to_replace.update(async_splitters.keys())
-
-            print(f"Found existing performances parquet. Replacing results for methods: {methods_to_replace}")
-
-            existing_perf_df = existing_perf_df[~existing_perf_df["method"].isin(methods_to_replace)]
-            performances_df = pd.concat([existing_perf_df, performances_df], ignore_index=True)
-        except Exception as e:
-            print(f"Warning: failed to read/merge existing performances parquet. Overwriting. Error: {e}")
-
-    performances_df.to_parquet(performances_output_path)
+    upsert_parquet(pd.DataFrame(perf_records), output_dir / "performances.parquet",
+                   methods_to_replace, replace_all_results)

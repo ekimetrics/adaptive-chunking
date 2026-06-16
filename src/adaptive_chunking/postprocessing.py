@@ -290,6 +290,123 @@ def merge_small_chunks_to_neighbours(
 
     return chunks
 
+def build_chunk_records(
+    splits_per_doc: dict[str, dict[str, list[str]]],
+    parsed_docs: dict[str, dict],
+    record_type: str,
+    count_tokens_func: Callable[[str], int] = count_tokens,
+) -> list[dict]:
+    """Flatten ``{doc: {method: [chunks]}}`` into the per-chunk records written
+    to the chunks parquet, attaching page numbers and enclosing-title context."""
+    records = []
+    for doc_name, methods in splits_per_doc.items():
+        for method, chunks in methods.items():
+            title_info = get_title_info(titles=parsed_docs[doc_name]["titles"], chunks=chunks, text=parsed_docs[doc_name]["full_text"])
+            page_info = get_page_info(pages=parsed_docs[doc_name]["pages"], chunks=chunks, text=parsed_docs[doc_name]["full_text"])
+            if chunks:
+                for i, chunk_text in enumerate(chunks):
+                    records.append({
+                        "doc_name": doc_name,
+                        "method": method,
+                        "type": record_type,
+                        "chunk_index": i,
+                        "chunk_text": chunk_text,
+                        "chunk_pages": page_info[i],
+                        "titles_context": title_info[i],
+                        "chunk_len": count_tokens_func(chunk_text),
+                    })
+    return records
+
+def upsert_parquet(
+    new_df: pd.DataFrame,
+    output_path: str | Path,
+    methods_to_replace: set,
+    replace_all_results: bool = False,
+) -> None:
+    """Write ``new_df`` to ``output_path``. Unless ``replace_all_results``, any
+    existing parquet is merged in by keeping its rows whose ``method`` is not
+    being replaced. On a read/merge failure, the file is overwritten."""
+    output_path = Path(output_path)
+    if not replace_all_results and output_path.exists():
+        try:
+            existing = pd.read_parquet(output_path)
+            existing = existing[~existing["method"].isin(methods_to_replace)]
+            new_df = pd.concat([existing, new_df], ignore_index=True)
+        except Exception as e:
+            print(f"Warning: failed to read/merge existing parquet at {output_path}. Overwriting. Error: {e}")
+    new_df.to_parquet(output_path)
+
+def _regularize_chunks_from_df(
+    parsed_docs_dir: str | Path,
+    chunks_path: str | Path,
+    output_dir: str | Path,
+    methods_to_be_regularized: set,
+    regularize_func: Callable[[list[str]], list[str]],
+    record_type: str,
+    action_label: str,
+    count_tokens_func: Callable[[str], int] = count_tokens,
+    replace_all_results: bool = False):
+    """Load a chunks parquet, apply ``regularize_func`` to the selected methods
+    (repairing gaps and verifying full-text coverage), and write the resulting
+    chunks + per-doc/method timing parquets. Shared by the public
+    split-oversized / merge-small entry points below."""
+
+    parsed_docs_dir = Path(parsed_docs_dir)
+    print(f"Loading parsed docs from {parsed_docs_dir}\n")
+
+    parsed_docs = {}
+    for json_path in parsed_docs_dir.glob("*.json"):
+        with json_path.open("r") as f:
+            parsed_docs[json_path.with_suffix('').name] = json.load(f)
+
+    if len(parsed_docs) == 0:
+        print(f"No parsed docs found in {parsed_docs_dir.name}")
+        return None
+
+    chunks_path = Path(chunks_path)
+    df = pd.read_parquet(chunks_path)
+    print(f"Loading chunks from {chunks_path}\n")
+
+    raw_splits_per_doc = {}
+    for doc_name, group in df.groupby("doc_name"):
+        raw_splits_per_doc[doc_name] = {}
+        for method, sub_group in group.groupby("method"):
+            raw_splits_per_doc[doc_name][method] = sub_group.chunk_text.to_list()
+
+    regularized_splits_per_doc = {}
+    time_per_doc_per_method = {}
+    for doc_name in raw_splits_per_doc:
+        regularized_splits_per_doc[doc_name] = {}
+        for method, chunks in raw_splits_per_doc[doc_name].items():
+            start_time_method = time.time()
+            if method in methods_to_be_regularized:
+                print(f"{action_label}: {doc_name}, {method}")
+                full_text = parsed_docs[doc_name]["full_text"]
+                repaired_splits = repair_gaps_between_chunks(
+                    chunks=regularize_func(chunks), text=full_text)
+                recover_success = check_chunk_gaps(repaired_splits, full_text)
+                assert recover_success == True, f"{action_label} gap recovery failed"
+            else:
+                repaired_splits = chunks
+
+            regularized_splits_per_doc[doc_name][method] = repaired_splits
+            time_per_doc_per_method.setdefault(doc_name, {})[method] = time.time() - start_time_method
+
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    records = build_chunk_records(regularized_splits_per_doc, parsed_docs, record_type, count_tokens_func)
+    upsert_parquet(pd.DataFrame(records), output_dir / "chunks.parquet",
+                   methods_to_be_regularized, replace_all_results)
+
+    perf_records = [
+        {"doc_name": doc_name, "method": method, "time": t}
+        for doc_name, method_dict in time_per_doc_per_method.items()
+        for method, t in method_dict.items()
+    ]
+    upsert_parquet(pd.DataFrame(perf_records), output_dir / "performances.parquet",
+                   methods_to_be_regularized, replace_all_results)
+
 def split_oversized_chunks_from_df(
     parsed_docs_dir: str | Path,
     chunks_path: str | Path,
@@ -299,107 +416,13 @@ def split_oversized_chunks_from_df(
     count_tokens_func: Callable[[str], int] = count_tokens,
     replace_all_results: bool = False):
 
-    # Read parsed docs dir
-    parsed_docs_dir = Path(parsed_docs_dir)
-    print(f"Loading parsed docs from {parsed_docs_dir}\n")
-
-    parsed_docs = {}
-    for json_path in parsed_docs_dir.glob("*.json"):
-        with json_path.open("r") as f:
-            parsed_docs[json_path.with_suffix('').name] = json.load(f)
-    
-    if len(parsed_docs) == 0:
-        print(f"No parsed docs found in {parsed_docs_dir.name}")
-        return None
-
-    # Load chunks df
-    chunks_path = Path(chunks_path)
-    df = pd.read_parquet(chunks_path)
-    print(f"Loading chunks from {chunks_path}\n")
-    # dict to store timing per doc/method
-    time_per_doc_per_method = {}
-
-    raw_splits_per_doc = {}
-    for doc_name, group in df.groupby("doc_name"):
-        raw_splits_per_doc[doc_name] = {}
-        for method, sub_group in group.groupby("method"):
-            raw_splits_per_doc[doc_name][method] = sub_group.chunk_text.to_list()
-
-    regularized_splits_per_doc = {}
-    for doc_name in raw_splits_per_doc:
-        regularized_splits_per_doc[doc_name] = {}
-        for method, chunks in raw_splits_per_doc[doc_name].items():
-            start_time_method = time.time()
-            # Split oversized chunks and repair any chunking between chunks gaps
-            if method in methods_to_be_regularized:
-                print(f"Splitting oversized chunks: {doc_name}, {method}")
-                full_text = parsed_docs[doc_name]["full_text"]
-                repaired_splits = repair_gaps_between_chunks(
-                    chunks=split_oversized_func(chunks), text=full_text)
-                recover_success = check_chunk_gaps(repaired_splits, full_text)
-                assert recover_success==True, "Oversized splitting gap recovery failed"
-            else:
-                repaired_splits = chunks
-
-            regularized_splits_per_doc[doc_name][method] = repaired_splits
-            time_spent = time.time() - start_time_method
-            time_per_doc_per_method.setdefault(doc_name, {})[method] = time_spent
-
-    # Format and save chunks parquet
-    records = []
-    for doc_name, methods in regularized_splits_per_doc.items():
-        for method, chunks in methods.items():
-            chunks_title_info = get_title_info(titles=parsed_docs[doc_name]["titles"], chunks=chunks, text=parsed_docs[doc_name]["full_text"])
-            chunks_page_info = get_page_info(pages=parsed_docs[doc_name]["pages"], chunks=chunks, text=parsed_docs[doc_name]["full_text"])
-
-            if chunks:
-                for i, chunk_text in enumerate(chunks):
-                    records.append({
-                        "doc_name": doc_name,
-                        "method": method,
-                        "type": "no_oversizing",
-                        "chunk_index": i,
-                        "chunk_text": chunk_text,
-                        "chunk_pages": chunks_page_info[i],
-                        "titles_context": chunks_title_info[i],
-                        "chunk_len": count_tokens_func(chunk_text),
-                    })
-
-    output_dir = Path(output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
-    chunks_output_path = output_dir / "chunks.parquet"
-    performances_output_path = output_dir / "performances.parquet"
-    chunks_df = pd.DataFrame(records)
-
-    # Merge with existing results if we only want to replace selected methods (chunks)
-    if not replace_all_results and chunks_output_path.exists():
-        try:
-            print(f"Found existing chunks parquet. Replacing results for methods: {methods_to_be_regularized}")
-            existing_df = pd.read_parquet(chunks_output_path)
-            existing_df = existing_df[~existing_df["method"].isin(methods_to_be_regularized)]
-            chunks_df = pd.concat([existing_df, chunks_df], ignore_index=True)
-        except Exception as e:
-            print(f"Warning: failed to read/merge existing parquet at {chunks_output_path}. Overwriting. Error: {e}")
-    chunks_df.to_parquet(chunks_output_path)
-
-    # Build performances dataframe
-    perf_records = []
-    for doc_name, method_dict in time_per_doc_per_method.items():
-        for method, t in method_dict.items():
-            perf_records.append({"doc_name": doc_name, "method": method, "time": t})
-
-    performances_df = pd.DataFrame(perf_records)
-
-    # Merge with existing performances if needed
-    if not replace_all_results and performances_output_path.exists():
-        try:
-            existing_perf_df = pd.read_parquet(performances_output_path)
-            existing_perf_df = existing_perf_df[~existing_perf_df["method"].isin(methods_to_be_regularized)]
-            performances_df = pd.concat([existing_perf_df, performances_df], ignore_index=True)
-        except Exception as e:
-            print(f"Warning: failed to merge performances parquet at {performances_output_path}. Overwriting. Error: {e}")
-
-    performances_df.to_parquet(performances_output_path)
+    return _regularize_chunks_from_df(
+        parsed_docs_dir, chunks_path, output_dir, methods_to_be_regularized,
+        regularize_func=split_oversized_func,
+        record_type="no_oversizing",
+        action_label="Splitting oversized chunks",
+        count_tokens_func=count_tokens_func,
+        replace_all_results=replace_all_results)
 
 def merge_small_chunks_from_df(
     parsed_docs_dir: str | Path,
@@ -410,104 +433,10 @@ def merge_small_chunks_from_df(
     count_tokens_func: Callable[[str], int] = count_tokens,
     replace_all_results: bool = False):
 
-    # Read parsed docs dir
-    parsed_docs_dir = Path(parsed_docs_dir)
-    print(f"Loading parsed docs from {parsed_docs_dir}\n")
-
-    parsed_docs = {}
-    for json_path in parsed_docs_dir.glob("*.json"):
-        with json_path.open("r") as f:
-            parsed_docs[json_path.with_suffix('').name] = json.load(f)
-    
-    if len(parsed_docs) == 0:
-        print(f"No parsed docs found in {parsed_docs_dir.name}")
-        return None
-    
-    # Load chunks df
-    chunks_path = Path(chunks_path)
-    df = pd.read_parquet(chunks_path)
-    print(f"Loading chunks from {chunks_path}\n")
-
-    raw_splits_per_doc = {}
-    for doc_name, group in df.groupby("doc_name"):
-        raw_splits_per_doc[doc_name] = {}
-        for method, sub_group in group.groupby("method"):
-            raw_splits_per_doc[doc_name][method] = sub_group.chunk_text.to_list()
-
-    regularized_splits_per_doc = {}
-    # dict to store timing per doc/method
-    time_per_doc_per_method = {}
-    for doc_name in raw_splits_per_doc:
-        regularized_splits_per_doc[doc_name] = {}
-        for method, chunks in raw_splits_per_doc[doc_name].items():
-            start_time_method = time.time()
-            if method in methods_to_be_regularized:
-                # Merge small chunks and repair any chunking gaps
-                print(f"Merging small chunks: {doc_name}, {method}")
-                full_text = parsed_docs[doc_name]["full_text"]
-
-                repaired_splits = repair_gaps_between_chunks(
-                    chunks=merge_small_chunks_func(chunks), text=full_text)
-
-                recover_success = check_chunk_gaps(repaired_splits, full_text)
-                assert recover_success==True, "Small chunks merging gap recovery failed"
-            else:
-                repaired_splits = chunks
-            
-            regularized_splits_per_doc[doc_name][method] = repaired_splits
-            time_spent = time.time() - start_time_method
-            time_per_doc_per_method.setdefault(doc_name, {})[method] = time_spent
-
-    # Format and save chunks parquet
-    records = []
-    for doc_name, methods in regularized_splits_per_doc.items():
-        for method, chunks in methods.items():
-            chunks_title_info = get_title_info(titles=parsed_docs[doc_name]["titles"], chunks=chunks, text=parsed_docs[doc_name]["full_text"])
-            chunks_page_info = get_page_info(pages=parsed_docs[doc_name]["pages"], chunks=chunks, text=parsed_docs[doc_name]["full_text"])
-            if chunks:
-                for i, chunk_text in enumerate(chunks):
-                    records.append({
-                        "doc_name": doc_name,
-                        "method": method,
-                        "type": "no_small_chunks",
-                        "chunk_index": i,
-                        "chunk_text": chunk_text,
-                        "chunk_pages": chunks_page_info[i],
-                        "titles_context": chunks_title_info[i],
-                        "chunk_len": count_tokens_func(chunk_text), # compute chunk lens
-                    })
-
-    output_dir = Path(output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
-    chunks_output_path = output_dir / "chunks.parquet"
-    performances_output_path = output_dir / "performances.parquet"
-    chunks_df = pd.DataFrame(records)
-
-    # Merge with existing results for chunks
-    if not replace_all_results and chunks_output_path.exists():
-        try:
-            print(f"Found existing chunks parquet. Replacing results for methods: {methods_to_be_regularized}")
-            existing_df = pd.read_parquet(chunks_output_path)
-            existing_df = existing_df[~existing_df["method"].isin(methods_to_be_regularized)]
-            chunks_df = pd.concat([existing_df, chunks_df], ignore_index=True)
-        except Exception as e:
-            print(f"Warning: failed to read/merge existing parquet at {chunks_output_path}. Overwriting. Error: {e}")
-    chunks_df.to_parquet(chunks_output_path)
-
-    # Build performances df
-    perf_records = []
-    for doc_name, method_dict in time_per_doc_per_method.items():
-        for method, t in method_dict.items():
-            perf_records.append({"doc_name": doc_name, "method": method, "time": t})
-
-    performances_df = pd.DataFrame(perf_records)
-
-    if not replace_all_results and performances_output_path.exists():
-        try:
-            existing_perf_df = pd.read_parquet(performances_output_path)
-            existing_perf_df = existing_perf_df[~existing_perf_df["method"].isin(methods_to_be_regularized)]
-            performances_df = pd.concat([existing_perf_df, performances_df], ignore_index=True)
-        except Exception as e:
-            print(f"Warning: failed to merge performances parquet at {performances_output_path}. Overwriting. Error: {e}")
-
-    performances_df.to_parquet(performances_output_path)
+    return _regularize_chunks_from_df(
+        parsed_docs_dir, chunks_path, output_dir, methods_to_be_regularized,
+        regularize_func=merge_small_chunks_func,
+        record_type="no_small_chunks",
+        action_label="Merging small chunks",
+        count_tokens_func=count_tokens_func,
+        replace_all_results=replace_all_results)
