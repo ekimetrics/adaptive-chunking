@@ -30,6 +30,7 @@ keywords = ["chunking", "nlp", "rag", "document-splitting", "evaluation"]
 dependencies = [
     "tiktoken>=0.9.0",
     "pandas>=2.2.3",
+    "pyarrow",  # parquet engine: split_documents / compute_metrics / postprocessing read+write .parquet
     "numpy",
     "tqdm>=4.67.1",
     "python-dotenv>=1.1.0",
