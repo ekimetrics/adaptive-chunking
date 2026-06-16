@@ -2,8 +2,8 @@ import json
 import os
 import pandas as pd
 from pathlib import Path
-from langdetect import detect_langs, LangDetectException
 from time import time
+from .chunking_utils import is_high_confidence_non_english
 
 def find_mentions_per_origin(parsed_docs_dir: str|Path, models: dict, output_dir: str|Path, skip_non_english: bool = True):
     from .metrics import extract_entity_pronoun_pairs
@@ -29,19 +29,9 @@ def find_mentions_per_origin(parsed_docs_dir: str|Path, models: dict, output_dir
         full_text = parsed_docs[doc_name]["full_text"]
 
         # skip non english documents, the current coref solver is english only
-        if skip_non_english:
-            try:
-                lang_probs = detect_langs(full_text[:50000])
-                if lang_probs:
-                    top_language = lang_probs[0]
-                    lang_code = top_language.lang
-                    confidence = top_language.prob
-                if confidence >= 0.98 and lang_code != 'en':
-                    print(f"\nSkipping document {doc_name}: language {lang_code}")
-                    continue
-            except LangDetectException:
-                print("Warning: keeping document with unknown language")
-                print(f"Check document: {doc_name}")
+        if skip_non_english and is_high_confidence_non_english(full_text):
+            print(f"\nSkipping document {doc_name}: detected non-English")
+            continue
 
         # Extract mentions
         start_time = time()

@@ -3,10 +3,9 @@ import pandas as pd
 import json
 import asyncio
 from typing import Any, Callable
-from langdetect import detect_langs, LangDetectException
 from pathlib import Path
 import time
-from .chunking_utils import count_tokens
+from .chunking_utils import count_tokens, is_high_confidence_non_english
 from .postprocessing import (
     repair_gaps_between_chunks,
     check_chunk_gaps,
@@ -61,19 +60,9 @@ async def split_documents_from_dir(
             continue
 
         # detect language and filter out non english if desirable
-        if skip_non_english:
-            try:
-                lang_probs = detect_langs(doc_text[:50000])
-                if lang_probs:
-                    top_language = lang_probs[0]
-                    lang_code = top_language.lang
-                    confidence = top_language.prob
-                if confidence >= 0.98 and lang_code != 'en':
-                    print(f"Skipping document {doc_name}: language {lang_code}")
-                    continue
-            except LangDetectException:
-                print("Warning: keeping document with unknown language")
-                print(f"Check document: {doc_name}")
+        if skip_non_english and is_high_confidence_non_english(doc_text):
+            print(f"Skipping document {doc_name}: detected non-English")
+            continue
         
         doc_texts_dict[doc_name] = doc_text
         doc_pages_dict[doc_name] = doc_pages
