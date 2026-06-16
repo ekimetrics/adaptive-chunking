@@ -385,7 +385,7 @@ def _regularize_chunks_from_df(
                 repaired_splits = repair_gaps_between_chunks(
                     chunks=regularize_func(chunks), text=full_text)
                 recover_success = check_chunk_gaps(repaired_splits, full_text)
-                assert recover_success == True, f"{action_label} gap recovery failed"
+                assert recover_success, f"{action_label} gap recovery failed"
             else:
                 repaired_splits = chunks
 
