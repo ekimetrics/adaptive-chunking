@@ -1,9 +1,25 @@
 import numpy as np
 from itertools import combinations
 from typing import Callable
+import functools
 import re
 from .chunking_utils import count_tokens
 from .postprocessing import find_chunks_start_and_end
+
+
+@functools.lru_cache(maxsize=1)
+def _load_word_tokenizer():
+    """Load the spaCy word tokenizer once and reuse it across calls.
+
+    Loading a spaCy model costs ~0.5-2s. ``_tokenize_by_word`` is invoked once
+    per coreference context window, so loading the model on every call
+    previously dominated runtime. Caching makes it load exactly once per
+    process, shared across all CoreferenceSolver instances.
+    """
+    import spacy
+
+    # parser/ner are disabled: only word tokenization is needed here.
+    return spacy.load("en_core_web_sm", disable=["parser", "ner"])
 
 PERSONAL_PRONOUNS = { # default list of lowercased pronouns used in extract_entity_pronoun_pairs
     "i", "me", "my", "mine", "myself", "we", "us",
@@ -919,9 +935,8 @@ class CoreferenceSolver:
         return char_offsets
 
     def _tokenize_by_word(self, text: str, return_clean = False) -> list|tuple:
-        import spacy
-        # use the small English model for faster processing
-        nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
+        # use the small English model for faster processing (loaded once, cached)
+        nlp = _load_word_tokenizer()
         doc = nlp(text)
         
         tokens_with_ws = []
