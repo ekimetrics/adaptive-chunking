@@ -17,7 +17,7 @@ jobs:
   test:
     name: test (py${{ matrix.python-version }})
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
@@ -31,16 +31,36 @@ jobs:
           cache: pip
           cache-dependency-path: pyproject.toml
 
-      # sentence-transformers depends on torch; install the CPU build first so
-      # pip does not pull the multi-GB CUDA distribution on GPU-less runners.
-      - name: Install CPU-only torch
-        run: pip install torch --index-url https://download.pytorch.org/whl/cpu
-
-      - name: Install package
-        run: pip install -e ".[test]"
+      # The test suite mocks the heavy ML dependencies (spacy, sentence-transformers,
+      # scikit-learn, scipy — see the roadmap to move them to a [metrics] extra), so
+      # only the lightweight runtime deps are installed here. The full dependency
+      # solve is validated separately by the `install` job.
+      - name: Install package (light)
+        run: |
+          pip install pytest pytest-asyncio tiktoken pandas numpy langdetect tqdm python-dotenv httpx
+          pip install -e . --no-deps
 
       - name: Run tests
         run: pytest
+
+  install:
+    name: full install check
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Real user install from PyPI only (pulls the default CUDA torch build,
+      # several GB — hence --no-cache-dir to stay within runner disk limits).
+      - name: pip install
+        run: pip install --no-cache-dir .
+
+      - name: Import smoke test
+        run: python -c "import adaptive_chunking; print(adaptive_chunking.__version__)"
 
   build:
     name: build distribution
