@@ -99,7 +99,7 @@ def check_chunk_gaps(chunks: list[str], text: str) -> bool:
 
 def find_chunks_start_and_end(chunks: list[str], text: str) -> list[tuple[int, int]]:
     if not chunks:
-        return None
+        return []
 
     end_of_previous_chunk = 0
     starts_and_ends = []
@@ -125,13 +125,13 @@ def find_chunks_start_and_end(chunks: list[str], text: str) -> list[tuple[int, i
 
     return starts_and_ends
 
-def repair_gaps_between_chunks(chunks: list[str], text: str) -> list[str] | None:
+def repair_gaps_between_chunks(chunks: list[str], text: str) -> list[str]:
     """
     Repair gaps between consecutive chunks, if any.
     """
 
     if not chunks:
-        return None
+        return []
 
     starts_and_ends = find_chunks_start_and_end(chunks, text)
 
