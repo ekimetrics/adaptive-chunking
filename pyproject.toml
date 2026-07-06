@@ -21,6 +21,7 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Text Processing :: Linguistic",
 ]
@@ -70,10 +71,12 @@ paper = [
     "langdetect",
     "ipykernel>=6.29.5",
 ]
-dev = [
-    "adaptive-chunking[paper]",
+test = [
     "pytest>=8.0",
     "pytest-asyncio",
+]
+dev = [
+    "adaptive-chunking[paper,test]",
 ]
 
 [project.urls]
