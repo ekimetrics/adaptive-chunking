@@ -30,6 +30,7 @@ keywords = ["chunking", "nlp", "rag", "document-splitting", "evaluation"]
 dependencies = [
     "tiktoken>=0.9.0",
     "pandas>=2.2.3",
+    "pyarrow",  # parquet engine: split_documents / compute_metrics / postprocessing read+write .parquet
     "numpy",
     "tqdm>=4.67.1",
     "python-dotenv>=1.1.0",
@@ -96,3 +97,23 @@ packages = ["src/adaptive_chunking"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["adaptive_chunking"]
+# Excluded from the coverage target (see CONTRIBUTING / PR notes):
+#  - paper/*: one-off research replication scripts, not part of the library API
+#  - parsing.py: thin adapters over the Azure DI / Docling / PyMuPDF SDKs, which
+#    are heavy optional deps (and need model downloads) — exercised by the
+#    parsing tests but not measured here.
+omit = [
+    "*/adaptive_chunking/paper/*",
+    "*/adaptive_chunking/parsing.py",
+]
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "@(abc\\.)?abstractmethod",
+]
+show_missing = true
