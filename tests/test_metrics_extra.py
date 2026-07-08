@@ -50,7 +50,7 @@ class FakeModel:
         return arr
 
 
-def _inject_fake_sentence_transformers():
+def _inject_fake_sentence_transformers(monkeypatch):
     """Install a fake ``sentence_transformers`` with a working ``util.cos_sim``."""
     st = types.ModuleType("sentence_transformers")
     util = types.ModuleType("sentence_transformers.util")
@@ -67,8 +67,8 @@ def _inject_fake_sentence_transformers():
               / ((np.linalg.norm(a) * np.linalg.norm(b)) or 1))
     )
     st.util = util
-    sys.modules["sentence_transformers"] = st
-    sys.modules["sentence_transformers.util"] = util
+    monkeypatch.setitem(sys.modules, "sentence_transformers", st)
+    monkeypatch.setitem(sys.modules, "sentence_transformers.util", util)
 
 
 # --------------------------------------------------------------------------- #
@@ -223,12 +223,12 @@ class TestNormalizedIntrachunkSim:
 # compute_semantic_dissimilarity (fake sentence_transformers)
 # --------------------------------------------------------------------------- #
 class TestSemanticDissimilarity:
-    def test_n_less_than_two(self):
-        _inject_fake_sentence_transformers()
+    def test_n_less_than_two(self, monkeypatch):
+        _inject_fake_sentence_transformers(monkeypatch)
         assert compute_semantic_dissimilarity(["only one"], model=FakeModel()) is None
 
-    def test_normal(self):
-        _inject_fake_sentence_transformers()
+    def test_normal(self, monkeypatch):
+        _inject_fake_sentence_transformers(monkeypatch)
         chunks = ["the quick brown fox", "jumps over the lazy dog", "more text here"]
         score = compute_semantic_dissimilarity(
             chunks, model=FakeModel(), min_tokens=1
@@ -236,8 +236,8 @@ class TestSemanticDissimilarity:
         assert score is not None
         assert 0.0 <= float(score) <= 1.0
 
-    def test_small_chunk_penalty(self):
-        _inject_fake_sentence_transformers()
+    def test_small_chunk_penalty(self, monkeypatch):
+        _inject_fake_sentence_transformers(monkeypatch)
         chunks = ["the quick brown fox", "jumps over the lazy dog"]
         # huge min_tokens => every chunk counts as undersized -> penalty branch
         score = compute_semantic_dissimilarity(
