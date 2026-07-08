@@ -111,3 +111,9 @@ slides/
 
 # Poster sources & build artefacts (only the final PDF is published at repo root)
 poster/
+
+# test/coverage artifacts
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
